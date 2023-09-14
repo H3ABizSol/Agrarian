@@ -1,7 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+var __importDefault =
+  (this && this.__importDefault) ||
+  function (mod) {
+    return mod && mod.__esModule ? mod : { default: mod };
+  };
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
@@ -24,9 +26,11 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use(express_1.default.json());
 app.use("/api/auth", adminroute_1.default);
 app.use("/api/property", property_1.default);
-app.use(express_1.default.static(path_1.default.join(__dirname, "../client/dist/")));
+app.use(
+  express_1.default.static(path_1.default.join(__dirname, "../client/build/"))
+);
 app.get("*", (req, res) => {
-    res.sendFile(path_1.default.join(__dirname, "../client/dist/index.html"));
+  res.sendFile(path_1.default.join(__dirname, "../client/build/index.html"));
 });
 // db connection
 (0, db_1.default)(URL);
@@ -34,5 +38,5 @@ app.get("*", (req, res) => {
 app.use(error_1.default);
 // listen to port
 app.listen(4000, () => {
-    console.log(`Server connected to port ${PORT}`);
+  console.log(`Server connected to port ${PORT}`);
 });
