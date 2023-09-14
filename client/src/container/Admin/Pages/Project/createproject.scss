@@ -1,0 +1,50 @@
+.create-project-container{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(251, 251, 251);
+    min-height: 600px;
+    form{
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      padding: 1.2rem;
+      h2{
+        text-align: center;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+      }
+
+       .form-text-field{
+              display: flex;
+              gap: 2rem;
+
+              input,textarea,select{
+                width: 100%;
+                outline: none;
+                padding: 1rem 1.6rem;
+                border: 2px solid rgb(197, 196, 196);
+                border-radius: 4px;
+                resize: none;
+                option{
+    
+                    font-size: 1.5rem;
+                    color: rgb(86, 86, 86);
+                }
+              }
+        }
+        .btn-container{
+            button{
+              padding: 1rem 2rem;
+              outline: none;
+              border: none;
+               background-color: #629D7B;   
+               color: white;
+               font-size: 1.4rem;      
+               border-radius: 2px;   
+               cursor: pointer;  
+            }
+        }
+    }
+}

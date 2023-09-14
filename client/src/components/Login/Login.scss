@@ -1,0 +1,109 @@
+.login-form-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-wrapper{
+        // background: red;
+        display: flex;
+        width: 90%;
+        @media screen and (max-width:968px) {
+            flex-direction: column;
+            width: 95%;
+        }
+        .left{
+            position: relative;
+            min-height: 700px;
+            width: 55%;
+            background: url("https://blog.hubspot.com/hubfs/Sales_Blog/real-estate-business-compressor.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            &::after{
+                content: ""; 
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                background: linear-gradient(rgb(98, 98, 229),rgb(230, 132, 132));
+                opacity: 0.3;
+                
+            }
+            @media screen and (max-width:968px) {
+                width: 100%;
+                display: none;
+
+            }
+            h2{
+                font-size: 5rem;
+                color: rgb(0, 0, 0);
+                z-index: 2;
+            }
+            p{
+                font-size: 3rem;
+                color: rgb(19, 19, 19);
+            }
+        }
+
+        .right{
+            width:45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 650px;
+            background-color: rgb(247, 244, 238);
+            @media screen and (max-width:968px) {
+                width: 100%;
+                order: 1;
+            }
+
+            form{
+                // background-color: red;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                h2{
+                    text-align: center;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.2rem;
+                }
+                div{
+                    display: flex;
+                    justify-content: center;
+                }
+                .forgot-password{
+                    display: flex;
+                    justify-content: end;
+                    width: 77%;
+                    .forgot{
+                        font-size: 1rem;
+                    }
+                }
+                input{
+                    width: 60%;
+                    padding: 1.5rem 2rem;
+                    outline: none;
+                    border-radius: 25px;
+                    border: 1px solid rgb(85, 183, 85);
+                }
+                button{
+                    padding: 0.8rem 4rem;
+                    // background: linear-gradient(rgb(248, 225, 228),rgb(214, 237, 247));
+                    background: rgb(52, 124, 208);
+                    outline: none;
+                    border: none;
+                    color: rgb(255, 255, 255);
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.side-nav{
+    height: 100vh;
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+        .link{
+            text-decoration: none;
+        }
+        li{
+            font-size: 1.5rem;
+            padding: 2rem;
+            cursor: pointer;
+            color: white;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
+            &:hover{
+                background-color: rgb(60, 62, 62);
+                transition: all 0.4s;
+                padding: 2rem;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,91 @@
+.project-wrapper{
+    background-color: #ffffff;
+    // background-color: rgb(16, 16, 16);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 5rem auto;
+    // padding: 8rem 0;
+    @media screen and (max-width:1445px){
+        width: 100%;
+        // padding-bottom: 12rem;
+        padding-top: 1rem;
+     }
+
+    .second-div{
+        padding: 2rem 0;
+        height: inherit;
+        .filter-wrapper{
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 2rem;
+            backdrop-filter: blur(50px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 0;
+            border-radius: 50px;
+            @media screen and (max-width:450px) {
+                width: 100%;
+            }
+            .filter-data{
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        justify-content: center ;
+                        gap: 2rem;
+                        .myul.active{
+                            background-color: #6075ed;
+                            color: white;
+                        }
+                        li{
+                            padding: 1rem 4rem;
+                            border: 1px solid #425CEC;
+                            border-radius: 5px;
+                            font-size: 1.5rem;
+                            cursor: pointer;
+                            @media screen and (max-width:450px) {
+                               font-size: 1rem;
+                               padding: 1rem 2rem;
+                            }
+                            &:hover{
+                                  background-color: #8293f3;
+                                
+
+                                  color: rgb(255, 255, 255);
+                                  transition: all 0.5s;
+                            }
+                          
+                          
+                        }
+                    }
+            }
+          }
+        h2{
+            text-align: center;
+            padding: 0.6rem 0;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            // background:linear-gradient(#283a9f,rgb(221, 49, 78));
+            color: #f09824;
+            // -webkit-text-fill-color: transparent;
+            // -webkit-background-clip:text;
+            @media screen and (max-width:768px) {
+                font-size: 2rem;
+            }
+        }
+
+      .card-wrapper{
+        width: 85%;
+        margin: 5rem auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        row-gap: 8rem;
+      }
+    }
+}

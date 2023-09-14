@@ -1,0 +1,16 @@
+.dahboard-layout-container{
+    display: flex;
+    align-items: start; 
+    margin-top: 1rem;
+    .left{
+        position: sticky;
+        top: 0;
+        width: 15%;
+        background: linear-gradient(rgb(73, 133, 108),rgb(100, 143, 100));
+    }
+    .right{
+        width: 85%;
+        padding: 1rem 2rem;
+        background-color: rgb(240, 239, 239);
+    }
+}

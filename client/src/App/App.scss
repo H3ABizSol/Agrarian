@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size: 64.5%;
+    font-family: sans-serif;
+    background-color: rgb(251, 249, 249);
+ 
+}
+.bg{
+    overflow: hidden;
+}
+.Toastify__toast-body > div:last-child {
+    word-break: break-word;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 1.5rem;
+}

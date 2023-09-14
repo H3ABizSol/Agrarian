@@ -1,0 +1,151 @@
+.admin-project-wrapper{
+    padding: 0.6rem 0;
+    background-color: rgb(255, 255, 255);
+    min-height: 600px;
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        color: #454745;
+    }
+    h4{
+        text-align: center;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        color: #454745;
+        margin-top: 1rem;
+    }
+    h3{
+        font-size: 3rem;
+        letter-spacing: 0.8rem;
+        text-align: center;
+        margin-top: 3rem;
+         color: rgb(131, 127, 127);
+         animation: paraanimie 4s linear infinite alternate;
+         @keyframes paraanimie {
+                0%{
+                    opacity: 0.4;
+                    transform: scale(1);
+                }
+                100%{
+                    opacity: 1;
+                    transform: scale(1.1);
+
+                }
+         }
+      }
+    .project-item{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            .delete{
+                background-color: rgb(218, 75, 75);
+            }
+            button{
+            display: flex;
+            gap: 0.5rem;
+              padding: 0.4rem 2rem;
+              outline: none;
+              border: none;
+               background-color: #629D7B;   
+               color: white;
+               font-size: 1.4rem;      
+               border-radius: 2px;   
+               cursor: pointer;  
+               margin-top: 1.2rem;
+            }
+        }
+        .items{
+            width: 350px;
+            height: 250px;
+            background-color: #e9efeb;
+            color: rgb(47, 46, 46);
+            padding: 0.4rem 0;
+            text-transform: capitalize;
+            box-shadow: 0 0 5px rgb(192, 205, 181);
+            figure{
+                width: 95%;
+                margin: auto;
+                height: 150px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            h3{
+                font-size: 1.8rem;
+                margin: 1rem 0 0 1rem;
+            }
+            p{
+                font-size: 1.3rem;
+                margin: 1rem 0 0 1rem;
+            }
+           
+        }
+    }
+}
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
+.update-project-container{
+    display: flex;
+    justify-content: center;
+    form{
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      padding: 1.2rem;
+      h2{
+        text-align: center;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+      }
+
+       .form-text-field{
+              display: flex;
+              gap: 2rem;
+
+              input,textarea,select{
+                width: 100%;
+                outline: none;
+                padding: 1rem 1.6rem;
+                border: 2px solid rgb(197, 196, 196);
+                border-radius: 4px;
+                resize: none;
+                option{
+    
+                    font-size: 1.5rem;
+                    color: rgb(86, 86, 86);
+                }
+              }
+        }
+        .btn-container{
+            button{
+              padding: 1rem 2rem;
+              outline: none;
+              border: none;
+               background-color: #629D7B;   
+               color: white;
+               font-size: 1.4rem;      
+               border-radius: 2px;   
+               cursor: pointer;  
+            }
+        }
+    }
+}

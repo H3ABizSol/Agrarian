@@ -1,0 +1,114 @@
+.about-section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;  
+    // .about-paralex{
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100vh;
+    //     background-color: rgb(37, 37, 37);
+    //     opacity: 0.3;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: 1;
+    // }
+
+
+
+    .video-wrapper{
+        position: absolute;
+        width: 100%;
+        top:0;
+        @media screen and (max-width:768px) {
+                 position: static;
+
+        }
+        video{
+            width: 100%;
+        }
+    }
+    
+    .about-wrapper{
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        display: flex;
+        width: 95%;
+        margin: auto;
+        padding: 1rem 0;
+        z-index: 2;
+        @media screen and (max-width:768px) {
+                  flex-direction: column;
+                   position: static;
+
+         }
+    
+        .left{
+            width: 50%;
+            @media screen and (max-width:768px) {
+             width: 100%;
+             order: 2;
+       }
+            h4{
+                font-size: 4rem;
+                margin-top: 4rem ;
+                color: rgb(230, 132, 52);
+                @media screen and (max-width:768px) {
+                    text-align: center;
+              }
+            
+            }
+            .content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 2rem;
+                p{
+                    font-size: 1.7rem;
+                    color: gray;
+                    line-height: 4rem;
+                    color:rgb(7, 4, 4);
+                    background-color: rgb(229, 223, 223);
+                    padding: 1rem;
+                    border: 5px;
+                    @media screen and (max-width:768px) {
+                       font-size: 1rem;
+                     
+
+                  }
+        
+                }
+            }
+        }
+    
+        .right{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5rem;
+            @media screen and (max-width:768px) {
+               width: 100%;
+               order: 1;
+              
+            }
+            figure{
+                width: 400px;
+                height: 400px;
+                background-color: rgb(236, 135, 69);
+                border-radius: 50%;
+                padding: 0.4rem;
+                @media screen and (max-width:768px) {
+                    width: 150px;
+                    height: 150px;
+           }
+            }
+            img{
+               width: 100%;
+               height: 100%;
+               border-radius:50%;
+            }
+        }
+    }
+}
+

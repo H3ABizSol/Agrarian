@@ -1,0 +1,143 @@
+.contact-paralex{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg/800px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg");
+    height: 220px;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: 100% 550px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     h2{
+        font-size: 4rem;
+        color: #D42C80;
+        z-index: 1;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+
+     }
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgb(117, 115, 115);
+        opacity: 0.2;
+    }
+}
+
+.contact-wrappers{
+    // height: 70vh;
+    // display: flex;
+    // align-items: center;
+    padding: 3rem 0;
+    .contact-form{
+        width: 80%;
+        min-height: 400px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @media screen and (max-width:868px){
+           display: flex;
+           flex-direction: column;
+           gap: 2rem;
+        }
+        // align-items: center ;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 2px rgb(223, 223, 223);
+        .left{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           gap: 1.5rem;
+           text-align: center;
+           position: relative;
+           height: 100%;
+           background:linear-gradient(25deg, rgba(168, 234, 63, 0.064),rgba(16, 140, 185, 0.125));
+           @media screen and (max-width:868px){
+             padding: 1.5rem 0;
+        }
+           .link{
+              text-decoration: none;
+              color: black;
+              font-size: 1.5rem;
+              font-weight: 600;
+              letter-spacing: 0.1rem;
+           }
+           .miss-call{
+            font-size: 1.7rem;
+            letter-spacing: 0.1rem;
+            font-weight: 500;
+            color: rgb(247, 59, 59);
+           }
+           .follow{
+            font-size: 1.5rem;
+            color: gray;
+           }
+           .social-icons{
+            display: flex;
+            justify-content: center;
+            gap: 1.4rem;
+            .icon{
+              color: white;
+              width: 35px;
+              height: 35px;
+              padding: 1rem;
+              border-radius: 50%;
+              font-size: 2.6rem; 
+              cursor: pointer;
+            }
+            .insta{
+                background-color: #D42C80;
+            }
+            .mail{
+                background-color: #D30000;
+            }
+            .twiter{
+                background-color: #1EA1F3;
+            }
+           }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+            // align-items: center;
+            text-align: center;
+            padding: 2rem 0;
+          input,textarea{
+            padding: 1.5rem 2rem;
+            outline: none;
+            border: 1px solid rgb(121, 169, 142);
+            width: 70%;
+            border-radius: 5px;
+      
+        }
+          button{
+              padding: 1.2rem 4rem;
+              width: 60%;
+              outline: none;
+              border: 1px solid rgb(30, 30, 29);
+              cursor: pointer;
+              background-color: transparent;
+              border-radius: 50px;
+              
+          }
+          h3{
+            font-size: 2.6rem;
+            color: rgb(119, 118, 118);
+            @media screen and (max-width:868px){
+                   font-size: 1.6rem;
+            }
+            // text-align: center;
+          }
+
+        }
+    }
+}
+.map-container{
+    width: 85%;
+    margin: auto;
+}

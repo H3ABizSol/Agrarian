@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const auth_1 = __importDefault(require("../middlewares/auth"));
+const router = express_1.default.Router();
+const admincontrolers_1 = require("../controlers/admincontrolers");
+// import multipleUpload from "../Helpers/multer";
+router.route("/authenticate").get(auth_1.default, admincontrolers_1.isAdmin);
+router.route("/register").post(admincontrolers_1.register);
+router.route("/login").post(admincontrolers_1.login);
+router.route("/update/:id").put(auth_1.default, admincontrolers_1.updateAdmin);
+router.route("/sendemail").post(admincontrolers_1.sendEmail);
+// router.route("/create").post(multipleUpload.array("img"), createProperty);
+// router.route("/delete/:id").delete(deleteProperty);
+// router.route("/create").post(multipleUpload.array("img"), createProperty);
+// router.route("/create").post(multipleUpload.array("img"), createProperty);
+exports.default = router;
