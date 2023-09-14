@@ -12,7 +12,7 @@ export const Servicedetial = () => {
   const params = useParams();
 
   const getProjectDetail = async () => {
-    const { data } = await axios.get(`/api/property/all`);
+    const { data } = await axios.get(`http://localhost:4000/api/property/all`);
     let names: any = params.name;
 
     if (data.success) {
@@ -48,7 +48,10 @@ export const Servicedetial = () => {
               return (
                 <div className="service-items">
                   <figure>
-                    <img src={`/uploads/${p.img[0]}`} alt="" />
+                    <img
+                      src={`http://localhost:4000/uploads/${p.img[0]}`}
+                      alt=""
+                    />
                   </figure>
                   <h3>{p.title}</h3>
                   <p>{p.desc}</p>

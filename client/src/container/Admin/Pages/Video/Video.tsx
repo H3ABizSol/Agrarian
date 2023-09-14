@@ -15,7 +15,10 @@ export const Video = () => {
     setSpin(true);
     const formData = new FormData();
     formData.append("video", video);
-    const { data } = await axios.post("/api/property/uploads", formData);
+    const { data } = await axios.post(
+      "http://localhost:4000/api/property/uploads",
+      formData
+    );
     console.log(data);
     if (data.success) {
       setSpin(false);
@@ -26,7 +29,9 @@ export const Video = () => {
 
   const getVideos = async () => {
     setSpin(true);
-    const { data } = await axios.get("/api/property/videos");
+    const { data } = await axios.get(
+      "http://localhost:4000/api/property/videos"
+    );
     if (data.success) {
       setAllVideos([...data.videos]);
     }
@@ -37,7 +42,9 @@ export const Video = () => {
     const confirm = window.confirm("Are you sure");
     if (confirm) {
       setSpin(true);
-      const { data } = await axios.delete(`/api/property/deletevideo/${v._id}`);
+      const { data } = await axios.delete(
+        `http://localhost:4000/api/property/deletevideo/${v._id}`
+      );
       console.log(data);
       if (data.success) {
         setSpin(false);
@@ -85,7 +92,9 @@ export const Video = () => {
                 return (
                   <div className="video-item">
                     <video controls>
-                      <source src={`/uploads/${v.video}`}></source>
+                      <source
+                        src={`http://localhost:4000/uploads/${v.video}`}
+                      ></source>
                     </video>
                     <div className="btn-container">
                       <button

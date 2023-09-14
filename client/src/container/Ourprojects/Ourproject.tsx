@@ -16,9 +16,11 @@ export const Ourproject = () => {
   // const [spin, setSpin] = React.useState(false);
 
   const getProjects = async () => {
-    const { data } = await axios.get("/api/property/all");
+    // setSpin(true);
+    const { data } = await axios.get("http://localhost:4000/api/property/all");
     if (data.success) {
       setAllProperty([...data.allProperty]);
+      // setSpin(false);
       setIsFilter(false);
       setIsProperty(true);
     }
@@ -69,7 +71,10 @@ export const Ourproject = () => {
                   return (
                     <div className="project-items">
                       <figure>
-                        <img src={`/uploads/${p.img[0]}`} alt="" />
+                        <img
+                          src={`http://localhost:4000/uploads/${p.img[0]}`}
+                          alt=""
+                        />
                       </figure>
                       <div className="content">
                         <h3>{p.title}</h3>
@@ -159,7 +164,10 @@ export const Ourproject = () => {
                   return (
                     <div className="project-items">
                       <figure>
-                        <img src={`/uploads/${p.img[0]}`} alt="" />
+                        <img
+                          src={`http://localhost:4000/uploads/${p.img[0]}`}
+                          alt=""
+                        />
                       </figure>
                       <div className="content">
                         <h3>{p.title}</h3>

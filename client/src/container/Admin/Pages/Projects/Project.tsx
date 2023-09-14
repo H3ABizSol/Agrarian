@@ -104,7 +104,7 @@ export const Project = () => {
     formData.append("parking", updatePropertyDetails.parking);
 
     const { data } = await axios.put(
-      `/api/property/update/${updateId}`,
+      `http://localhost:4000/api/property/update/${updateId}`,
       formData,
       {
         headers: {
@@ -122,7 +122,7 @@ export const Project = () => {
 
   const getProjects = async () => {
     setSpin(true);
-    const { data } = await axios.get("/api/property/all");
+    const { data } = await axios.get("http://localhost:4000/api/property/all");
     if (data.success) {
       setAllProperty([...data.allProperty]);
       setSpin(false);
@@ -150,11 +150,14 @@ export const Project = () => {
     const confirm = window.confirm("Are you sure");
     if (confirm) {
       setSpin(true);
-      const { data } = await axios.delete(`/api/property/delete/${p._id}`, {
-        headers: {
-          token: localStorage.getItem("admin_token"),
-        },
-      });
+      const { data } = await axios.delete(
+        `http://localhost:4000/api/property/delete/${p._id}`,
+        {
+          headers: {
+            token: localStorage.getItem("admin_token"),
+          },
+        }
+      );
       console.log(data);
       if (data.success) {
         setSpin(false);
@@ -196,7 +199,10 @@ export const Project = () => {
                   <div>
                     <div className="items">
                       <figure>
-                        <img src={`/uploads/${p.img[0]}`} alt="" />
+                        <img
+                          src={`http://localhost:4000/uploads/${p.img[0]}`}
+                          alt=""
+                        />
                       </figure>
                       <h4>{p.title}</h4>
                       <p>Rs {p.price}</p>

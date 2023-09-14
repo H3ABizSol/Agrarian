@@ -11,7 +11,7 @@ export const Projectdetail = () => {
 
   const getProjectDetail = async () => {
     const { data } = await axios.get(
-      `/api/property/propertydetail/${params.id}`
+      `http://localhost:4000/api/property/propertydetail/${params.id}`
     );
     console.log(data);
     if (data.success) {
@@ -29,7 +29,8 @@ export const Projectdetail = () => {
           <figure>
             <img
               src={
-                propertyDetail.img && `/uploads/${propertyDetail.img[imgIndex]}`
+                propertyDetail.img &&
+                `http://localhost:4000/uploads/${propertyDetail.img[imgIndex]}`
               }
               alt=""
             />
@@ -43,7 +44,7 @@ export const Projectdetail = () => {
                   setImgIndex(index);
                 }}
               >
-                <img src={`/uploads/${i}`} alt="" />
+                <img src={`http://localhost:4000/uploads/${i}`} alt="" />
               </figure>
             );
           })}
