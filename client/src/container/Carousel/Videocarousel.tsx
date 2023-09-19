@@ -29,16 +29,17 @@ export const Videocarousel = ({ allVideos }: any) => {
         responsive={responsive}
         className="carasouel"
         showDots={true}
+        arrows={false}
         autoPlay={true}
+        infinite={true}
+        autoPlaySpeed={3000}
       >
         {allVideos &&
           allVideos.map((v: any) => {
             return (
               <div className="video-slide">
                 <video controls autoPlay={true} muted>
-                  <source
-                    src={`http://localhost:4000/uploads/${v.video}`}
-                  ></source>
+                  <source src={`/uploads/${v.video}`}></source>
                 </video>
               </div>
             );

@@ -29,6 +29,7 @@ header{
      nav{ 
         width: 100%;
         margin: auto;
+        padding: 1.6rem 0;
         @media screen and (max-width:1445px){
             width: 100%;
         }
@@ -45,14 +46,15 @@ header{
         left: 0;
         width: 65%;
         background-color: rgb(198, 195, 195);
+        background-color: #1d3261;
         // transform: translateX(100%);
         height: 100vh;
-        z-index: 2; 
+        z-index: 9999; 
         display: flex;
         align-items: center;
         // justify-content: center;
-        animation: slider 0.4s linear;
         padding: 0 2rem;
+        animation: slider 0.4s linear;
         @keyframes slider {
             0%{
                 margin-left: -50rem;
@@ -88,11 +90,7 @@ header{
                 font-weight: 550;
                 text-transform: uppercase;
                 cursor: pointer;
-                color: rgb(208, 141, 18);
-                &:first-child{
-                    // background:linear-gradient(#283a9f,rgb(221, 49, 78));
-                    color: rgb(151, 100, 12);
-                }
+                color: white;
                 &:hover > .sub-menu-li{
                     display: flex;
                     flex-direction: column;
@@ -105,7 +103,7 @@ header{
                     z-index: 13;
                     background-color: rgb(205, 201, 201);
                     // background:linear-gradient(#283a9f,rgb(221, 49, 78));
-                    color: rgb(209, 125, 15);
+                    color: white;
                     animation: animehover 0.6s forwards;
                     li{
                         text-transform: capitalize;
@@ -179,15 +177,25 @@ header{
         margin-top: 2rem;
         color: rgb(212, 152, 21);
         figure{
-             width: 140px;
-             height: 120px;
+             width: 240px;  
+             padding: 9rem 0;
+             img{
+                  width: 100%;
+                  height: 100%;
+                   margin-left: 5rem;
+                   margin-top: 
+                   4rem;
+                   @media screen and (max-width:868px){
+                     margin-top: 
+                     2rem;
+                     margin-left: 0;
+                    }
+                 
+             }
+             @media screen and (max-width:868px){
+                   width: 180px;
+               }
              
-        }
-        img{
-             width: 100%;
-             height: 100%;
-            margin-left: 5rem;
-            
         }
         @media screen and (max-width:868px){
          width: 100%;
@@ -207,6 +215,8 @@ header{
 
        .navbar-wrapper{
         width: 80%;
+        display: flex;
+        justify-content: center;
         ul{
             display: flex;
             justify-content:center;
@@ -219,16 +229,32 @@ header{
                   display: none;
             } 
             li{
-                font-size: 1.2rem;
+                font-size: 1.6rem;
                 letter-spacing: 0.1rem;
                 position: relative; 
-                font-weight: 550;
+                font-weight: 700;
+                font-family: "Lato";
                 text-transform: uppercase;
                 cursor: pointer;
-                color: rgb(208, 141, 18);
-                &:first-child{
-                    // background:linear-gradient(#283a9f,rgb(221, 49, 78));
-                    color: rgb(151, 100, 12);
+                // color: rgb(208, 141, 18);
+                color: #011F5F;
+                .sub-li{
+                    &:hover{
+                        background-color: #011F5F;
+                        padding: 1rem 0;
+                        transition: all 0.2s;
+                        color: white;
+                    }
+                    li{
+                        &:hover{
+                            background-color: #011F5F;
+                            padding: 1rem 0;
+                            transition: all 0.2s;
+                            color: white;
+
+                        }
+                    }
+
                 }
                 &:hover > .sub-menu-li{
                     display: flex;
@@ -236,27 +262,29 @@ header{
                     gap: 1.6rem;
                     position: absolute;
                     padding: 1rem 0.8rem;
-                    width: 230px;
+                    width: 280px;
                     top: 100%;
-                    left: 50%;
+                    left: 10%;
                     z-index: 13;
                     background-color: rgb(238, 235, 235);
-               
                     // background:linear-gradient(#283a9f,rgb(221, 49, 78));
                     color: rgb(209, 125, 15);
                     animation: animehover 0.6s forwards;
+              
                     li{
                         text-transform: capitalize;
-                        font-size: 1.5rem;
-                        font-weight: 400;
+                        font-size: 1.7rem;
+                        padding: 1rem 0.5rem;
+                        font-weight: 600;
+
                     }
                     li:hover > .sub-sub-menu-li {
                         display: flex;
                         flex-direction: column;
                         gap: 1rem;
-                        width: 220px;
+                        width: 280px;
                         position: absolute;
-                        top: -55%;
+                        top: -28%;
                         right: 100%;
                         z-index: 20;
                         padding: 1rem 0.5rem;
@@ -272,8 +300,8 @@ header{
                        }
                        li{
                         text-transform: capitalize;
-                        font-size: 1.4rem;
-                        font-weight: 500;
+                        font-size: 1.7rem;
+                        font-weight: 600;
                        }
                     }
                     @keyframes animehover {

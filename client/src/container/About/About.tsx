@@ -21,14 +21,19 @@ export const About = () => {
             <h4>About us</h4>
             <div className="content">
               <p>
-                A Delhi University alumnus, Mr. Ankush Jain left his high paying
-                job to bring a revolutionary change in the mammoth world of
-                Indian real estate through his sheer vision and hard-earned
-                experience. It is his hardship and dedication towards his work
-                that Bullmen Realty is on the right path to achieving new
-                heights. The founder of Bullmen Realty India, Mr. Ankush Jain is
-                the first generation entrepreneur of the family and dons many
-                hats as Chief Executive
+                Agrarian Infratech leverages the power of technology and brings
+                simplicity, transparency and trust in unstructured real estate
+                world. Agrarian infratech provides complete end to end solutions
+                to their customers through mix of technology-enabled tools as
+                well as on-ground support, research base information about
+                various localities and properties and provides guidance on
+                matters pertaining to legal paperwork and loan assistance to
+                successfully fulfill service With nothing in his hand Mr. Anil
+                Roy, the Captain of Agrarian Infratech ship, begin this voyage
+                and sailed it successfully amidst the gigantic crests and
+                troughs of the real estate. He and his entire team are fully
+                devoted to offering unique experience to our valuable customers
+                that they can cherish their dream buying journey for a lifetime.
               </p>
             </div>
           </div>

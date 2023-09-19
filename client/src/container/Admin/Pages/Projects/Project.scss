@@ -1,7 +1,7 @@
 .admin-project-wrapper{
     padding: 0.6rem 0;
     background-color: rgb(255, 255, 255);
-    min-height: 600px;
+    min-height: 100vh;
     h2 {
         text-align: center;
         font-size: 2rem;
@@ -11,7 +11,9 @@
     }
     h4{
         text-align: center;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        height: 15px;
+        overflow: hidden;
         text-transform: uppercase;
         letter-spacing: 0.3rem;
         color: #454745;

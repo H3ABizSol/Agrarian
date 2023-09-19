@@ -1,6 +1,10 @@
 import "./sidenavdashboard.scss";
-import { AiOutlineFundProjectionScreen, AiOutlineHome } from "react-icons/ai";
-import { MdOutlineCreate } from "react-icons/md";
+import {
+  AiOutlineFundProjectionScreen,
+  AiOutlineHome,
+  AiOutlineVideoCamera,
+} from "react-icons/ai";
+import { MdOutlineCreate, MdCropPortrait } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 export const Sidenavdash = () => {
@@ -22,8 +26,15 @@ export const Sidenavdash = () => {
 
         <Link to="/admin/video" className="link">
           <li>
-            <MdOutlineCreate />
+            <AiOutlineVideoCamera />
             videos
+          </li>
+        </Link>
+
+        <Link to="/admin/careers" className="link">
+          <li>
+            <MdCropPortrait />
+            Careers
           </li>
         </Link>
         <Link to="/admin/create" className="link">

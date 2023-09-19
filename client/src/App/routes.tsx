@@ -11,6 +11,8 @@ import { Createproject } from "../container/Admin/Pages/Project/createproject";
 import { Video } from "../container/Admin/Pages/Video/Video";
 import { Project } from "../container/Admin/Pages/Projects/Project";
 import { Projectdetail } from "../container/Projectdetails/Projectdetail";
+import { Career } from "../container/Career/Career";
+import { Admincareer } from "../container/Admin/Pages/Career/Career";
 
 ContactPage;
 const routes = () => {
@@ -23,11 +25,13 @@ const routes = () => {
       <Route path="/service/:name" element={<Servicedetial />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/about" element={<About />} />
+      <Route path="/careers" element={<Career />} />
       <Route path="/admin" element={<Privateroute />}>
         <Route path="" element={<Dashboard />} />
         <Route path="create" element={<Createproject />} />
         <Route path="video" element={<Video />} />
         <Route path="projects" element={<Project />} />
+        <Route path="careers" element={<Admincareer />} />
       </Route>
       {/* <Route path="/login" element={<h2>Login Page</h2>} /> */}
     </Routes>

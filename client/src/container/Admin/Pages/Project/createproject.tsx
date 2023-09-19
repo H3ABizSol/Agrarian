@@ -95,15 +95,11 @@ export const Createproject = () => {
     formData.append("washrooms", propertyDetails.washrooms);
     formData.append("parking", propertyDetails.parking);
 
-    const { data } = await axios.post(
-      "http://localhost:4000/api/property/create",
-      formData,
-      {
-        headers: {
-          token: localStorage.getItem("admin_token"),
-        },
-      }
-    );
+    const { data } = await axios.post("/api/property/create", formData, {
+      headers: {
+        token: localStorage.getItem("admin_token"),
+      },
+    });
     if (data.success) {
       setSpin(false);
       setOk(true);

@@ -19,11 +19,7 @@ export const Login = () => {
         "Content-Type": "application/json",
       },
     };
-    const { data } = await axios.post(
-      "http://localhost:4000/api/auth/login",
-      formData,
-      config
-    );
+    const { data } = await axios.post("/api/auth/login", formData, config);
     console.log(data);
     if (data.success) {
       localStorage.setItem("admin_token", data.token);

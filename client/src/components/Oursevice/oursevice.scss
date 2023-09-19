@@ -1,11 +1,10 @@
 .oursevice-wrapper{
     background-color: #FFFFFF;
-    margin-top: 5rem;
+    margin-top: 4rem;
     .service-container{
         h2{
             font-size: 3.5rem;
             text-align: center;
-            // color: #3052a1ce;
             color: rgb(117, 116, 116);
             text-transform: uppercase;
             letter-spacing: 0.3rem;
@@ -13,14 +12,15 @@
                 font-size:1.8rem;
             }
         }
-        p{
-            text-align: center;
-            font-size: 1.4rem;
-            margin-top: 2rem;
-        }
+        // p{
+        //     text-align: center;
+        //     font-size: 1.4rem;
+        //     margin-top: 2rem;
+        //     color: #011F5F;
+        // }
        .service-icon{
         width: 80%;
-        margin: 2rem auto;
+        margin: -2rem auto;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -47,12 +47,16 @@
                 // background:linear-gradient(#5b72f4,rgb(252, 95, 122));
                 // background: linear-gradient(rgb(201, 133, 6),rgb(249, 249, 154),rgb(118, 114, 114));
                 background-color: rgb(233, 171, 55);
+                background-color: #011F5F;
                border-radius: 10px;
                 font-size: 5rem;
             }
             h3{
                 font-size: 1.6rem;
                 margin: 2rem;
+                // color: #011F5F;
+                // color: rgb(0, 0, 0);
+                color: #c0762d;
             }
             p{
                 font-size: 1rem;

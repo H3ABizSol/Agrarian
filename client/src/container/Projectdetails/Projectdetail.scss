@@ -4,6 +4,9 @@
     .img-container{
         figure{
             height: 450px;
+            @media screen and (max-width:768px) {
+                 height: 240px;
+            }
             img{
               width: 100%;
               height: 100%;
@@ -13,16 +16,23 @@
     }
     .img-show{
           display: flex;
-          flex-wrap: wrap;
           gap: 3rem;
           justify-content: center;
           width: 70%;
           margin: 1.6rem auto;
           text-wrap: nowrap;
+          @media screen and (max-width:768px) {
+                 display: grid;
+                 grid-template-columns: 1fr 1fr;
+          }
           figure{
             width: 200px;
             height: 140px;
             cursor: pointer;
+            @media screen and (max-width:768px) {
+                 width: 150px;
+                 height: 120px;
+            }
             img{ 
                 width: 100%;
                 height: 100%;
@@ -33,8 +43,15 @@
         display: flex;
         width: 85%;
         margin: 4rem auto;
+        @media screen and (max-width:768px) {
+            flex-direction: column;
+            gap: 2rem;
+      }
         .left{
             width: 70%;
+            @media screen and (max-width:768px) {
+                width: 100%;
+          }
             .first{
                 display: flex;
                 flex-direction: column;
@@ -42,6 +59,9 @@
                 h2{
                     font-size: 2.5rem;
                     text-transform: capitalize;
+                    @media screen and (max-width:768px) {
+                          font-size: 1.5rem;
+                    }
                 }
                 span{
                     display: flex;
@@ -53,10 +73,15 @@
                     font-size: 1.7rem;
                     color: gray;
                     text-transform: capitalize;
+                    @media screen and (max-width:768px) {
+                       font-size: 1.4rem;
+                       line-height: 2.4rem;
+                    }
                 }
             }
             .second{
                 display: flex;
+                flex-wrap: wrap;
                 gap: 2rem;
                 margin-top: 2rem;
                 .items{
@@ -66,6 +91,9 @@
                     p{
                         font-size: 1.6rem;
                         color: rgb(61, 61, 61);
+                        @media screen and (max-width:768px) {
+                              font-size: 1.2rem;
+                        }
                     }
                 }
             }

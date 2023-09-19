@@ -1,0 +1,74 @@
+.create-career-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(251, 251, 251);
+    min-height: 600px;
+    form{
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      padding: 1.2rem;
+      h2{
+        text-align: center;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+      }
+
+       .form-text-field{
+              display: flex;
+              gap: 2rem;
+
+              input,textarea,select{
+                width: 100%;
+                outline: none;
+                padding: 1rem 1.6rem;
+                border: 2px solid rgb(197, 196, 196);
+                border-radius: 4px;
+                resize: none;
+                option{
+    
+                    font-size: 1.5rem;
+                    color: rgb(86, 86, 86);
+                }
+              }
+        }
+        .btn-container{
+            button{
+              padding: 1rem 2rem;
+              outline: none;
+              border: none;
+               background-color: #2A4278;   
+               color: white;
+               font-size: 1.4rem;      
+               border-radius: 2px;   
+               cursor: pointer;  
+            }
+        }
+    }
+    .btn-container{
+     display: flex;
+     gap: 2rem;
+     button{
+        padding: 0.6rem 2rem;
+        background-color: rgb(65, 144, 82);
+        background-color: #2A4278;
+        color: white;
+        outline: none;
+         border: none;
+         display: flex;
+         align-items: center;
+         gap: 0.6rem;
+     }
+    }
+    .career-wrapper{
+       .careers-container{
+        .items{
+            width: 360px;
+        }
+       }
+    }
+
+}

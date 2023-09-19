@@ -5,6 +5,8 @@ import errorHanlder from "./middlewares/error";
 import Database from "./database/db";
 import propertyRoute from "./routes/property";
 import adminRoute from "./routes/adminroute";
+import careerRoute from "./routes/career";
+
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import path from "path";
@@ -22,10 +24,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/api/auth", adminRoute);
 app.use("/api/property", propertyRoute);
+app.use("/api/career", careerRoute);
 
-app.use(express.static(path.join(__dirname, "../client/build/")));
+app.use(express.static(path.join(__dirname, "../client/dist/")));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
 
 // db connection

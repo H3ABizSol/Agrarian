@@ -6,19 +6,25 @@ import { LuBedDouble } from "react-icons/lu";
 import "./Ourproject.scss";
 import axios from "axios";
 import logo from "../../assets/LOGO.png";
+import { Link } from "react-router-dom";
 
 export const Ourproject = () => {
   const [allProperty, setAllProperty] = React.useState([] as any);
   const [filterProperty, setFilterProperty] = React.useState([] as any);
   const [isFilter, setIsFilter] = useState(false);
   const [isProperty, setIsProperty] = useState(false);
+  const [location, setLocation] = useState([] as any);
 
   // const [spin, setSpin] = React.useState(false);
 
   const getProjects = async () => {
     // setSpin(true);
-    const { data } = await axios.get("http://localhost:4000/api/property/all");
+    const { data } = await axios.get("/api/property/all");
     if (data.success) {
+      const filterLocation = data.allProperty.map((i: any) => {
+        return i.location;
+      });
+      setLocation([...new Set(filterLocation)]);
       setAllProperty([...data.allProperty]);
       // setSpin(false);
       setIsFilter(false);
@@ -27,6 +33,7 @@ export const Ourproject = () => {
   };
 
   const filterProject = (e: any) => {
+    console.log(e.target.innerHTML);
     if (e.target.innerHTML.toLowerCase() === "all") {
       setIsProperty(true);
       setIsFilter(false);
@@ -34,10 +41,30 @@ export const Ourproject = () => {
       setIsProperty(false);
       setIsFilter(true);
       const filterData = allProperty.filter((i: any) => {
+        if (
+          i.ourservices.subservice.toLowerCase() ===
+          e.target.innerHTML.toLowerCase()
+        ) {
+          console.log("hai");
+        }
         return (
           i.ourservices.subservice.toLowerCase() ===
           e.target.innerHTML.toLowerCase()
         );
+      });
+      console.log(filterData);
+      setFilterProperty([...filterData]);
+    }
+  };
+  const filterLocation = (e: any) => {
+    if (e.target.innerHTML.toLowerCase() === "all") {
+      setIsProperty(true);
+      setIsFilter(false);
+    } else {
+      setIsProperty(false);
+      setIsFilter(true);
+      const filterData = allProperty.filter((i: any) => {
+        return i.location.toLowerCase() === e.target.innerHTML.toLowerCase();
       });
       setFilterProperty([...filterData]);
     }
@@ -71,17 +98,14 @@ export const Ourproject = () => {
                   return (
                     <div className="project-items">
                       <figure>
-                        <img
-                          src={`http://localhost:4000/uploads/${p.img[0]}`}
-                          alt=""
-                        />
+                        <img src={`/uploads/${p.img[0]}`} alt="" />
                       </figure>
                       <div className="content">
                         <h3>{p.title}</h3>
                         <p>{p.desc}</p>
                         <div className="location">
                           <SlLocationPin className="icon" />
-                          <span>{p.loaction}</span>
+                          <span>{p.location}</span>
                         </div>
                         <p className="price"> ₹ {p.price}</p>
                         <div className="residental-wrapper">
@@ -103,7 +127,9 @@ export const Ourproject = () => {
                           </div>
                         </div>
                         <div>
-                          <button>More</button>
+                          <Link to={`/projectdetails/${p._id}`}>
+                            <button>More</button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -130,18 +156,23 @@ export const Ourproject = () => {
                 }}
               >
                 <p className="item">Residental</p>
-                <p className="item">Coomercial</p>
                 <p className="item">Land</p>
                 <p className="item">Dream Home</p>
-                <p className="item">Coomercial</p>
+                <p className="item">Commercial</p>
                 <p className="item">Plot</p>
                 <p className="item">All</p>
               </div>
               <h4>By Location</h4>
-              <div className="residental-category">
-                <p className="item">Nodia</p>
-                <p className="item">Gurugram</p>
-                <p className="item">Nodia</p>
+              <div
+                className="residental-category"
+                onClick={(e) => {
+                  filterLocation(e);
+                }}
+              >
+                {location &&
+                  location.map((l: any) => {
+                    return <p className="item">{l}</p>;
+                  })}
               </div>
               <h4>By Price</h4>
               <div className="price">
@@ -164,17 +195,14 @@ export const Ourproject = () => {
                   return (
                     <div className="project-items">
                       <figure>
-                        <img
-                          src={`http://localhost:4000/uploads/${p.img[0]}`}
-                          alt=""
-                        />
+                        <img src={`/uploads/${p.img[0]}`} alt="" />
                       </figure>
                       <div className="content">
                         <h3>{p.title}</h3>
                         <p>{p.desc}</p>
                         <div className="location">
                           <SlLocationPin className="icon" />
-                          <span>{p.loaction}</span>
+                          <span>{p.location}</span>
                         </div>
                         <p className="price"> ₹ {p.price}</p>
                         <div className="residental-wrapper">
@@ -196,7 +224,9 @@ export const Ourproject = () => {
                           </div>
                         </div>
                         <div>
-                          <button>More</button>
+                          <Link to={`/projectdetails/${p._id}`}>
+                            <button>More</button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -223,18 +253,25 @@ export const Ourproject = () => {
                 }}
               >
                 <p className="item">Residental</p>
-                <p className="item">Coomercial</p>
+                <p className="item">Commercial</p>
                 <p className="item">Land</p>
                 <p className="item">Dream Home</p>
-                <p className="item">Coomercial</p>
                 <p className="item">Plot</p>
                 <p className="item">All</p>
               </div>
               <h4>By Location</h4>
-              <div className="residental-category">
-                <p className="item">Nodia</p>
-                <p className="item">Gurugram</p>
-                <p className="item">Nodia</p>
+              <div
+                className="residental-category"
+                onClick={(e) => {
+                  filterLocation(e);
+                }}
+              >
+                {location &&
+                  location.map((l: any) => {
+                    return <p className="item">{l}</p>;
+                  })}
+                {/* <p className="item">Gurugram</p>
+                <p className="item">Nodia</p> */}
               </div>
               <h4>By Price</h4>
               <div className="price">

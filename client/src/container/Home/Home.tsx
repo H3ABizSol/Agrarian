@@ -8,12 +8,15 @@ import banner1 from "../../assets/banner1.webp";
 import "./Home.scss";
 import { Link } from "react-router-dom";
 import { Relatedvideo } from "../Relatedvideos/Relatedvideo";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 
 const Home = () => {
   const image: string[] = [
     "https://www.bankrate.com/2020/10/02105002/What_are_real_estate_comps.jpg",
     "https://www.build-review.com/wp-content/uploads/2020/07/luxury-real-estate.jpg",
     banner1,
+    "https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+    "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1348328425/image_1348328425.jpg?io=getty-c-w750",
   ];
 
   return (
@@ -34,10 +37,14 @@ const Home = () => {
           </div>
           <div className="right">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
-              quod nobis omnis harum maiores dolore ullam. Minima fuga rem quod
-              tempore provident fugit aliquid, libero iste enim repudiandae sed
-              laudantium!
+              Agrarian Infratech leverages the power of technology and brings
+              simplicity, transparency and trust in unstructured real estate
+              world. Agrarian infratech provides complete end to end solutions
+              to their customers through mix of technology-enabled tools as well
+              as on-ground support, research base information about various
+              localities and properties and provides guidance on matters
+              pertaining to legal paperwork and loan assistance to successfully
+              fulfill service..
             </p>
             <div className="btn-container">
               <Link to="/about">
@@ -49,6 +56,11 @@ const Home = () => {
       </section>
       <Relatedvideo />
       <Contact />
+      <a href="https://api.whatsapp.com/send?phone=7497042180">
+        <div className="whatsapp">
+          <AiOutlineWhatsApp className="icon" />
+        </div>
+      </a>
     </Layout>
   );
 };

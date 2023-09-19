@@ -1,0 +1,43 @@
+.career-wrapper{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(245, 251, 251);
+    .paralex{
+        width: 100vw;
+        background: url("https://www.jwunited.com.my/v2/img/career.jpg");
+        background-position: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height: 400px;
+    }
+    .careers-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 10rem;
+        column-gap: 2rem;
+        width: 90%;
+        margin: 4rem auto;
+        padding: 2rem 0;
+        .items{
+            width: 380px;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            border: 2px solid rgb(137, 136, 136);
+            box-shadow: 0 0 2px rgb(181, 178, 178);
+            padding: 1rem 0.8rem;
+            background-color: white;
+            h2{
+                font-size: 2.4rem;
+                color: #16a30a;
+            }
+            p{
+                font-size: 1.6rem;
+                color: rgb(65, 63, 63);
+
+            }
+        }
+    }
+}

@@ -17,7 +17,7 @@ export const Header = () => {
   const [nav, setNav] = useState(false);
 
   const changeNav = () => {
-    if (window.scrollY > 250) {
+    if (window.scrollY > 400) {
       setNav(true);
     } else {
       setNav(false);
@@ -76,7 +76,9 @@ export const Header = () => {
           <div className="bottom-nav">
             <div className="logo-wrapper">
               <figure>
-                <img src={logo} alt="" />
+                <Link to="/">
+                  <img src={logo} alt="" />
+                </Link>
               </figure>
             </div>
             <div className={"navbar-wrapper"}>
@@ -90,35 +92,35 @@ export const Header = () => {
                 <li>
                   OUR SERVICE
                   <ul className="sub-menu-li">
-                    <li>
+                    <li className="sub-li">
                       Property Bajjar
                       <ul className="sub-sub-menu-li">
-                        <Link to="/service/residental" className="link">
+                        <a href="/service/residental" className="link">
                           <li>Residental</li>
-                        </Link>
-                        <Link to="/service/coomercial" className="link">
+                        </a>
+                        <a href="/service/commercial" className="link">
                           <li>Commercial</li>
-                        </Link>
+                        </a>
                       </ul>
                     </li>
-                    <li>
+                    <li className="sub-li">
                       Agraina Landcraft
                       <ul className="sub-sub-menu-li">
-                        <Link to="/service/plot" className="link">
-                          <li>Plot</li>
-                        </Link>
-                        <Link to="/service/land development" className="link">
+                        <a href="/service/plot" className="link">
+                          <li className="sub-li">Plot</li>
+                        </a>
+                        <a href="/service/land development" className="link">
                           <li>Land Development</li>
-                        </Link>
+                        </a>
                       </ul>
                     </li>
-                    <li>
+                    <li className="sub-li">
                       Agrain Home
                       <ul className="sub-sub-menu-li">
                         <li>Dream Home Construction</li>
                       </ul>
                     </li>
-                    <li>
+                    <li className="sub-li">
                       Agrarain Infrastructure
                       <ul className="sub-sub-menu-li">
                         <li>Building Walion</li>
@@ -130,9 +132,11 @@ export const Header = () => {
                   <li>PROJECTS</li>
                 </Link>
                 <li>LEGAL GURU</li>
-                <li>CAREER</li>
+                <Link to="/careers" className="link">
+                  <li>CAREERS</li>
+                </Link>
                 <Link to="/contact" className="link">
-                  <li>CONTACT US</li>
+                  <li>CONNECT US</li>
                 </Link>
               </ul>
             </div>
@@ -148,7 +152,9 @@ export const Header = () => {
                 <Link to="/" className="link">
                   <li>HOME</li>
                 </Link>
-                <li>WHO WE ARE</li>
+                <Link to="/about" className="link">
+                  <li>WHO WE ARE</li>
+                </Link>
                 <li>
                   OUR SERVICE
                   <ul className="sub-menu-li">

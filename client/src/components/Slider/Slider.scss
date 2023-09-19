@@ -1,17 +1,22 @@
 .slider-wrapper{
     position: relative;
     background-color: rgb(255, 255, 255);
-    width: 97%;
+    width: 100%;
     margin: auto;
      .cara-style{
-        border-radius: 15px;
-        z-index: 1;
-        img{
-            width: 100%;
-            height:520px;
+        figure{
+            height: 500px;
             @media screen and (max-width:768px){
                 width:100%;
-                height: 470px;
+                height: 250px;
+            }
+            img{
+                width: 100%;
+                height:100%;
+                @media screen and (max-width:768px){
+                    width:100%;
+                    height: 250px;
+                }
             }
         }
         &::after{
@@ -23,7 +28,7 @@
             opacity: 0.2;
             top: 0;
             left: 0;
-            border-radius: 15px;
+            // border-radius: 15px;
         }
      }
   
@@ -37,9 +42,7 @@
         align-items: center;
         @media screen and (max-width:768px) {
             width: 100%;
-            top: 60%;
-          
-        
+            top: 70%;
         }
         .search-wrapper{
             position: relative;
@@ -67,6 +70,10 @@
                  border-radius: 30px;
                  width: 100%;
                  font-size: 2rem;
+                 @media screen and (max-width:768px) {
+                    width: 90%;
+                    font-size: 1.2rem;
+                 }
             }
             .icon{
               background-color: rgb(71, 62, 62);
@@ -79,6 +86,13 @@
               display: flex;
               justify-content: center;
               align-items: center;
+              @media screen and (max-width:768px) {
+                  top: 16%;
+                  right: 8%;
+                  padding: 0.5rem;
+                  width: 28px;
+                  height: 28px;
+              }
             }
         
 
@@ -86,13 +100,13 @@
         .search-wrapper.fix-scroll{
             position: fixed;
             left: 32%;
-            top: 9.2%;
+            top: 13.6%;
             z-index: 8;
             animation: anime 1.5s forwards;
             @media screen and (max-width:768px) {
                 width: 95%;
                 left: 3%;
-                top: 7.8%;
+                top: 15.4%;
                 input{
                     border: 5px solid black;
                     font-size: 1rem;
@@ -100,6 +114,37 @@
                 .icon{
                     top: 10%;
                     right: 2%;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+            @media screen and (max-width:468px) {
+                width: 95%;
+                left: 3%;
+                top: 11.4%;
+                input{
+                    border: 5px solid black;
+                    font-size: 1rem;
+                }
+                .icon{
+                    top: 10%;
+                    right: 2%;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+
+            @media screen and (max-width:400px) {
+                width: 95%;
+                left: 3%;
+                top: 15.4%;
+                input{
+                    border: 5px solid black;
+                    font-size: 1rem;
+                }
+                .icon{
+                    top: 10%;
+                    right: 7%;
                     width: 35px;
                     height: 35px;
                 }
@@ -116,6 +161,43 @@
                 border: 1px solid rgb(168, 160, 160);
             }
             
+        }
+      
+    }
+    h2{
+        position: absolute;
+        width: 100%;
+        top: 25%;
+        left: 12%;
+        font-size: 5.6rem;
+        letter-spacing: 0.6rem;
+        color: rgba(6, 6, 6, 0.862);
+        z-index: 1;
+        text-transform: uppercase;
+        color: #011F5F;
+        color: rgb(196, 62, 50);
+        // background-color: rgba(255, 255, 255, 0.075);
+        width: fit-content;
+        padding: 0.2rem 1rem;
+        animation: paraanimi 6s linear infinite alternate;
+        @keyframes paraanimi {
+             0%{
+                   opacity: 0.8;
+                   transform: scale(0.8);
+                   transform: rotate(0);
+
+             }
+             100%{
+                  opacity: 1;
+                  transform: scale(1.08);
+                  transform: rotateX(360);
+             }
+        }
+        @media screen and (max-width:768px) {
+            font-size: 2.1rem;
+            left: 8%;
+            width: 90%;
+            text-align: center;
         }
     }
 }

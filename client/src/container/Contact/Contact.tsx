@@ -15,14 +15,11 @@ export const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { data } = await axios.post(
-      "http://localhost:4000/api/auth/sendemail",
-      {
-        name,
-        email,
-        message,
-      }
-    );
+    const { data } = await axios.post("/api/auth/sendemail", {
+      name,
+      email,
+      message,
+    });
     console.log(data);
   };
 

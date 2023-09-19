@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Card.scss";
 // import { BiRupee } from "react-icons/bi";
 import { SlLocationPin } from "react-icons/sl";
+import { BiRupee } from "react-icons/bi";
 
 export const Card = ({ property }: any) => {
   console.log(property);
@@ -10,10 +11,7 @@ export const Card = ({ property }: any) => {
       <div className="card-items">
         <Link to={`/projectdetails/${property._id}`}>
           <figure>
-            <img
-              src={`http://localhost:4000/uploads/${property.img[0]}`}
-              alt=""
-            />
+            <img src={`/uploads/${property.img[0]}`} alt="" />
           </figure>
         </Link>
         <h3>{property.title}</h3>
@@ -22,24 +20,16 @@ export const Card = ({ property }: any) => {
           <span>{property.location}</span>
         </div>
         <div className="card-details">
-          {/* <div>
+          <div>
             <BiRupee className="icon" />
-            <p>Name</p>
+            <p>{property.price}</p>
           </div>
-          <div>
-            <BiRupee className="icon" />
-            <p>Address</p>
-          </div>{" "}
-          <div>
-            <BiRupee className="icon" />
-            <p>price</p>
-          </div> */}
         </div>
-        {/* <div className="explore-and-enquiry">
+      </div>
+      {/* <div className="explore-and-enquiry">
           <button>Explore</button>
           <button>Enquire</button>
         </div> */}
-      </div>
     </>
   );
 };

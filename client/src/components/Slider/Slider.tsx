@@ -27,7 +27,7 @@ export const Slider = ({ Image }: any) => {
   };
 
   const scrollBar = () => {
-    if (window.scrollY > 250) {
+    if (window.scrollY > 400) {
       setScrollVal(true);
     } else {
       setScrollVal(false);
@@ -70,6 +70,7 @@ export const Slider = ({ Image }: any) => {
             </div>
           </div>
         </div>
+        <h2>New Thinking new real estate</h2>
       </div>
     </>
   );

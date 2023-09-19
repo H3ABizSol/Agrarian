@@ -13,23 +13,23 @@ export const Oursevice = () => {
         <div className="service-icon">
           <div>
             <AiOutlineStock className="icon" />
-            <h3>Buy Plot</h3>
-            <p>Cum sociis natoque penatibus et magnis dis​</p>
+            <h3>Property Bazzar</h3>
+            {/* <p>Cum sociis natoque penatibus et magnis dis​</p> */}
           </div>
           <div>
             <MdCompareArrows className="icon" />
-            <h3>Compare</h3>
-            <p>Cum sociis natoque penatibus et magnis dis​</p>
+            <h3>Agrarian Landcraft</h3>
+            {/* <p>Cum sociis natoque penatibus et magnis dis​</p> */}
           </div>{" "}
           <div>
             <AiOutlineProject className="icon" />
-            <h3>Projects</h3>
-            <p>Cum sociis natoque penatibus et magnis dis​</p>
+            <h3>Agrarian Home</h3>
+            {/* <p>Cum sociis natoque penatibus et magnis dis​</p> */}
           </div>{" "}
           <div>
             <AiOutlineHome className="icon" />
-            <h3>Sell your Plot</h3>
-            <p>Cum sociis natoque penatibus et magnis dis​</p>
+            <h3>Agrain Infrastructure</h3>
+            {/* <p>Cum sociis natoque penatibus et magnis dis​</p> */}
           </div>
         </div>
       </div>

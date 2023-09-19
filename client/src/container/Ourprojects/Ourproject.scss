@@ -219,12 +219,14 @@
             }
          }
         .project-items{
-         display: flex;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
          width: 100%;
          gap: 1.6rem;
          box-shadow: 0 0 4px rgb(217, 217, 217);
          padding: 2rem 0.8rem;
          @media screen and (max-width:768px) {
+            display: flex;
             flex-direction: column;
         }
          .content{
@@ -278,6 +280,8 @@
          }
          h3{
              font-size: 2rem;
+             height: 20px;
+             overflow: hidden;
          }
          p{
              font-size: 1.3rem;
@@ -285,7 +289,7 @@
              line-height: 2rem;
          }
            figure{
-             width: 40%;
+             width: 95%;
              height: 240px;
              border-radius: 0;
              @media screen and (max-width:768px) {

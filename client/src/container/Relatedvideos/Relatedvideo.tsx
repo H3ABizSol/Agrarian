@@ -7,9 +7,7 @@ export const Relatedvideo = () => {
   const [allVideos, setAllVideos] = React.useState([] as any);
 
   const getVideos = async () => {
-    const { data } = await axios.get(
-      "http://localhost:4000/api/property/videos"
-    );
+    const { data } = await axios.get("/api/property/videos");
     if (data.success) {
       setAllVideos([...data.videos]);
     }

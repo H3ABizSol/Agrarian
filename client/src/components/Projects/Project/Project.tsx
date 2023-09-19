@@ -18,7 +18,7 @@ export const Project = () => {
 
   const getProjects = async () => {
     setSpin(true);
-    const { data } = await axios.get("http://localhost:4000/api/property/all");
+    const { data } = await axios.get("/api/property/all");
     if (data.success) {
       setAllProperty([...data.allProperty]);
       setSpin(false);
@@ -49,7 +49,7 @@ export const Project = () => {
           ) : (
             <div className="card-wrapper">
               {allProperty &&
-                allProperty.map((property: any) => {
+                allProperty.slice(0, 6).map((property: any) => {
                   return <Card property={property} />;
                 })}
             </div>
