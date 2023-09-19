@@ -84,7 +84,6 @@ header{
                 //        transition: all 0.6s;
                 // }
             li{
-                font-size: 1rem;
                 letter-spacing: 0.1rem;
                 position: relative; 
                 font-weight: 550;
@@ -107,7 +106,6 @@ header{
                     animation: animehover 0.6s forwards;
                     li{
                         text-transform: capitalize;
-                        font-size: 1rem;
                         font-weight: 400;
                     }
                     li:hover > .sub-sub-menu-li {
@@ -132,7 +130,7 @@ header{
                        }
                        li{
                         text-transform: capitalize;
-                        font-size: 1rem;
+                      
                         font-weight: 500;
                        }
                     }
