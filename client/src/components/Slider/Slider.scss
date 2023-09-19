@@ -100,55 +100,42 @@
         .search-wrapper.fix-scroll{
             position: fixed;
             left: 32%;
-            top: 13.6%;
+            top: 22%;
             z-index: 8;
             animation: anime 1.5s forwards;
             @media screen and (max-width:768px) {
                 width: 95%;
                 left: 3%;
-                top: 15.4%;
+                top: 22%;
                 input{
                     border: 5px solid black;
                     font-size: 1rem;
                 }
                 .icon{
                     top: 10%;
-                    right: 2%;
-                    width: 35px;
-                    height: 35px;
-                }
-            }
-            @media screen and (max-width:468px) {
-                width: 95%;
-                left: 3%;
-                top: 11.4%;
-                input{
-                    border: 5px solid black;
-                    font-size: 1rem;
-                }
-                .icon{
-                    top: 10%;
-                    right: 2%;
+                    right: 6%;
                     width: 35px;
                     height: 35px;
                 }
             }
 
-            @media screen and (max-width:400px) {
-                width: 95%;
-                left: 3%;
-                top: 15.4%;
-                input{
-                    border: 5px solid black;
-                    font-size: 1rem;
-                }
-                .icon{
-                    top: 10%;
-                    right: 7%;
-                    width: 35px;
-                    height: 35px;
-                }
-            }
+
+
+            // @media screen and (max-width:400px) {
+            //     width: 95%;
+            //     left: 3%;
+            //     top: 15.4%;
+            //     input{
+            //         border: 5px solid black;
+            //         font-size: 1rem;
+            //     }
+            //     .icon{
+            //         top: 10%;
+            //         right: 7%;
+            //         width: 35px;
+            //         height: 35px;
+            //     }
+            // }
             @keyframes anime {
                 0%{
                      margin-top: -10rem;

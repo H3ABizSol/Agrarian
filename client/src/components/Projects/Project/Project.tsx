@@ -17,8 +17,10 @@ export const Project = () => {
   // };
 
   const getProjects = async () => {
+    console.log("helo");
     setSpin(true);
     const { data } = await axios.get("/api/property/all");
+    console.log(data);
     if (data.success) {
       setAllProperty([...data.allProperty]);
       setSpin(false);
