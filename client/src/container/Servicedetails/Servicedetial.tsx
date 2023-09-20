@@ -10,17 +10,38 @@ import axios from "axios";
 export const Servicedetial = () => {
   const [propertyDetail, setPropertyDetail] = React.useState({} as any);
   const params = useParams();
+  const [searchValue, setSearchValue] = React.useState("");
+  const [searchData, setSearchData] = React.useState([] as any);
+  const [dispay, setDisplay] = React.useState(false);
 
   const getProjectDetail = async () => {
     const { data } = await axios.get(`/api/property/all`);
+    console.log(data);
     let names: any = params.name;
 
     if (data.success) {
-      console.log("innn");
       const filterData = data.allProperty.filter((i: any) => {
-        return i.ourservices.subservice.toLowerCase() == names.toLowerCase();
+        if (i.ourservices.subservice.toLowerCase() == names.toLowerCase()) {
+          return i;
+        }
+        if (i.ourservices.name.toLowerCase() == names.toLowerCase()) {
+          return i;
+        }
       });
       setPropertyDetail([...filterData]);
+    }
+  };
+
+  const search = () => {
+    if (searchValue) {
+      setDisplay(true);
+      const filterData = propertyDetail.filter((d: any) => {
+        return d.title.toLowerCase().includes(searchValue.toLowerCase());
+      });
+      console.log(filterData);
+      setSearchData([...filterData]);
+    } else {
+      setDisplay(false);
     }
   };
 
@@ -33,10 +54,31 @@ export const Servicedetial = () => {
       <div className="service-detail-wrapper">
         <div className="search-wrapper-container">
           <div className={"search-wrapper"}>
-            <input type="search" name="" id="" placeholder="Search" />
+            <input
+              type="search"
+              name=""
+              id=""
+              placeholder="Search"
+              onChange={(e) => {
+                setSearchValue(e.target.value);
+              }}
+              onKeyUp={() => {
+                search();
+              }}
+            />
             <div className="icon">
               <AiOutlineSearch size={30} color="#ff55a4d3" />
             </div>
+            {dispay && (
+              <div className="display-search">
+                <ul>
+                  {searchData &&
+                    searchData.map((p: any) => {
+                      return <li>{p.title}</li>;
+                    })}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
         <div className="paralex">
@@ -231,6 +273,11 @@ export const Servicedetial = () => {
             </div>
           </div> */}
         </div>
+        {propertyDetail.length === 0 && (
+          <h2 style={{ textAlign: "center", fontSize: "4rem", color: "gray" }}>
+            Not Found
+          </h2>
+        )}
       </div>
     </Layout>
   );
