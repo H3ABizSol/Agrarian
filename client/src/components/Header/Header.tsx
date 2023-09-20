@@ -104,7 +104,7 @@ export const Header = () => {
                       </ul>
                     </li>
                     <li className="sub-li">
-                      Agraina Landcraft
+                      Agragian Landcraft
                       <ul className="sub-sub-menu-li">
                         <a href="/service/plot" className="link">
                           <li className="sub-li">Plot</li>
@@ -115,13 +115,13 @@ export const Header = () => {
                       </ul>
                     </li>
                     <li className="sub-li">
-                      Agrain Home
+                      Agragian Home
                       <ul className="sub-sub-menu-li">
                         <li>Dream Home Construction</li>
                       </ul>
                     </li>
                     <li className="sub-li">
-                      Agrarain Infrastructure
+                      Agragian Infrastructure
                       <ul className="sub-sub-menu-li">
                         <li>Building Walion</li>
                       </ul>
@@ -170,20 +170,20 @@ export const Header = () => {
                       </ul>
                     </li>
                     <li>
-                      Agraina Landcraft
+                      Agragian Landcraft
                       <ul className="sub-sub-menu-li">
                         <li>Plot</li>
                         <li>Land Development</li>
                       </ul>
                     </li>
                     <li>
-                      Agrain Home
+                      Agragian Home
                       <ul className="sub-sub-menu-li">
                         <li>Dream Home Construction</li>
                       </ul>
                     </li>
                     <li>
-                      Agrarain Infrastructure
+                      Agragian Infrastructure
                       <ul className="sub-sub-menu-li">
                         <li>Building Walion</li>
                       </ul>

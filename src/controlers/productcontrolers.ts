@@ -60,7 +60,6 @@ const getPropertyDetails = catchAsynchError(
 const updateProperty = catchAsynchError(
   async (req: Request, res: Response, next: NextFunction) => {
     const { washrooms, bedrooms, parking } = req.body;
-    console.log(req.body);
     const imgFile: any = req.files;
     if (imgFile > 0) {
       const imgArr: String[] = [];
