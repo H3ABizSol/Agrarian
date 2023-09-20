@@ -8,7 +8,6 @@ import banner1 from "../../assets/banner1.jpg";
 import "./Home.scss";
 import { Link } from "react-router-dom";
 import { Relatedvideo } from "../Relatedvideos/Relatedvideo";
-import { AiOutlineWhatsApp } from "react-icons/ai";
 
 const Home = () => {
   const image: string[] = [
@@ -56,11 +55,6 @@ const Home = () => {
       </section>
       <Relatedvideo />
       <Contact />
-      <a href="https://api.whatsapp.com/send?phone=7497042180">
-        <div className="whatsapp">
-          <AiOutlineWhatsApp className="icon" />
-        </div>
-      </a>
     </Layout>
   );
 };

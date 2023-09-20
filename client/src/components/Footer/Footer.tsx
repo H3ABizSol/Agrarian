@@ -1,3 +1,4 @@
+import { AiOutlineWhatsApp } from "react-icons/ai";
 import "./Footer.scss";
 import {
   BiLogoFacebook,
@@ -47,6 +48,11 @@ export const Footer = () => {
           <p>© Copyright 2023, all right reserved Demo</p>
         </div>
       </footer>
+      <a href="https://api.whatsapp.com/send?phone=7497042180">
+        <div className="whatsapp">
+          <AiOutlineWhatsApp className="icon" />
+        </div>
+      </a>
     </>
   );
 };
