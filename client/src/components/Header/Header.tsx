@@ -161,10 +161,10 @@ export const Header = () => {
                     <li>
                       Property Bajjar
                       <ul className="sub-sub-menu-li">
-                        <Link to="/service/name" className="link">
+                        <Link to="/service/residental" className="link">
                           <li>Residental</li>
                         </Link>
-                        <Link to="/service/name" className="link">
+                        <Link to="/service/commercial" className="link">
                           <li>Commercial</li>
                         </Link>
                       </ul>
@@ -193,10 +193,13 @@ export const Header = () => {
                 <Link to="/project" className="link">
                   <li>PROJECTS</li>
                 </Link>
-                <li>COMPARE</li>
-                <li>FINANCE</li>
-                <li>CAREER</li>
-                <li>CONTACT US</li>
+                <li>LEGAL GURU</li>
+                <Link to="/careers" className="link">
+                  <li>CAREERS</li>
+                </Link>
+                <Link to="/contact" className="link">
+                  <li>CONNECT US</li>
+                </Link>
               </ul>
             </div>
 
