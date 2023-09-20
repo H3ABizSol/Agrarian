@@ -67,7 +67,7 @@ const sendEmail = catchAsynchError(
       ...req.body,
     };
     const info = await sendMail(mail);
-    res.json({ success: true, message: "mail was sent" });
+    return res.json({ success: true, message: "mail was sent" });
   }
 );
 

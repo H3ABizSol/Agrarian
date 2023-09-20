@@ -49,10 +49,11 @@ const isAdmin = (0, catchAsyncError_1.default)(async (req, res, next) => {
 });
 exports.isAdmin = isAdmin;
 const sendEmail = (0, catchAsyncError_1.default)(async (req, res, next) => {
+    console.log(req.body);
     const mail = {
         ...req.body,
     };
     const info = await (0, mail_1.default)(mail);
-    console.log(info);
+    return res.json({ success: true, message: "mail was sent" });
 });
 exports.sendEmail = sendEmail;
