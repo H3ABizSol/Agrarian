@@ -7,20 +7,31 @@ import {
 } from "react-icons/ai";
 import "./Contact.scss";
 import axios from "axios";
+import { Spin } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
 
 export const ContactPage = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [mailMessage, setMailMessage] = useState("");
+  const [spin, setSpin] = React.useState(false);
+  const antIcon = (
+    <LoadingOutlined style={{ fontSize: 24, color: "black" }} spin />
+  );
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSpin(true);
     const { data } = await axios.post("/api/auth/sendemail", {
       name,
       email,
       message,
     });
-    console.log(data);
+    if (data.success) {
+      setMailMessage(data.message);
+      setSpin(false);
+    }
   };
 
   return (
@@ -45,7 +56,17 @@ export const ContactPage = () => {
           </div>
           <form method="post" onSubmit={handleSubmit}>
             <h3>We’d love to hear from you</h3>
-
+            {mailMessage && (
+              <p
+                style={{
+                  textAlign: "center",
+                  fontSize: "1.6rem",
+                  color: "green",
+                }}
+              >
+                {mailMessage}
+              </p>
+            )}
             <div>
               <input
                 type="text"
@@ -82,7 +103,7 @@ export const ContactPage = () => {
               />
             </div>
             <div>
-              <button>Submit</button>
+              <button>Submit {spin && <Spin indicator={antIcon} />}</button>
             </div>
           </form>
         </div>

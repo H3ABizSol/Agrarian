@@ -3,7 +3,7 @@ import { Contact } from "../../components/Contact/Contact";
 import { Oursevice } from "../../components/Oursevice/Oursevice";
 import { Project } from "../../components/Projects/Project/Project";
 import { Slider } from "../../components/Slider/Slider";
-import banner1 from "../../assets/banner1.webp";
+import banner1 from "../../assets/banner1.jpg";
 
 import "./Home.scss";
 import { Link } from "react-router-dom";
@@ -14,8 +14,8 @@ const Home = () => {
   const image: string[] = [
     "https://www.bankrate.com/2020/10/02105002/What_are_real_estate_comps.jpg",
     "https://www.build-review.com/wp-content/uploads/2020/07/luxury-real-estate.jpg",
-    banner1,
     "https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
+    banner1,
     "https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1348328425/image_1348328425.jpg?io=getty-c-w750",
   ];
 

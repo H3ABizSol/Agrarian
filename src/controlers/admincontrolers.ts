@@ -62,11 +62,12 @@ const isAdmin = catchAsynchError(
 
 const sendEmail = catchAsynchError(
   async (req: Request, res: Response, next: NextFunction) => {
+    console.log(req.body);
     const mail = {
       ...req.body,
     };
     const info = await sendMail(mail);
-    console.log(info);
+    res.json({ success: true, message: "mail was sent" });
   }
 );
 

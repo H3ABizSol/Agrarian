@@ -8,18 +8,19 @@ var transporter = nodemailer.createTransport({
 });
 
 const sendMail = (mail: any) => {
+  console.log(mail);
   let details;
   var mailOptions = {
     from: process.env.SMPT_USER,
     to: mail.email,
     subject: "Sending Email.",
-    text: mail.text,
+    text: mail.message,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
     } else {
-      console.log(error);
+      console.log(info);
     }
   });
 };

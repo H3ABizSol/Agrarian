@@ -163,10 +163,11 @@
         z-index: 1;
         text-transform: uppercase;
         color: #011F5F;
-        color: rgb(196, 62, 50);
-        // background-color: rgba(255, 255, 255, 0.075);
+        // color: rgb(196, 62, 50);
+        background-color: rgba(255, 255, 255, 0.733);
+        border-radius: 55px;
         width: fit-content;
-        padding: 0.2rem 1rem;
+        padding: 0.2rem 2rem;
         animation: paraanimi 6s linear infinite alternate;
         @keyframes paraanimi {
              0%{

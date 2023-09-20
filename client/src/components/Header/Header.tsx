@@ -93,7 +93,7 @@ export const Header = () => {
                   OUR SERVICE
                   <ul className="sub-menu-li">
                     <li className="sub-li">
-                      Property Bajjar
+                      Property Bazzar
                       <ul className="sub-sub-menu-li">
                         <a href="/service/residental" className="link">
                           <li>Residental</li>
