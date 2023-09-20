@@ -235,7 +235,7 @@ export const Project = () => {
             onCancel={() => {
               setOpen(false);
             }}
-            width={"60%"}
+            width={"80%"}
           >
             <div className="update-project-container">
               <form action="" onSubmit={handleSubmit}>

@@ -7,7 +7,7 @@ export const Privateroute = (): any => {
   const navigate = useNavigate();
   const isAuthenticate = async () => {
     const { data } = await axios.get(
-      "http://localhost:4000/api/auth/authenticate",
+      "/api/auth/authenticate",
 
       {
         headers: {
