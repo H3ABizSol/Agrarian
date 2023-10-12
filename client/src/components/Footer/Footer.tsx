@@ -34,18 +34,14 @@ export const Footer = () => {
         <div className="footer-details">
           <ul>
             <ul>
-              <li>Become our partner</li>
-              <li>NRI Corner</li>
-              <li>Careers</li>
               <li>Disclaimer</li>
               <li>Privacy Polcy</li>
-              <li>Anul Returns</li>
               <li>Become our partner</li>
             </ul>
           </ul>
         </div>
         <div className="copyright">
-          <p>© Copyright 2023, all right reserved Demo</p>
+          <p>© Copyright 2023, all right reserved</p>
         </div>
       </footer>
       <a href="https://api.whatsapp.com/send?phone=7497042180">

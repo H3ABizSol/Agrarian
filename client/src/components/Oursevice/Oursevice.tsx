@@ -6,6 +6,7 @@ import {
 } from "react-icons/ai";
 import { MdCompareArrows } from "react-icons/md";
 import { Link } from "react-router-dom";
+
 export const Oursevice = () => {
   return (
     <div className="oursevice-wrapper">
@@ -36,7 +37,7 @@ export const Oursevice = () => {
           <Link to="/service/agrarian infrastructure" className="link">
             <div>
               <AiOutlineHome className="icon" />
-              <h3>Agrain Infrastructure</h3>
+              <h3>Agrarian Infrastructure</h3>
               {/* <p>Cum sociis natoque penatibus et magnis dis​</p> */}
             </div>
           </Link>

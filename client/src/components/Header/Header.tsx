@@ -104,7 +104,7 @@ export const Header = () => {
                       </ul>
                     </li>
                     <li className="sub-li">
-                      Agragian Landcraft
+                      Agrarian Landcraft
                       <ul className="sub-sub-menu-li">
                         <a href="/service/plot" className="link">
                           <li className="sub-li">Plot</li>
@@ -115,7 +115,7 @@ export const Header = () => {
                       </ul>
                     </li>
                     <li className="sub-li">
-                      Agragian Home
+                      Agrarian Home
                       <ul className="sub-sub-menu-li">
                         <a
                           href="/service/dream home construction"
@@ -126,7 +126,7 @@ export const Header = () => {
                       </ul>
                     </li>
                     <li className="sub-li">
-                      Agragian Infrastructure
+                      Agrarian Infrastructure
                       <ul className="sub-sub-menu-li">
                         <a href="/service/building nation" className="link">
                           <li>Building nation</li>
@@ -231,7 +231,7 @@ export const Header = () => {
                   </ul>
                 </li>
                 <Link to="/careers" className="link">
-                  <li>CAREERS</li>
+                  <li>partner with us</li>
                 </Link>
                 <Link to="/contact" className="link">
                   <li>CONNECT US</li>
@@ -268,7 +268,7 @@ export const Header = () => {
                       </ul>
                     </li>
                     <li className="sub-li">
-                      Agragian Landcraft
+                      Agrarian Landcraft
                       <ul className="sub-sub-menu-li">
                         <a href="/service/plot" className="link">
                           <li className="sub-li">Plot</li>
@@ -279,7 +279,7 @@ export const Header = () => {
                       </ul>
                     </li>
                     <li className="sub-li">
-                      Agragian Home
+                      Agrarian Home
                       <ul className="sub-sub-menu-li">
                         <a
                           href="/service/dream home construction"
@@ -290,7 +290,7 @@ export const Header = () => {
                       </ul>
                     </li>
                     <li className="sub-li">
-                      Agragian Infrastructure
+                      Agrarian Infrastructure
                       <ul className="sub-sub-menu-li">
                         <a href="/service/building nation" className="link">
                           <li>Building nation</li>
