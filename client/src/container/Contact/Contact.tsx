@@ -36,9 +36,7 @@ export const ContactPage = () => {
 
   return (
     <Layout>
-      <div className="contact-paralex">
-        <h2>Contact us</h2>
-      </div>
+      <div className="contact-paralex">{/* <h2>Contact us</h2> */}</div>
       <div className="contact-wrappers">
         <div className="contact-form">
           <div className="left">

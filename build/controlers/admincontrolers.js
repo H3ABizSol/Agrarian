@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendEmail = exports.isAdmin = exports.updateAdmin = exports.register = exports.login = void 0;
+exports.applyJob = exports.sendEmail = exports.isAdmin = exports.updateAdmin = exports.register = exports.login = void 0;
 const catchAsyncError_1 = __importDefault(require("../Helpers/catchAsyncError"));
 const admin_1 = __importDefault(require("../model/admin"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
@@ -49,7 +49,6 @@ const isAdmin = (0, catchAsyncError_1.default)(async (req, res, next) => {
 });
 exports.isAdmin = isAdmin;
 const sendEmail = (0, catchAsyncError_1.default)(async (req, res, next) => {
-    console.log(req.body);
     const mail = {
         ...req.body,
     };
@@ -57,3 +56,12 @@ const sendEmail = (0, catchAsyncError_1.default)(async (req, res, next) => {
     return res.json({ success: true, message: "mail was sent" });
 });
 exports.sendEmail = sendEmail;
+const applyJob = (0, catchAsyncError_1.default)(async (req, res, next) => {
+    const mail = {
+        ...req.body,
+        resume: req.file,
+    };
+    const info = await (0, mail_1.default)(mail);
+    return res.json({ success: true, message: "mail was sent" });
+});
+exports.applyJob = applyJob;

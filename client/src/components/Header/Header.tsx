@@ -117,13 +117,20 @@ export const Header = () => {
                     <li className="sub-li">
                       Agragian Home
                       <ul className="sub-sub-menu-li">
-                        <li>Dream Home Construction</li>
+                        <a
+                          href="/service/dream home construction"
+                          className="link"
+                        >
+                          <li>Dream Home construction</li>
+                        </a>
                       </ul>
                     </li>
                     <li className="sub-li">
                       Agragian Infrastructure
                       <ul className="sub-sub-menu-li">
-                        <li>Building Walion</li>
+                        <a href="/service/building nation" className="link">
+                          <li>Building nation</li>
+                        </a>
                       </ul>
                     </li>
                   </ul>
@@ -131,7 +138,98 @@ export const Header = () => {
                 <Link to="/project" className="link">
                   <li>PROJECTS</li>
                 </Link>
-                <li>LEGAL GURU</li>
+                <li>
+                  360 Assistant
+                  <ul className="sub-menu-li">
+                    <li className="sub-li">
+                      Help to search
+                      <ul className="sub-sub-menu-li">
+                        <a href="#" className="link">
+                          <li>location</li>
+                        </a>
+                        <a href="#" className="link">
+                          <li>projects</li>
+                        </a>
+                        <a href="#" className="link">
+                          <li>masterplan</li>
+                        </a>
+                      </ul>
+                    </li>
+                    <li className="sub-li">
+                      site visit
+                      <ul className="sub-sub-menu-li">
+                        <a href="#" className="link">
+                          <li className="sub-li">free pick up & drop</li>
+                        </a>
+                        {/* <a href="/service/land development" className="link">
+                          <li>Land Development</li>
+                        </a> */}
+                      </ul>
+                    </li>
+                    <li className="sub-li">
+                      legal guru
+                      <ul className="sub-sub-menu-li">
+                        <a
+                          href="/service/dream home construction"
+                          className="link"
+                        >
+                          <li>plot</li>
+                        </a>
+                        <a
+                          href="/service/dream home construction"
+                          className="link"
+                        >
+                          <li>Residential Propoerty</li>
+                        </a>
+                        <a
+                          href="/service/dream home construction"
+                          className="link"
+                        >
+                          <li>Commercial Property</li>
+                        </a>
+                      </ul>
+                    </li>
+                    <li className="sub-li">
+                      loan assistance
+                      <ul className="sub-sub-menu-li">
+                        <a href="#" className="link">
+                          <li>EMI Calculator</li>
+                        </a>
+                        <a href="#" className="link">
+                          <li>Loan Eligibility</li>
+                        </a>
+                        <a href="#" className="link">
+                          <li>Loan Documents</li>
+                        </a>
+                      </ul>
+                    </li>
+                    <li className="sub-li">
+                      property services
+                      <ul className="sub-sub-menu-li">
+                        <a href="#" className="link">
+                          <li>Rent Agreement</li>
+                        </a>
+                        <a href="#" className="link">
+                          <li>Office Leasing Assistance</li>
+                        </a>
+                        <a href="/service/building nation" className="link">
+                          <li>Home Interiors</li>
+                        </a>
+                        <a href="/service/building nation" className="link">
+                          <li>Vastu</li>
+                        </a>
+                      </ul>
+                    </li>
+                    <li className="sub-li">
+                      booking to possession
+                      <ul className="sub-sub-menu-li">
+                        <a href="/service/building nation" className="link">
+                          <li>Complete Assistance</li>
+                        </a>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
                 <Link to="/careers" className="link">
                   <li>CAREERS</li>
                 </Link>
@@ -158,34 +256,45 @@ export const Header = () => {
                 <li>
                   OUR SERVICE
                   <ul className="sub-menu-li">
-                    <li>
-                      Property Bajjar
+                    <li className="sub-li">
+                      Property Bazzar
                       <ul className="sub-sub-menu-li">
-                        <Link to="/service/residental" className="link">
+                        <a href="/service/residental" className="link">
                           <li>Residental</li>
-                        </Link>
-                        <Link to="/service/commercial" className="link">
+                        </a>
+                        <a href="/service/commercial" className="link">
                           <li>Commercial</li>
-                        </Link>
+                        </a>
                       </ul>
                     </li>
-                    <li>
+                    <li className="sub-li">
                       Agragian Landcraft
                       <ul className="sub-sub-menu-li">
-                        <li>Plot</li>
-                        <li>Land Development</li>
+                        <a href="/service/plot" className="link">
+                          <li className="sub-li">Plot</li>
+                        </a>
+                        <a href="/service/land development" className="link">
+                          <li>Land Development</li>
+                        </a>
                       </ul>
                     </li>
-                    <li>
+                    <li className="sub-li">
                       Agragian Home
                       <ul className="sub-sub-menu-li">
-                        <li>Dream Home Construction</li>
+                        <a
+                          href="/service/dream home construction"
+                          className="link"
+                        >
+                          <li>Dream Home construction</li>
+                        </a>
                       </ul>
                     </li>
-                    <li>
+                    <li className="sub-li">
                       Agragian Infrastructure
                       <ul className="sub-sub-menu-li">
-                        <li>Building Walion</li>
+                        <a href="/service/building nation" className="link">
+                          <li>Building nation</li>
+                        </a>
                       </ul>
                     </li>
                   </ul>
@@ -193,7 +302,98 @@ export const Header = () => {
                 <Link to="/project" className="link">
                   <li>PROJECTS</li>
                 </Link>
-                <li>LEGAL GURU</li>
+                <li>
+                  360 Assistant
+                  <ul className="sub-menu-li">
+                    <li className="sub-li">
+                      Help to search
+                      <ul className="sub-sub-menu-li">
+                        <a href="#" className="link">
+                          <li>location</li>
+                        </a>
+                        <a href="#" className="link">
+                          <li>projects</li>
+                        </a>
+                        <a href="#" className="link">
+                          <li>masterplan</li>
+                        </a>
+                      </ul>
+                    </li>
+                    <li className="sub-li">
+                      site visit
+                      <ul className="sub-sub-menu-li">
+                        <a href="#" className="link">
+                          <li className="sub-li">free pick up & drop</li>
+                        </a>
+                        {/* <a href="/service/land development" className="link">
+                          <li>Land Development</li>
+                        </a> */}
+                      </ul>
+                    </li>
+                    <li className="sub-li">
+                      legal guru
+                      <ul className="sub-sub-menu-li">
+                        <a
+                          href="/service/dream home construction"
+                          className="link"
+                        >
+                          <li>plot</li>
+                        </a>
+                        <a
+                          href="/service/dream home construction"
+                          className="link"
+                        >
+                          <li>Residential Propoerty</li>
+                        </a>
+                        <a
+                          href="/service/dream home construction"
+                          className="link"
+                        >
+                          <li>Commercial Property</li>
+                        </a>
+                      </ul>
+                    </li>
+                    <li className="sub-li">
+                      loan assistance
+                      <ul className="sub-sub-menu-li">
+                        <a href="#" className="link">
+                          <li>EMI Calculator</li>
+                        </a>
+                        <a href="#" className="link">
+                          <li>Loan Eligibility</li>
+                        </a>
+                        <a href="#" className="link">
+                          <li>Loan Documents</li>
+                        </a>
+                      </ul>
+                    </li>
+                    <li className="sub-li">
+                      property services
+                      <ul className="sub-sub-menu-li">
+                        <a href="#" className="link">
+                          <li>Rent Agreement</li>
+                        </a>
+                        <a href="#" className="link">
+                          <li>Office Leasing Assistance</li>
+                        </a>
+                        <a href="/service/building nation" className="link">
+                          <li>Home Interiors</li>
+                        </a>
+                        <a href="/service/building nation" className="link">
+                          <li>Vastu</li>
+                        </a>
+                      </ul>
+                    </li>
+                    <li className="sub-li">
+                      booking to possession
+                      <ul className="sub-sub-menu-li">
+                        <a href="/service/building nation" className="link">
+                          <li>Complete Assistance</li>
+                        </a>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
                 <Link to="/careers" className="link">
                   <li>CAREERS</li>
                 </Link>

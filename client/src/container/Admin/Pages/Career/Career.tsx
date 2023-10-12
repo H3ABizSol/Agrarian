@@ -116,7 +116,7 @@ export const Admincareer = () => {
         <>
           <div className="create-career-container">
             <form action="" onSubmit={handleSubmit}>
-              <h2>Agrarian Create Project</h2>
+              <h2> Create Carrers</h2>
               <div className="form-text-field">
                 <input
                   type="text"

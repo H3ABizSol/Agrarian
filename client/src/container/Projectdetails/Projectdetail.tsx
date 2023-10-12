@@ -74,7 +74,7 @@ export const Projectdetail = () => {
             )}
           </div>
           <div className="right">
-            <h3>Welomce</h3>
+            <h3></h3>
           </div>
         </div>
       </div>

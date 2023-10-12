@@ -8,6 +8,7 @@ import path from "path";
 
 const createProperty = catchAsynchError(
   async (req: Request, res: Response, next: NextFunction) => {
+    console.log(req.body);
     const { washrooms, bedrooms, parking } = req.body;
     const imgFile: any = req.files;
     const imgArr: String[] = [];
@@ -21,6 +22,7 @@ const createProperty = catchAsynchError(
         ourservices: {
           name: req.body.service,
           subservice: req.body.subservice,
+          type: req.body.type,
         },
         properyDetails: {
           bedrooms: req.body.bedrooms,
@@ -35,7 +37,8 @@ const createProperty = catchAsynchError(
         img: imgArr,
         ourservices: {
           name: req.body.service,
-          subservice: req.body.subservice,
+          subservice: req.body.subservice.toLowerCase(),
+          type: req.body.type,
         },
       });
       return res.send({ success: true, property });
@@ -60,6 +63,7 @@ const getPropertyDetails = catchAsynchError(
 const updateProperty = catchAsynchError(
   async (req: Request, res: Response, next: NextFunction) => {
     const { washrooms, bedrooms, parking } = req.body;
+    console.log(req.body);
     const imgFile: any = req.files;
     if (imgFile > 0) {
       const imgArr: String[] = [];
@@ -79,6 +83,11 @@ const updateProperty = catchAsynchError(
               washrooms: washrooms,
               parking: parking,
             },
+            ourservices: {
+              name: req.body.service,
+              subservice: req.body.subservice,
+              type: req.body.type,
+            },
           },
         },
         { new: true }
@@ -90,10 +99,10 @@ const updateProperty = catchAsynchError(
         {
           $set: {
             ...req.body,
-            properyDetails: {
-              bedrooms: bedrooms,
-              washrooms: washrooms,
-              parking: parking,
+            ourservices: {
+              name: req.body.service,
+              subservice: req.body.subservice,
+              type: req.body.type,
             },
           },
         },

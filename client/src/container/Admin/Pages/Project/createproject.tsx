@@ -14,18 +14,18 @@ const ourservices = [
   },
   {
     id: "2",
-    name: "Agrarian Landcraft",
+    name: "Agragian Landcraft",
     subservie: ["Plot", "Land Development"],
   },
   {
     id: "3",
-    name: "Agrarian Home",
+    name: "Agragian Home",
     subservie: ["Dream Home Construction"],
   },
   {
     id: "4",
-    name: "Agrarian Infrastructure",
-    subservie: ["Building Wallion"],
+    name: "Agragian Infrastructure",
+    subservie: ["Building nation"],
   },
 ];
 const num = [1, 2, 3, 4, 5];
@@ -45,6 +45,7 @@ export const Createproject = () => {
   const [image, setImages] = useState([]);
   const [subService, setSubService] = useState([] as any);
   const [showInput, setShowInput] = useState(false);
+  const [type, setType] = useState("");
   const [ok, setOk] = useState(false);
   const [spin, setSpin] = useState(false);
 
@@ -91,6 +92,7 @@ export const Createproject = () => {
     formData.append("location", propertyDetails.location);
     formData.append("service", propertyDetails.service);
     formData.append("subservice", propertyDetails.subservice);
+    formData.append("type", type);
     formData.append("bedrooms", propertyDetails.bedrooms);
     formData.append("washrooms", propertyDetails.washrooms);
     formData.append("parking", propertyDetails.parking);
@@ -188,6 +190,66 @@ export const Createproject = () => {
                   return <option value={s}>{s}</option>;
                 })}
               </select>
+              {propertyDetails.subservice.toLowerCase() === "residental" && (
+                <select
+                  name=""
+                  onChange={(e) => {
+                    setType(e.target.value);
+                  }}
+                >
+                  <option value="">select type</option>
+                  <option value="flats">Flats</option>
+                  <option value="villas">villas</option>
+                  <option value="appartments">appartments</option>
+                  <option value="floors">floors</option>
+                </select>
+              )}
+              {propertyDetails.subservice.toLowerCase() === "commercial" && (
+                <select
+                  name=""
+                  id=""
+                  onChange={(e) => {
+                    setType(e.target.value);
+                  }}
+                >
+                  <option>select type</option>
+                  <option value="shop">shop</option>
+                  <option value="offices">offices</option>
+                  <option value="foodcourt">food-court</option>
+                </select>
+              )}
+              {propertyDetails.subservice.toLowerCase() ===
+                "dream home construction" && (
+                <select
+                  name=""
+                  id=""
+                  onChange={(e) => {
+                    setType(e.target.value);
+                  }}
+                >
+                  <option>select type</option>
+                  <option value="flat">flat</option>
+                  <option value="floors">floors</option>
+                  <option value="appartment">Appartment</option>
+                  <option value="villa">villa</option>
+                </select>
+              )}
+              {propertyDetails.subservice.toLowerCase() ===
+                "building nation" && (
+                <select
+                  name=""
+                  id=""
+                  onChange={(e) => {
+                    setType(e.target.value);
+                  }}
+                >
+                  <option>select type</option>
+                  <option value="roads">roads</option>
+                  <option value="bridges">bridges</option>
+                  <option value="hospitals">hospitals</option>
+                  <option value="hotels">hotels</option>
+                </select>
+              )}
               <input
                 type="file"
                 name="title"

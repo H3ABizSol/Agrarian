@@ -107,7 +107,17 @@
                     width: 85%;
                     font-size: 1.2rem;
                 }
-             
+              button{
+                background-color: rgb(79, 141, 146);
+                width: 55%;
+                padding: 0.8rem 0;
+                margin: auto;
+                border: none;
+                outline: none;
+                color: white;
+                font-size: 1.4rem;
+                cursor: pointer;
+              }
             }
         }
     }

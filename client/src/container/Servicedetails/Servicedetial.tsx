@@ -13,6 +13,17 @@ export const Servicedetial = () => {
   const [searchValue, setSearchValue] = React.useState("");
   const [searchData, setSearchData] = React.useState([] as any);
   const [dispay, setDisplay] = React.useState(false);
+  const [filterDatas, setFilterData] = React.useState([] as any);
+  const [isFilter, setIsFilter] = React.useState(false);
+
+  const changeType = (e: any) => {
+    console.log(e.innerHTML);
+    const filterData = propertyDetail.filter((f: any) => {
+      return f.ourservices.type === e.target.innerHTML.toLowerCase();
+    });
+    setFilterData([...filterData]);
+    setIsFilter(true);
+  };
 
   const getProjectDetail = async () => {
     const { data } = await axios.get(`/api/property/all`);
@@ -49,6 +60,7 @@ export const Servicedetial = () => {
     getProjectDetail();
     // window.location.reload();
   }, []);
+
   return (
     <Layout>
       <div className="service-detail-wrapper">
@@ -82,13 +94,255 @@ export const Servicedetial = () => {
           </div>
         </div>
         <div className="paralex">
-          <h2>Residental</h2>
+          <h2>{propertyDetail[0]?.ourservices.subservice}</h2>
           <p>Find your dream house</p>
         </div>
+        {propertyDetail[0]?.ourservices.subservice.toLowerCase() ===
+          "residental" && (
+          <div
+            className="filter-type"
+            onClick={(e) => {
+              changeType(e);
+            }}
+          >
+            <button>Flats</button>
+            <button>villas</button>
+            <button>Appartments</button>
+            <button>Floors</button>
+          </div>
+        )}
+        {propertyDetail[0]?.ourservices.subservice === "commercial" && (
+          <div
+            className="filter-type"
+            onClick={(e) => {
+              changeType(e);
+            }}
+          >
+            <button>shop</button>
+            <button>offices</button>
+            <button>food court</button>
+          </div>
+        )}
+        {propertyDetail[0]?.ourservices.subservice ===
+          "dream home construction" && (
+          <div
+            className="filter-type"
+            onClick={(e) => {
+              changeType(e);
+            }}
+          >
+            <button>flat</button>
+            <button>floors</button>
+            <button>Appartments</button>
+            <button>villa</button>
+          </div>
+        )}
+        {propertyDetail[0]?.ourservices.subservice === "building nation" && (
+          <div
+            className="filter-type"
+            onClick={(e) => {
+              changeType(e);
+            }}
+          >
+            <button>roads</button>
+            <button>bridges</button>
+            <button>hospitals</button>
+            <button>hotels</button>
+          </div>
+        )}
+
         <div className="service-detail">
-          {propertyDetail &&
+          {!isFilter &&
             propertyDetail.length > 0 &&
             propertyDetail.map((p: any) => {
+              return (
+                <div className="service-items">
+                  <figure>
+                    <img src={`/uploads/${p.img[0]}`} alt="" />
+                  </figure>
+                  <h3>{p.title}</h3>
+                  <p className="desc">{p.desc}</p>
+                  <div className="location">
+                    <SlLocationPin className="icon" />
+                    <span>{p.location}</span>
+                  </div>
+                  <p className="price">Rs 20000</p>
+                  {p.properyDetails && (
+                    <div className="residental-wrapper">
+                      <div className="details">
+                        <LuBedDouble size={20} />
+                        <p>Bedrooms {p.properyDetails.bedrooms}</p>
+                      </div>
+                      <div className="details">
+                        <LuBedDouble size={20} />
+                        <p>Bath Room {p.properyDetails.washrooms}</p>
+                      </div>{" "}
+                      <div className="details">
+                        <LuBedDouble size={20} />
+                        <p>ParKing</p>
+                      </div>
+                    </div>
+                  )}
+
+                  <div>
+                    <Link
+                      to={`/projectdetails/${p._id}`}
+                      onClick={() => {
+                        window.location.href = `/projectdetails/${p._id}`;
+                      }}
+                    >
+                      <button>More</button>
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+
+          {/* <div className="service-items">
+            <figure>
+              <img
+                src="https://cdn.staticmb.com/propertyservicestatic/marketplacestatic/images/property-valuation/val-for-buyer-img.png"
+                alt=""
+              />
+            </figure>
+            <h3>Valuation for Buyers</h3>
+            <p>
+              Finalized a property? Let an Expert Valuer make sure it's worth
+              the price you pay & help you save money.
+            </p>
+            <div className="location">
+              <SlLocationPin className="icon" />
+              <span>Nodia</span>
+            </div>
+            <p className="price">Rs 20000</p>
+            <div className="residental-wrapper">
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>Bedrooms 2</p>
+              </div>
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>Bath Room 2</p>
+              </div>{" "}
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>ParKing</p>
+              </div>
+            </div>
+            <div>
+              <button>More</button>
+            </div>
+          </div>{" "}
+          <div className="service-items">
+            <figure>
+              <img
+                src="https://cdn.staticmb.com/propertyservicestatic/marketplacestatic/images/property-valuation/val-for-buyer-img.png"
+                alt=""
+              />
+            </figure>
+            <h3>Valuation for Buyers</h3>
+            <p>
+              Finalized a property? Let an Expert Valuer make sure it's worth
+              the price you pay & help you save money.
+            </p>
+            <div className="location">
+              <SlLocationPin className="icon" />
+              <span>Nodia</span>
+            </div>
+            <p className="price">Rs 20000</p>
+            <div className="residental-wrapper">
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>Bedrooms 2</p>
+              </div>
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>Bath Room 2</p>
+              </div>{" "}
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>ParKing</p>
+              </div>
+            </div>
+            <div>
+              <button>More</button>
+            </div>
+          </div>{" "}
+          <div className="service-items">
+            <figure>
+              <img
+                src="https://cdn.staticmb.com/propertyservicestatic/marketplacestatic/images/property-valuation/val-for-buyer-img.png"
+                alt=""
+              />
+            </figure>
+            <h3>Valuation for Buyers</h3>
+            <p>
+              Finalized a property? Let an Expert Valuer make sure it's worth
+              the price you pay & help you save money.
+            </p>
+            <div className="location">
+              <SlLocationPin className="icon" />
+              <span>Nodia</span>
+            </div>
+            <p className="price">Rs 20000</p>
+            <div className="residental-wrapper">
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>Bedrooms 2</p>
+              </div>
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>Bath Room 2</p>
+              </div>{" "}
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>ParKing</p>
+              </div>
+            </div>
+            <div>
+              <button>More</button>
+            </div>
+          </div>{" "}
+          <div className="service-items">
+            <figure>
+              <img
+                src="https://cdn.staticmb.com/propertyservicestatic/marketplacestatic/images/property-valuation/val-for-buyer-img.png"
+                alt=""
+              />
+            </figure>
+            <h3>Valuation for Buyers</h3>
+            <p>
+              Finalized a property? Let an Expert Valuer make sure it's worth
+              the price you pay & help you save money.
+            </p>
+            <div className="location">
+              <SlLocationPin className="icon" />
+              <span>Nodia</span>
+            </div>
+            <p className="price">Rs 20000</p>
+            <div className="residental-wrapper">
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>Bedrooms 2</p>
+              </div>
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>Bath Room 2</p>
+              </div>{" "}
+              <div className="details">
+                <LuBedDouble size={20} />
+                <p>ParKing</p>
+              </div>
+            </div>
+            <div>
+              <button>More</button>
+            </div>
+          </div> */}
+        </div>
+        <div className="service-detail">
+          {isFilter &&
+            filterDatas.length > 0 &&
+            filterDatas.map((p: any) => {
               return (
                 <div className="service-items">
                   <figure>

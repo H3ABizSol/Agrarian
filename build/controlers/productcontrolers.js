@@ -33,6 +33,7 @@ const errorhanlder_1 = __importDefault(require("../Helpers/errorhanlder"));
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const createProperty = (0, catchAsyncError_1.default)(async (req, res, next) => {
+    console.log(req.body);
     const { washrooms, bedrooms, parking } = req.body;
     const imgFile = req.files;
     const imgArr = [];
@@ -46,6 +47,7 @@ const createProperty = (0, catchAsyncError_1.default)(async (req, res, next) => 
             ourservices: {
                 name: req.body.service,
                 subservice: req.body.subservice,
+                type: req.body.type,
             },
             properyDetails: {
                 bedrooms: req.body.bedrooms,
@@ -61,7 +63,8 @@ const createProperty = (0, catchAsyncError_1.default)(async (req, res, next) => 
             img: imgArr,
             ourservices: {
                 name: req.body.service,
-                subservice: req.body.subservice,
+                subservice: req.body.subservice.toLowerCase(),
+                type: req.body.type,
             },
         });
         return res.send({ success: true, property });
@@ -97,6 +100,11 @@ const updateProperty = (0, catchAsyncError_1.default)(async (req, res, next) => 
                     washrooms: washrooms,
                     parking: parking,
                 },
+                ourservices: {
+                    name: req.body.service,
+                    subservice: req.body.subservice,
+                    type: req.body.type,
+                },
             },
         }, { new: true });
         return res.send({ success: true, allProperty });
@@ -105,10 +113,10 @@ const updateProperty = (0, catchAsyncError_1.default)(async (req, res, next) => 
         const allProperty = await property_1.default.findByIdAndUpdate(req.params.id, {
             $set: {
                 ...req.body,
-                properyDetails: {
-                    bedrooms: bedrooms,
-                    washrooms: washrooms,
-                    parking: parking,
+                ourservices: {
+                    name: req.body.service,
+                    subservice: req.body.subservice,
+                    type: req.body.type,
                 },
             },
         }, { new: true });

@@ -62,7 +62,6 @@ const isAdmin = catchAsynchError(
 
 const sendEmail = catchAsynchError(
   async (req: Request, res: Response, next: NextFunction) => {
-    console.log(req.body);
     const mail = {
       ...req.body,
     };
@@ -70,5 +69,15 @@ const sendEmail = catchAsynchError(
     return res.json({ success: true, message: "mail was sent" });
   }
 );
+const applyJob = catchAsynchError(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const mail = {
+      ...req.body,
+      resume: req.file,
+    };
+    const info = await sendMail(mail);
+    return res.json({ success: true, message: "mail was sent" });
+  }
+);
 
-export { login, register, updateAdmin, isAdmin, sendEmail };
+export { login, register, updateAdmin, isAdmin, sendEmail, applyJob };

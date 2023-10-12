@@ -14,6 +14,8 @@ export const Ourproject = () => {
   const [isFilter, setIsFilter] = useState(false);
   const [isProperty, setIsProperty] = useState(false);
   const [location, setLocation] = useState([] as any);
+  const [check, setCheck] = React.useState("");
+  const [isCheck, setIsCheck] = React.useState(true);
 
   // const [spin, setSpin] = React.useState(false);
 
@@ -32,8 +34,27 @@ export const Ourproject = () => {
     }
   };
 
+  const filterProject2 = (e: any) => {
+    if (e.target.innerHTML.toLowerCase() === "all") {
+      setIsProperty(true);
+      setIsFilter(false);
+    } else {
+      setIsProperty(false);
+      setIsFilter(true);
+      const filterData = allProperty.filter((i: any) => {
+        if (
+          i.ourservices.type.toLowerCase() === e.target.innerHTML.toLowerCase()
+        ) {
+          return i;
+        }
+      });
+      setFilterProperty([...filterData]);
+    }
+  };
+
   const filterProject = (e: any) => {
-    console.log(e.target.innerHTML);
+    setCheck(e.target.innerHTML.toLowerCase());
+    setIsCheck(false);
     if (e.target.innerHTML.toLowerCase() === "all") {
       setIsProperty(true);
       setIsFilter(false);
@@ -45,12 +66,8 @@ export const Ourproject = () => {
           i.ourservices.subservice.toLowerCase() ===
           e.target.innerHTML.toLowerCase()
         ) {
-          console.log("hai");
+          return i;
         }
-        return (
-          i.ourservices.subservice.toLowerCase() ===
-          e.target.innerHTML.toLowerCase()
-        );
       });
       console.log(filterData);
       setFilterProperty([...filterData]);
@@ -74,6 +91,7 @@ export const Ourproject = () => {
     window.scrollTo(0, 0);
     getProjects();
   }, []);
+  console.log(check);
   return (
     <Layout>
       <div className="project-detail-wrapper">
@@ -102,7 +120,7 @@ export const Ourproject = () => {
                       </figure>
                       <div className="content">
                         <h3>{p.title}</h3>
-                        <p>{p.desc}</p>
+                        <p className="description">{p.desc}</p>
                         <div className="location">
                           <SlLocationPin className="icon" />
                           <span>{p.location}</span>
@@ -149,19 +167,22 @@ export const Ourproject = () => {
             <div className="right">
               <h3>Filter</h3>
               <h4>Services</h4>
-              <div
-                className="residental-category"
-                onClick={(e) => {
-                  filterProject(e);
-                }}
-              >
-                <p className="item">Residental</p>
-                <p className="item">Land</p>
-                <p className="item">Dream Home</p>
-                <p className="item">Commercial</p>
-                <p className="item">Plot</p>
-                <p className="item">All</p>
-              </div>
+              {isCheck && (
+                <div
+                  className="residental-category"
+                  onClick={(e) => {
+                    filterProject(e);
+                  }}
+                >
+                  <p className="item">Residental</p>
+                  <p className="item">Commercial</p>
+                  <p className="item">Building Nation</p>
+                  <p className="item">Plot</p>
+                  <p className="item">Dream Home Construction</p>
+                  <p className="item">All</p>
+                </div>
+              )}
+
               <h4>By Location</h4>
               <div
                 className="residental-category"
@@ -199,7 +220,7 @@ export const Ourproject = () => {
                       </figure>
                       <div className="content">
                         <h3>{p.title}</h3>
-                        <p>{p.desc}</p>
+                        <p className="description">{p.desc}</p>
                         <div className="location">
                           <SlLocationPin className="icon" />
                           <span>{p.location}</span>
@@ -246,19 +267,73 @@ export const Ourproject = () => {
             <div className="right">
               <h3>Filter</h3>
               <h4>Services</h4>
-              <div
-                className="residental-category"
-                onClick={(e) => {
-                  filterProject(e);
-                }}
-              >
-                <p className="item">Residental</p>
-                <p className="item">Commercial</p>
-                <p className="item">Land</p>
-                <p className="item">Dream Home</p>
-                <p className="item">Plot</p>
-                <p className="item">All</p>
-              </div>
+              {isCheck && (
+                <div
+                  className="residental-category"
+                  onClick={(e) => {
+                    filterProject2(e);
+                  }}
+                >
+                  <p className="item">Residental</p>
+                  <p className="item">Commercial</p>
+                  <p className="item">Land</p>
+                  <p className="item">Dream Home Construction</p>
+                  <p className="item">Plot</p>
+                  <p className="item">All</p>
+                </div>
+              )}
+
+              {check.toLowerCase() === "residental" && (
+                <div
+                  className="residental-category"
+                  onClick={(e) => {
+                    filterProject2(e);
+                  }}
+                >
+                  <p>Flats</p>
+                  <p>villas</p>
+                  <p>Appartments</p>
+                  <p>Floors</p>
+                </div>
+              )}
+              {check.toLowerCase() === "commercial" && (
+                <div
+                  className="residental-category"
+                  onClick={(e) => {
+                    filterProject2(e);
+                  }}
+                >
+                  <p>shop</p>
+                  <p>offices</p>
+                  <p>food court</p>
+                </div>
+              )}
+              {check.toLowerCase() === "dream home construction" && (
+                <div
+                  className="residental-category"
+                  onClick={(e) => {
+                    filterProject2(e);
+                  }}
+                >
+                  <p>Flats</p>
+                  <p>Floors</p>
+                  <p>Appartments</p>
+                  <p>Villa</p>
+                </div>
+              )}
+              {check.toLowerCase() === "building nation" && (
+                <div
+                  className="residental-category"
+                  onClick={(e) => {
+                    filterProject2(e);
+                  }}
+                >
+                  <p>roads</p>
+                  <p>bridges</p>
+                  <p>hospitals</p>
+                  <p>hotels</p>
+                </div>
+              )}
               <h4>By Location</h4>
               <div
                 className="residental-category"

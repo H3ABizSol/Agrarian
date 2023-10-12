@@ -9,7 +9,9 @@ import {
   updateAdmin,
   isAdmin,
   sendEmail,
+  applyJob,
 } from "../controlers/admincontrolers";
+import FileUpload from "../Helpers/multer";
 
 // import multipleUpload from "../Helpers/multer";
 
@@ -18,6 +20,7 @@ router.route("/register").post(register);
 router.route("/login").post(login);
 router.route("/update/:id").put(authenticate, updateAdmin);
 router.route("/sendemail").post(sendEmail);
+router.route("/applyjob").post(FileUpload.single("resume"), applyJob);
 
 // router.route("/create").post(multipleUpload.array("img"), createProperty);
 // router.route("/delete/:id").delete(deleteProperty);

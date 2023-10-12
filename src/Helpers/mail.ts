@@ -8,14 +8,29 @@ var transporter = nodemailer.createTransport({
 });
 
 const sendMail = (mail: any) => {
-  console.log(mail);
-  let details;
-  var mailOptions = {
-    from: process.env.SMPT_USER,
-    to: mail.email,
-    subject: "Sending Email.",
-    text: mail.message,
-  };
+  let mailOptions = {};
+  if (mail.resume) {
+    mailOptions = {
+      from: process.env.SMPT_USER,
+      to: mail.email,
+      subject: "Sending Email.",
+      text: mail.message,
+      html: `Thank you for apply ${mail.firstname} ${mail.lastname}\n Mobile : ${mail.mobile}`,
+      attachments: [
+        {
+          filename: mail.resume.originalname,
+          contentType: "application/pdf",
+        },
+      ],
+    };
+  } else {
+    mailOptions = {
+      from: process.env.SMPT_USER,
+      to: mail.email,
+      subject: "Sending Email.",
+      text: mail.message,
+    };
+  }
 
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {

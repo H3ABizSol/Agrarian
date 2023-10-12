@@ -44,7 +44,7 @@ export const Project = () => {
     washrooms: "",
     parking: "",
   } as any);
-
+  const [type, setType] = useState("");
   const [allProperty, setAllProperty] = React.useState([] as any);
   const [open, setOpen] = useState(false);
   const [image, setImages] = useState([]);
@@ -102,6 +102,7 @@ export const Project = () => {
     formData.append("bedrooms", updatePropertyDetails.bedrooms);
     formData.append("washrooms", updatePropertyDetails.washrooms);
     formData.append("parking", updatePropertyDetails.parking);
+    formData.append("type", type);
 
     const { data } = await axios.put(
       `/api/property/update/${updateId}`,
@@ -216,7 +217,7 @@ export const Project = () => {
                           deleteProject(p);
                         }}
                       >
-                        Dlete
+                        Delete
                         <AiOutlineDelete />
                       </button>
                     </div>
@@ -301,6 +302,68 @@ export const Project = () => {
                       return <option value={s}>{s}</option>;
                     })}
                   </select>
+                  {updatePropertyDetails.subservice.toLowerCase() ===
+                    "residental" && (
+                    <select
+                      name=""
+                      onChange={(e) => {
+                        setType(e.target.value);
+                      }}
+                    >
+                      <option value="">select type</option>
+                      <option value="flats">Flats</option>
+                      <option value="villas">villas</option>
+                      <option value="appartments">appartments</option>
+                      <option value="floors">floors</option>
+                    </select>
+                  )}
+                  {updatePropertyDetails.subservice.toLowerCase() ===
+                    "commercial" && (
+                    <select
+                      name=""
+                      id=""
+                      onChange={(e) => {
+                        setType(e.target.value);
+                      }}
+                    >
+                      <option>select type</option>
+                      <option value="shop">shop</option>
+                      <option value="offices">offices</option>
+                      <option value="foodcourt">food-court</option>
+                    </select>
+                  )}
+                  {updatePropertyDetails.subservice.toLowerCase() ===
+                    "dream home construction" && (
+                    <select
+                      name=""
+                      id=""
+                      onChange={(e) => {
+                        setType(e.target.value);
+                      }}
+                    >
+                      <option>select type</option>
+                      <option value="flat">flat</option>
+                      <option value="floors">floors</option>
+                      <option value="appartment">Appartment</option>
+                      <option value="villa">villa</option>
+                    </select>
+                  )}
+                  {updatePropertyDetails.subservice.toLowerCase() ===
+                    "building nation" && (
+                    <select
+                      name=""
+                      id=""
+                      onChange={(e) => {
+                        setType(e.target.value);
+                      }}
+                    >
+                      <option>select type</option>
+                      <option value="roads">roads</option>
+                      <option value="bridges">bridges</option>
+                      <option value="hospitals">hospitals</option>
+                      <option value="hotels">hotels</option>
+                    </select>
+                  )}
                   <input
                     type="file"
                     name="title"

@@ -8,6 +8,7 @@ const propertySchema = new mongoose.Schema({
   ourservices: {
     name: { type: String },
     subservice: { type: String },
+    type: { type: String },
   },
   properyDetails: {
     bedrooms: { type: String },

@@ -123,6 +123,34 @@
      }
 
 }
+.filter-type{
+  display: flex;
+   gap: 1rem;
+   justify-content: center;
+   margin-top: 2rem;
+   button{
+     position: relative;
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1;
+    &::after{
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      background-color: rgba(132, 185, 210, 0.719);
+      top: 0;
+      left: 0;
+      transition: all 0.5s ease-in-out;
+      z-index: -1;
+    }
+    &:hover::after{
+      width: 100%;
+    }
+   }
+}
     .service-detail{
         display: flex;
         justify-content: center;
@@ -189,6 +217,10 @@
             font-size: 1.3rem;
             color: gray;
             line-height: 2rem;
+        }
+        .desc{
+          height: 80px;
+          overflow: hidden;
         }
           figure{
             width: 100%;
