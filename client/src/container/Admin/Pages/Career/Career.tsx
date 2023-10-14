@@ -14,6 +14,10 @@ export const Admincareer = () => {
   const [minage, setMinage] = React.useState("");
   const [noofopenings, setNoofopening] = React.useState("");
   const [experience, setExperience] = React.useState("");
+  const [qualification, setQualification] = React.useState("");
+  const [salary, setSalary] = React.useState("");
+  const [location, setLocation] = React.useState("");
+
   const [careers, setCareers] = React.useState([] as any);
   const [open, setOpen] = React.useState(false);
 
@@ -28,6 +32,9 @@ export const Admincareer = () => {
         minage,
         noofopenings,
         experience,
+        qualification,
+        salary,
+        location,
       },
       {
         headers: {
@@ -52,6 +59,9 @@ export const Admincareer = () => {
         minage,
         noofopenings,
         experience,
+        qualification,
+        salary,
+        location,
       },
       {
         headers: {
@@ -174,6 +184,35 @@ export const Admincareer = () => {
                   value={experience}
                 />
               </div>
+              <div className="form-text-field">
+                <input
+                  name="qualification"
+                  type="text"
+                  placeholder="qualification"
+                  onChange={(e) => {
+                    setQualification(e.target.value);
+                  }}
+                  value={qualification}
+                />
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="location"
+                  onChange={(e) => {
+                    setLocation(e.target.value);
+                  }}
+                  value={location}
+                />
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="salary"
+                  onChange={(e) => {
+                    setSalary(e.target.value);
+                  }}
+                  value={salary}
+                />
+              </div>
               <div className="btn-container">
                 <button>Create</button>
               </div>
@@ -190,6 +229,10 @@ export const Admincareer = () => {
                           <p>Minium-age :-{c.minage}</p>
                           <p>No. Of Openings :-{c.noofopenings}</p>
                           <p>Experience Required :- {c.experience}</p>
+                          <p>Qualification :- {c.qualification}</p>
+                          <p>salary :- {c.salary}</p>
+                          <p>location :- {c.location}</p>
+
                           <div className="btn-container">
                             <button
                               onClick={() => {
@@ -286,6 +329,35 @@ export const Admincareer = () => {
                       setExperience(e.target.value);
                     }}
                     value={experience}
+                  />
+                </div>
+                <div className="form-text-field">
+                  <input
+                    name="qualification"
+                    type="text"
+                    placeholder="qualification"
+                    onChange={(e) => {
+                      setQualification(e.target.value);
+                    }}
+                    value={qualification}
+                  />
+                  <input
+                    type="text"
+                    name="title"
+                    placeholder="location"
+                    onChange={(e) => {
+                      setLocation(e.target.value);
+                    }}
+                    value={location}
+                  />
+                  <input
+                    type="text"
+                    name="title"
+                    placeholder="salary"
+                    onChange={(e) => {
+                      setSalary(e.target.value);
+                    }}
+                    value={salary}
                   />
                 </div>
                 <div className="btn-container">

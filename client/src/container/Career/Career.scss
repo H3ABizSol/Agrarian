@@ -3,11 +3,12 @@
     min-height: 100vh;
     background-color: rgb(245, 251, 251);
     .paralex{
-        background: url("https://www.jwunited.com.my/v2/img/career.jpg");
+        background: url("https://media.licdn.com/dms/image/C4D12AQH4nXKTNYLq8Q/article-cover_image-shrink_600_2000/0/1520055177103?e=2147483647&v=beta&t=Uf0rRPkFhefZBRDo2u3dfMFQvUxXJ7aOApG_AUrbgLM");
         background-position: 100%;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        height: 400px;
+        background-size: cover;
+        height: 350px;
     }
     .careers-container{
         display: flex;
@@ -55,6 +56,9 @@
     margin-top: 2.3rem;
     .left{
         width: 30%;
+        p{
+            font-weight: 600;
+        }
     }
     form{
         width: 70%;

@@ -73,7 +73,7 @@ export const ContactPage = () => {
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
-                placeholder="enter your name"
+                placeholder="Enter Your Name"
                 required
               />
             </div>
@@ -85,14 +85,14 @@ export const ContactPage = () => {
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
-                placeholder="enter your email"
+                placeholder="Enter Your Email"
                 required
               />
             </div>
             <div>
               <textarea
                 rows={6}
-                placeholder="message"
+                placeholder="Message"
                 required
                 value={message}
                 onChange={(e) => {

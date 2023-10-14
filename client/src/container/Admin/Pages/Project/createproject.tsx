@@ -15,12 +15,12 @@ const ourservices = [
   {
     id: "2",
     name: "Agragian Landcraft",
-    subservie: ["Plot", "Land Development"],
+    subservie: ["Plotting & Land Development"],
   },
   {
     id: "3",
-    name: "Agragian Home",
-    subservie: ["Dream Home Construction"],
+    name: "Agragian Homes",
+    subservie: ["Dream Homes Construction"],
   },
   {
     id: "4",
@@ -216,6 +216,20 @@ export const Createproject = () => {
                   <option value="shop">shop</option>
                   <option value="offices">offices</option>
                   <option value="foodcourt">food-court</option>
+                </select>
+              )}
+              {propertyDetails.subservice.toLowerCase() ===
+                "plotting & land development" && (
+                <select
+                  name=""
+                  id=""
+                  onChange={(e) => {
+                    setType(e.target.value);
+                  }}
+                >
+                  <option>select type</option>
+                  <option value="plots">Plots</option>
+                  <option value="farm house">Farm House</option>
                 </select>
               )}
               {propertyDetails.subservice.toLowerCase() ===

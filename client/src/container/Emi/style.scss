@@ -1,0 +1,41 @@
+.App {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    background-color: rgb(245, 243, 243);
+    height: 60vh;
+    padding: 2rem 0;
+    border-radius: 4px;
+    div {
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      label{
+        font-size: 1.4rem;
+      }
+      input{
+        padding: 1rem 2rem;
+        width: 50%;
+        margin: auto;
+
+      }
+   
+    }
+    button{
+        background-color: rgb(75, 197, 126);
+        color: white;
+        padding: 1rem 2rem;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+    .result {
+      font-size: 1.6rem;
+      margin-top: 20px;
+
+    
+    }
+  }
+  
+  
+  

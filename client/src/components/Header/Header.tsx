@@ -106,22 +106,27 @@ export const Header = () => {
                     <li className="sub-li">
                       Agrarian Landcraft
                       <ul className="sub-sub-menu-li">
-                        <a href="/service/plot" className="link">
-                          <li className="sub-li">Plot</li>
+                        <a
+                          href="/service/plotting & Land Development"
+                          className="link"
+                        >
+                          <li className="sub-li">
+                            Plotting & Land Development
+                          </li>
                         </a>
-                        <a href="/service/land development" className="link">
+                        {/* <a href="/service/land development" className="link">
                           <li>Land Development</li>
-                        </a>
+                        </a> */}
                       </ul>
                     </li>
                     <li className="sub-li">
-                      Agrarian Home
+                      Agrarian Homes
                       <ul className="sub-sub-menu-li">
                         <a
                           href="/service/dream home construction"
                           className="link"
                         >
-                          <li>Dream Home construction</li>
+                          <li>Dream Homes construction</li>
                         </a>
                       </ul>
                     </li>
@@ -192,7 +197,7 @@ export const Header = () => {
                     <li className="sub-li">
                       loan assistance
                       <ul className="sub-sub-menu-li">
-                        <a href="#" className="link">
+                        <a href="/emicalculator" className="link">
                           <li>EMI Calculator</li>
                         </a>
                         <a href="#" className="link">
@@ -271,11 +276,13 @@ export const Header = () => {
                       Agrarian Landcraft
                       <ul className="sub-sub-menu-li">
                         <a href="/service/plot" className="link">
-                          <li className="sub-li">Plot</li>
+                          <li className="sub-li">
+                            Plotting & Land Development
+                          </li>
                         </a>
-                        <a href="/service/land development" className="link">
+                        {/* <a href="/service/land development" className="link">
                           <li>Land Development</li>
-                        </a>
+                        </a> */}
                       </ul>
                     </li>
                     <li className="sub-li">
@@ -356,7 +363,7 @@ export const Header = () => {
                     <li className="sub-li">
                       loan assistance
                       <ul className="sub-sub-menu-li">
-                        <a href="#" className="link">
+                        <a href="/emicalculator" className="link">
                           <li>EMI Calculator</li>
                         </a>
                         <a href="#" className="link">

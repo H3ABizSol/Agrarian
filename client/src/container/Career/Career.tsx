@@ -77,7 +77,10 @@ export const Career = () => {
                       <p>sector :-{c.sector}</p>
                       <p>Minium-age :-{c.minage}</p>
                       <p>No. Of Openings :-{c.noofopenings}</p>
-                      <p>Experience Required :- {c.experience}</p>
+                      <p>Experience Required :- {c.experience} years</p>
+                      <p>Qualification :- {c.qualification}</p>
+                      <p>salary :- {c.salary}</p>
+                      <p>location :- {c.location}</p>
                       <div className="btn-container">
                         <button
                           onClick={() => {
@@ -105,10 +108,11 @@ export const Career = () => {
               <div className="left">
                 <h3>Job Details</h3>
                 <h2>{details?.title}</h2>
-                <p>sector :-{details?.sector}</p>
-                <p>Minium-age :-{details?.minage}</p>
                 <p>No. Of Openings :-{details?.noofopenings}</p>
                 <p>Experience Required :- {details?.experience}</p>
+                <p>Qualification :- {details.qualification}</p>
+                <p>Salary :- {details.salary}</p>
+                <p>Location :- {details.location}</p>
               </div>
               <form action="" onSubmit={handleSubmit}>
                 {mailMessage && (

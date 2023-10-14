@@ -24,7 +24,7 @@
         opacity: 0.5;
      }
      h2{
-      font-size: 4vw;
+      font-size: 3vw;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 0.5rem;
@@ -37,7 +37,7 @@
       margin: 0 auto;
       z-index: 10;
       background-color: rgb(25, 34, 43);
-      padding: 0.5rem 4rem;
+      padding: 0.5rem 20rem;
       border-radius: 40px;
       @media screen and (max-width:574px) {
         font-size: 1.2rem;
@@ -125,15 +125,16 @@
 }
 .filter-type{
   display: flex;
-   gap: 1rem;
+   gap: 10rem;
    justify-content: center;
    margin-top: 2rem;
    button{
-     position: relative;
-    padding: 1rem 2rem;
+    position: relative;
+    padding: 1rem 6rem;
     border: 1px solid black;
     background-color: transparent;
     cursor: pointer;
+    font-weight: 600;
     z-index: 1;
     &::after{
       content: "";

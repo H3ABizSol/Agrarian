@@ -124,6 +124,18 @@ export const Servicedetial = () => {
           </div>
         )}
         {propertyDetail[0]?.ourservices.subservice ===
+          "plotting & land development" && (
+          <div
+            className="filter-type"
+            onClick={(e) => {
+              changeType(e);
+            }}
+          >
+            <button>Plots</button>
+            <button>Farm House</button>
+          </div>
+        )}
+        {propertyDetail[0]?.ourservices.subservice ===
           "dream home construction" && (
           <div
             className="filter-type"
