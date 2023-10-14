@@ -1,7 +1,7 @@
 import "./sidenavdashboard.scss";
 import {
   AiOutlineFundProjectionScreen,
-  AiOutlineHome,
+  // AiOutlineHome,
   AiOutlineVideoCamera,
 } from "react-icons/ai";
 import { MdOutlineCreate, MdCropPortrait } from "react-icons/md";
@@ -11,12 +11,12 @@ export const Sidenavdash = () => {
   return (
     <div className="side-nav">
       <ul>
-        <Link to="/admin" className="link">
+        {/* <Link to="/admin" className="link">
           <li>
             <AiOutlineHome />
             Dashboard
           </li>
-        </Link>
+        </Link> */}
         <Link to="/admin/projects" className="link">
           <li>
             <AiOutlineFundProjectionScreen />
