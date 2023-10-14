@@ -10,6 +10,9 @@ const careerSchema = new mongoose_1.default.Schema({
     minage: { type: String, trim: true },
     noofopenings: { type: String, trim: true },
     experience: { type: String, trim: true },
+    qualification: { type: String, trim: true },
+    location: { type: String, trim: true },
+    salary: { type: String, trim: true },
 });
 const careerModel = mongoose_1.default.model("career", careerSchema);
 exports.default = careerModel;

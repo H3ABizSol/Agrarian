@@ -126,24 +126,27 @@ export const Ourproject = () => {
                           <span>{p.location}</span>
                         </div>
                         <p className="price"> ₹ {p.price}</p>
-                        <div className="residental-wrapper">
-                          <div className="details">
-                            <LuBedDouble size={20} />
-                            <p>Bedrooms {p.properyDetails?.bedrooms}</p>
+                        {p.properyDetails?.bedrooms && (
+                          <div className="residental-wrapper">
+                            <div className="details">
+                              <LuBedDouble size={20} />
+                              <p>Bedrooms {p.properyDetails?.bedrooms}</p>
+                            </div>
+                            <div className="details">
+                              <LuBedDouble size={20} />
+                              <p>washrooms {p.properyDetails?.washrooms}</p>
+                            </div>{" "}
+                            <div className="details">
+                              <LuBedDouble size={20} />
+                              {p.properyDetails?.parking === "yes" ? (
+                                <p>Parking</p>
+                              ) : (
+                                <p>No Parking</p>
+                              )}
+                            </div>
                           </div>
-                          <div className="details">
-                            <LuBedDouble size={20} />
-                            <p>washrooms {p.properyDetails?.washrooms}</p>
-                          </div>{" "}
-                          <div className="details">
-                            <LuBedDouble size={20} />
-                            {p.properyDetails?.parking === "yes" ? (
-                              <p>Parking</p>
-                            ) : (
-                              <p>No Parking</p>
-                            )}
-                          </div>
-                        </div>
+                        )}
+
                         <div>
                           <Link to={`/projectdetails/${p._id}`}>
                             <button>More</button>

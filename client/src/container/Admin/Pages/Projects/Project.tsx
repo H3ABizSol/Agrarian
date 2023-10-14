@@ -113,11 +113,19 @@ export const Project = () => {
         },
       }
     );
-    console.log(data);
     if (data.success) {
       setSpin(false);
       setOk(true);
-      alert("project cerated");
+      toast("👌 update successfully!", {
+        position: "bottom-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
 
@@ -156,7 +164,6 @@ export const Project = () => {
           token: localStorage.getItem("admin_token"),
         },
       });
-      console.log(data);
       if (data.success) {
         setSpin(false);
         toast("👌 delete successfully!", {
