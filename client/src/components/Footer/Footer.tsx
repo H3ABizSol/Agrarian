@@ -44,7 +44,7 @@ export const Footer = () => {
           <p>© Copyright 2023, all right reserved</p>
         </div>
       </footer>
-      <a href="https://api.whatsapp.com/send?phone=7497042180">
+      <a href="https://api.whatsapp.com/send?phone=9999589348">
         <div className="whatsapp">
           <AiOutlineWhatsApp className="icon" />
         </div>
