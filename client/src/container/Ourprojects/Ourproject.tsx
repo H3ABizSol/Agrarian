@@ -5,7 +5,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { LuBedDouble } from "react-icons/lu";
 import "./Ourproject.scss";
 import axios from "axios";
-import logo from "../../assets/LOGO.png";
+import logo from "../../assets/agrarianlogo.jpeg";
 import { Link } from "react-router-dom";
 
 export const Ourproject = () => {

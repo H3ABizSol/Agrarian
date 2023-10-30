@@ -41,8 +41,8 @@ export const ContactPage = () => {
         <div className="contact-form">
           <div className="left">
             <p className="miss-call">Give a Miss Call</p>
-            <a href="" className="link">
-              +9111111111
+            <a href="tel:+919999589348" className="link">
+              +919999589348
             </a>
             <p className="follow">Foolow on us</p>
             <div className="social-icons">

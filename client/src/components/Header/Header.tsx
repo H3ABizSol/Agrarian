@@ -2,7 +2,7 @@ import "./Header.scss";
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import logo from "../../assets/LOGO.png";
+import logo from "../../assets/agrarianlogo.jpeg";
 
 // import {
 //   BiLogoFacebook,

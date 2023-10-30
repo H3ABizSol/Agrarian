@@ -1,4 +1,4 @@
-import logo from "../../assets/LOGO.png";
+import logo from "../../assets/agrarianlogo.jpeg";
 import "./Loader.scss";
 
 export const Loader = () => {

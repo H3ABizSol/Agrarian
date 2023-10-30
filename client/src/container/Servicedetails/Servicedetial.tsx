@@ -39,6 +39,7 @@ export const Servicedetial = () => {
           return i;
         }
       });
+      console.log(filterData);
       setPropertyDetail([...filterData]);
     }
   };

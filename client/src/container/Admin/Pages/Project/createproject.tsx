@@ -89,7 +89,7 @@ export const Createproject = () => {
     formData.append("title", propertyDetails.title);
     formData.append("desc", propertyDetails.desc);
     formData.append("price", propertyDetails.price);
-    formData.append("location", propertyDetails.location);
+    formData.append("location", propertyDetails.location.toLowerCase());
     formData.append("service", propertyDetails.service);
     formData.append("subservice", propertyDetails.subservice);
     formData.append("type", type);
