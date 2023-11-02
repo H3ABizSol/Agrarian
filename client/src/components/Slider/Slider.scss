@@ -107,6 +107,9 @@
                     flex-direction: column;
                     gap: 1.5rem;
                     list-style: none;
+                    .link{
+                        color: black;
+                    }
                     li{
                         font-size: 1.6rem;
                         padding: 0.8rem 1rem;

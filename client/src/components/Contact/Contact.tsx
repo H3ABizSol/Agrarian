@@ -77,6 +77,13 @@ export const Contact = () => {
               />
             </div>
             <div>
+              <select name="" id="">
+                <option value="">Interest</option>
+                <option value="">Residential</option>
+                <option value="">Commercial</option>
+              </select>
+            </div>
+            <div>
               <textarea
                 rows={6}
                 placeholder="Message"

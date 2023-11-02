@@ -107,9 +107,9 @@ export const Servicedetial = () => {
             }}
           >
             <button>Flats</button>
-            <button>villas</button>
+            <button>Villas</button>
             <button>Appartments</button>
-            <button>Floors</button>
+            <button>Independent Floors</button>
           </div>
         )}
         {propertyDetail[0]?.ourservices.subservice === "commercial" && (
@@ -119,9 +119,9 @@ export const Servicedetial = () => {
               changeType(e);
             }}
           >
-            <button>shop</button>
-            <button>offices</button>
-            <button>food court</button>
+            <button>Shop</button>
+            <button>Offices</button>
+            <button>Food court</button>
           </div>
         )}
         {propertyDetail[0]?.ourservices.subservice ===
@@ -144,10 +144,10 @@ export const Servicedetial = () => {
               changeType(e);
             }}
           >
-            <button>flat</button>
-            <button>floors</button>
+            <button>Flat</button>
+            <button>Floors</button>
             <button>Appartments</button>
-            <button>villa</button>
+            <button>Villa</button>
           </div>
         )}
         {propertyDetail[0]?.ourservices.subservice === "building nation" && (
@@ -157,10 +157,10 @@ export const Servicedetial = () => {
               changeType(e);
             }}
           >
-            <button>roads</button>
-            <button>bridges</button>
-            <button>hospitals</button>
-            <button>hotels</button>
+            <button>Roads</button>
+            <button>Bridges</button>
+            <button>Hospitals</button>
+            <button>Hotels</button>
           </div>
         )}
 

@@ -30,7 +30,7 @@ export const Oursevice = () => {
           <Link to="/service/agrarian home" className="link">
             <div>
               <AiOutlineProject className="icon" />
-              <h3>Agrarian Home</h3>
+              <h3>Agrarian Homes</h3>
               {/* <p>Cum sociis natoque penatibus et magnis dis​</p> */}
             </div>{" "}
           </Link>

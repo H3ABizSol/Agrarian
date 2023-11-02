@@ -28,51 +28,6 @@ export const Header = () => {
     <>
       <header className={nav ? "share" : ""}>
         <nav>
-          {/* <div className="top-nav">
-            <div className="contact-details">
-              <ul>
-                <li>
-                  <a href="tel:+">
-                    <FiPhone />
-                    Sales: +7778899888
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+">
-                    <FiPhone />
-                    Custome Care: +7778899888
-                  </a>
-                </li>{" "}
-                <li>
-                  <a href="tel:+">
-                    <FiPhone />
-                    Corporate +7778899888
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="social-icons">
-              <ul>
-                <li>
-                  <a href="tel:+">
-                    <BiLogoFacebook />
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+">
-                    <BiLogoInstagram />
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+">
-                    <BiLogoLinkedin />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div> */}
-
           <div className="bottom-nav">
             <div className="logo-wrapper">
               <figure>
@@ -96,7 +51,7 @@ export const Header = () => {
                       Property Bazzar
                       <ul className="sub-sub-menu-li">
                         <a href="/service/residental" className="link">
-                          <li>Residental</li>
+                          <li>Residential</li>
                         </a>
                         <a href="/service/commercial" className="link">
                           <li>Commercial</li>

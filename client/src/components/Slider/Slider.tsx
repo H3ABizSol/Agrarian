@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export const Slider = ({ Image }: any) => {
   const [scrollVal, setScrollVal] = useState(false);
@@ -116,7 +117,11 @@ export const Slider = ({ Image }: any) => {
                 <ul>
                   {searchData &&
                     searchData.map((p: any) => {
-                      return <li>{p.title}</li>;
+                      return (
+                        <Link to={`/projectdetails/${p._id}`} className="link">
+                          <li>{p.title}</li>
+                        </Link>
+                      );
                     })}
                 </ul>
               </div>
