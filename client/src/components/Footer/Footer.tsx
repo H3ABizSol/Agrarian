@@ -41,7 +41,9 @@ export const Footer = () => {
           </ul>
         </div>
         <div className="copyright">
-          <p>© Copyright 2023, all right reserved</p>
+          <p>
+            © Copyright 2023, all right reserved, H3A Business Solutions Pvt Ltd
+          </p>
         </div>
       </footer>
       <a href="https://api.whatsapp.com/send?phone=+919999589348">
