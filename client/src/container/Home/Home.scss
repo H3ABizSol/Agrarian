@@ -1,5 +1,6 @@
 .about-container{
     background-color: rgb(249, 249, 248);
+    // background-color: red;
     margin-top: 12rem;
     h2{
         text-align: center;
@@ -14,12 +15,13 @@
     .about-section{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        background-color: rgb(255, 255, 255);
+        // background-color: rgb(255, 255, 255);
         min-height: fit-content;
         gap: 2rem;
         width: 80%;
         margin: 0 auto;
         padding: 4rem 0;
+        // background-color: black;
        @media screen and (max-width:868px) {
           display: flex;
           flex-wrap: wrap;
