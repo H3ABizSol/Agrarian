@@ -44,7 +44,7 @@ export const ContactPage = () => {
             <a href="tel:+919999589348" className="link">
               +919999589348
             </a>
-            <p className="follow">Foolow on us</p>
+            <p className="follow">Follow on us</p>
             <div className="social-icons">
               <AiOutlineInstagram className="icon insta" />
               <AiOutlineTwitter className="icon twiter" />

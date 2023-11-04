@@ -8,6 +8,7 @@ export const Contact = () => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
+  const [interest, setInterest] = React.useState("");
   const [mailMessage, setMailMessage] = React.useState("");
   const [spin, setSpin] = React.useState(false);
   const antIcon = (
@@ -20,6 +21,7 @@ export const Contact = () => {
       name,
       email,
       message,
+      interest,
     });
     console.log(data);
     if (data.success) {
@@ -77,10 +79,16 @@ export const Contact = () => {
               />
             </div>
             <div>
-              <select name="" id="">
+              <select
+                name=""
+                id=""
+                onChange={(e) => {
+                  setInterest(e.target.value);
+                }}
+              >
                 <option value="">Interest</option>
-                <option value="">Residential</option>
-                <option value="">Commercial</option>
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
               </select>
             </div>
             <div>

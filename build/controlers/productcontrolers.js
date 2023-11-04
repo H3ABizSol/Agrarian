@@ -83,15 +83,19 @@ const getPropertyDetails = (0, catchAsyncError_1.default)(async (req, res, next)
 exports.getPropertyDetails = getPropertyDetails;
 const updateProperty = (0, catchAsyncError_1.default)(async (req, res, next) => {
     const { washrooms, bedrooms, parking } = req.body;
-    console.log(req.body);
     const imgFile = req.files;
-    if (imgFile > 0) {
-        const imgArr = [];
+    const imgArr = [];
+    console.log(imgFile);
+    if (req.files) {
         for (const items of imgFile) {
-            imgArr.push(items.originalname);
+            console.log(items);
+            imgArr.push(items.filename);
         }
     }
-    if (parking && bedrooms && washrooms) {
+    console.log(imgArr);
+    if (parking !== "undefined" &&
+        bedrooms !== "undefined" &&
+        washrooms !== "undefined") {
         const allProperty = await property_1.default.findByIdAndUpdate(req.params.id, {
             $set: {
                 ...req.body,
@@ -113,6 +117,7 @@ const updateProperty = (0, catchAsyncError_1.default)(async (req, res, next) => 
         const allProperty = await property_1.default.findByIdAndUpdate(req.params.id, {
             $set: {
                 ...req.body,
+                img: imgArr,
                 ourservices: {
                     name: req.body.service,
                     subservice: req.body.subservice,

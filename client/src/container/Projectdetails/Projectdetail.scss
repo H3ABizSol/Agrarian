@@ -73,6 +73,7 @@
                     font-size: 1.7rem;
                     color: gray;
                     text-transform: capitalize;
+                    line-height: 3rem;
                     @media screen and (max-width:768px) {
                        font-size: 1.4rem;
                        line-height: 2.4rem;
@@ -85,8 +86,9 @@
                 gap: 2rem;
                 margin-top: 2rem;
                 .items{
-                    width: 140px;
+                    // width: 20%;
                     border: 1px solid rgb(188, 209, 134);
+                
                     padding: 2rem 0.8rem;
                     p{
                         font-size: 1.6rem;

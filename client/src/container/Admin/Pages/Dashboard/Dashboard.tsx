@@ -5,7 +5,7 @@ export const Dashboard = () => {
   return (
     <Dashboardlayout>
       <div className="dashboard-wrapper">
-        <div className="dashboard">
+        {/* <div className="dashboard">
           <div className="items">
             <h2>Total Projects</h2>
             <p>10</p>
@@ -14,7 +14,7 @@ export const Dashboard = () => {
             <h2>Total Videos</h2>
             <p>10</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </Dashboardlayout>
   );

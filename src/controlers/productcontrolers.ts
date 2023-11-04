@@ -63,16 +63,21 @@ const getPropertyDetails = catchAsynchError(
 const updateProperty = catchAsynchError(
   async (req: Request, res: Response, next: NextFunction) => {
     const { washrooms, bedrooms, parking } = req.body;
-    console.log(req.body);
     const imgFile: any = req.files;
-    if (imgFile > 0) {
-      const imgArr: String[] = [];
+    const imgArr: String[] = [];
+    console.log(imgFile);
+    if (req.files) {
       for (const items of imgFile) {
-        imgArr.push(items.originalname);
+        console.log(items);
+        imgArr.push(items.filename);
       }
     }
-
-    if (parking && bedrooms && washrooms) {
+    console.log(imgArr);
+    if (
+      parking !== "undefined" &&
+      bedrooms !== "undefined" &&
+      washrooms !== "undefined"
+    ) {
       const allProperty = await propertyModel.findByIdAndUpdate(
         req.params.id,
         {
@@ -99,6 +104,7 @@ const updateProperty = catchAsynchError(
         {
           $set: {
             ...req.body,
+            img: imgArr,
             ourservices: {
               name: req.body.service,
               subservice: req.body.subservice,

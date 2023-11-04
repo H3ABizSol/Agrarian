@@ -50,7 +50,7 @@ export const Header = () => {
                     <li className="sub-li">
                       Property Bazzar
                       <ul className="sub-sub-menu-li">
-                        <a href="/service/residental" className="link">
+                        <a href="/service/residential" className="link">
                           <li>Residential</li>
                         </a>
                         <a href="/service/commercial" className="link">
@@ -219,8 +219,8 @@ export const Header = () => {
                     <li className="sub-li">
                       Property Bazzar
                       <ul className="sub-sub-menu-li">
-                        <a href="/service/residental" className="link">
-                          <li>Residental</li>
+                        <a href="/service/residential" className="link">
+                          <li>Residential</li>
                         </a>
                         <a href="/service/commercial" className="link">
                           <li>Commercial</li>

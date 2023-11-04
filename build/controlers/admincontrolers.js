@@ -49,6 +49,7 @@ const isAdmin = (0, catchAsyncError_1.default)(async (req, res, next) => {
 });
 exports.isAdmin = isAdmin;
 const sendEmail = (0, catchAsyncError_1.default)(async (req, res, next) => {
+    console.log(req.body);
     const mail = {
         ...req.body,
     };

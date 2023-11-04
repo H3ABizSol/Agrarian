@@ -17,9 +17,11 @@ export const Servicedetial = () => {
   const [isFilter, setIsFilter] = React.useState(false);
 
   const changeType = (e: any) => {
-    console.log(e.innerHTML);
     const filterData = propertyDetail.filter((f: any) => {
-      return f.ourservices.type === e.target.innerHTML.toLowerCase();
+      console.log(f);
+      return (
+        f.ourservices.type.toLowerCase() === e.target.innerHTML.toLowerCase()
+      );
     });
     setFilterData([...filterData]);
     setIsFilter(true);
@@ -39,7 +41,7 @@ export const Servicedetial = () => {
           return i;
         }
       });
-      console.log(filterData);
+      // console.log(filterData);
       setPropertyDetail([...filterData]);
     }
   };
@@ -61,6 +63,7 @@ export const Servicedetial = () => {
     getProjectDetail();
     // window.location.reload();
   }, []);
+  console.log(propertyDetail);
 
   return (
     <Layout>
@@ -87,7 +90,11 @@ export const Servicedetial = () => {
                 <ul>
                   {searchData &&
                     searchData.map((p: any) => {
-                      return <li>{p.title}</li>;
+                      return (
+                        <Link to={`/projectdetails/${p._id}`} className="link">
+                          <li> {p.title}</li>
+                        </Link>
+                      );
                     })}
                 </ul>
               </div>
@@ -99,7 +106,7 @@ export const Servicedetial = () => {
           <p>Find your dream house</p>
         </div>
         {propertyDetail[0]?.ourservices.subservice.toLowerCase() ===
-          "residental" && (
+          "residential" && (
           <div
             className="filter-type"
             onClick={(e) => {
@@ -150,7 +157,7 @@ export const Servicedetial = () => {
             <button>Villa</button>
           </div>
         )}
-        {propertyDetail[0]?.ourservices.subservice === "building nation" && (
+        {propertyDetail[0]?.ourservices.subservice === "Building nation" && (
           <div
             className="filter-type"
             onClick={(e) => {

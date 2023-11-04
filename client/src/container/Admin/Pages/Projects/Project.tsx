@@ -12,12 +12,12 @@ const ourservices = [
   {
     id: "1",
     name: "Property Bazzar",
-    subservie: ["Residental", "commercial"],
+    subservie: ["Residential", "commercial"],
   },
   {
     id: "2",
     name: "Agrarian Landcraft",
-    subservie: ["Plot", "Land Development"],
+    subservie: ["Plotting & Land Development"],
   },
   {
     id: "3",
@@ -27,7 +27,7 @@ const ourservices = [
   {
     id: "4",
     name: "Agrarian Infrastructure",
-    subservie: ["Building Wallion"],
+    subservie: ["Building nation"],
   },
 ];
 const num = [1, 2, 3, 4, 5];
@@ -73,6 +73,7 @@ export const Project = () => {
   };
 
   const changeSubService = (e: any) => {
+    console.log(e.target.value);
     setUpdatePropertyDetails({
       ...updatePropertyDetails,
       subservice: e.target.value,
@@ -91,8 +92,6 @@ export const Project = () => {
     for (const img of image) {
       formData.append("img", img);
     }
-    console.log(updatePropertyDetails);
-    console.log(image);
     formData.append("title", updatePropertyDetails.title);
     formData.append("desc", updatePropertyDetails.desc);
     formData.append("price", updatePropertyDetails.price);
@@ -340,6 +339,20 @@ export const Project = () => {
                     </select>
                   )}
                   {updatePropertyDetails.subservice.toLowerCase() ===
+                    "plotting & land development" && (
+                    <select
+                      name=""
+                      id=""
+                      onChange={(e) => {
+                        setType(e.target.value);
+                      }}
+                    >
+                      <option>select type</option>
+                      <option value="plots">Plots</option>
+                      <option value="farm house">Farm House</option>
+                    </select>
+                  )}
+                  {updatePropertyDetails.subservice.toLowerCase() ===
                     "dream home construction" && (
                     <select
                       name=""
@@ -374,7 +387,7 @@ export const Project = () => {
                   <input
                     type="file"
                     name="title"
-                    id=""
+                    multiple
                     onChange={(e: any) => {
                       setImages(e.target.files);
                     }}

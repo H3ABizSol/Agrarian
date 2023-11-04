@@ -3,10 +3,10 @@
     width: 100%;
     min-height: 100vh;  
     .video-wrapper{
-        position: absolute;
+        // position: absolute;
         width: 100%;
         top:0;
-        opacity: 0.3;
+        opacity: 0.5;
         @media screen and (max-width:1140px) {
                  position: static;
                  opacity: 0.8;
@@ -23,6 +23,8 @@
         left: 0;
         display: grid;
         grid-template-columns: 2fr 1fr;
+   
+
         // z-index: 2;
         @media screen and (max-width:980px) {
            grid-template-columns: 1fr;

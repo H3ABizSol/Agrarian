@@ -10,21 +10,21 @@ const ourservices = [
   {
     id: "1",
     name: "Property Bazzar",
-    subservie: ["Residental", "commercial"],
+    subservie: ["Residential", "commercial"],
   },
   {
     id: "2",
-    name: "Agragian Landcraft",
+    name: "Agrarian Landcraft",
     subservie: ["Plotting & Land Development"],
   },
   {
     id: "3",
-    name: "Agragian Homes",
+    name: "Agrarian Homes",
     subservie: ["Dream Homes Construction"],
   },
   {
     id: "4",
-    name: "Agragian Infrastructure",
+    name: "Agrarian Infrastructure",
     subservie: ["Building nation"],
   },
 ];

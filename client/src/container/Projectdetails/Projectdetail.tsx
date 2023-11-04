@@ -22,6 +22,7 @@ export const Projectdetail = () => {
   React.useEffect(() => {
     getProjectDetail();
   }, []);
+  console.log(propertyDetail);
   return (
     <Layout>
       <div className="project-detail-wrapper">
@@ -68,7 +69,11 @@ export const Projectdetail = () => {
                   <p>{propertyDetail.properyDetails?.washrooms} Washrooms</p>
                 </div>
                 <div className="items">
-                  <p>{propertyDetail.properyDetails?.parking} Parking</p>
+                  <p>
+                    {propertyDetail.properyDetails?.parking === "yes"
+                      ? "Parking Available"
+                      : "No Parking"}
+                  </p>
                 </div>
               </div>
             )}

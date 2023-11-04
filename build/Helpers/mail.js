@@ -33,7 +33,8 @@ const sendMail = (mail) => {
             from: process.env.SMPT_USER,
             to: mail.email,
             subject: "Sending Email.",
-            text: mail.message,
+            // text: mail.message,
+            html: ` ${mail.message}\n Interest : ${mail.interest}`,
         };
     }
     transporter.sendMail(mailOptions, function (error, info) {
