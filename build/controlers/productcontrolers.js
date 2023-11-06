@@ -83,16 +83,15 @@ const getPropertyDetails = (0, catchAsyncError_1.default)(async (req, res, next)
 exports.getPropertyDetails = getPropertyDetails;
 const updateProperty = (0, catchAsyncError_1.default)(async (req, res, next) => {
     const { washrooms, bedrooms, parking } = req.body;
+    console.log(req.body);
     const imgFile = req.files;
     const imgArr = [];
-    console.log(imgFile);
     if (req.files) {
         for (const items of imgFile) {
             console.log(items);
             imgArr.push(items.filename);
         }
     }
-    console.log(imgArr);
     if (parking !== "undefined" &&
         bedrooms !== "undefined" &&
         washrooms !== "undefined") {

@@ -29,9 +29,7 @@ export const Projectdetail = () => {
         <div className="img-container">
           <figure>
             <img
-              src={
-                propertyDetail.img && `/uploads/${propertyDetail.img[imgIndex]}`
-              }
+              src={propertyDetail.img && `${propertyDetail.img[imgIndex]}`}
               alt=""
             />
           </figure>
@@ -44,7 +42,7 @@ export const Projectdetail = () => {
                   setImgIndex(index);
                 }}
               >
-                <img src={`/uploads/${i}`} alt="" />
+                <img src={`${i}`} alt="" />
               </figure>
             );
           })}

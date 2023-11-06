@@ -78,7 +78,7 @@ export const Project = () => {
       ...updatePropertyDetails,
       subservice: e.target.value,
     });
-    if (e.target.value.toLowerCase() === "residental") {
+    if (e.target.value.toLowerCase() === "residential") {
       setShowInput(true);
     } else {
       setShowInput(false);
@@ -89,23 +89,42 @@ export const Project = () => {
     setSpin(true);
     e.preventDefault();
     const formData = new FormData();
+    const imgArr = [];
     for (const img of image) {
-      formData.append("img", img);
+      formData.append("file", img);
+      formData.append("upload_preset", "agrarian");
+      const { data } = await axios.post(
+        "https://api.cloudinary.com/v1_1/drozcfuhv/image/upload",
+        formData
+      );
+      imgArr.push(data.secure_url);
     }
-    formData.append("title", updatePropertyDetails.title);
-    formData.append("desc", updatePropertyDetails.desc);
-    formData.append("price", updatePropertyDetails.price);
-    formData.append("location", updatePropertyDetails.location);
-    formData.append("service", updatePropertyDetails.service);
-    formData.append("subservice", updatePropertyDetails.subservice);
-    formData.append("bedrooms", updatePropertyDetails.bedrooms);
-    formData.append("washrooms", updatePropertyDetails.washrooms);
-    formData.append("parking", updatePropertyDetails.parking);
-    formData.append("type", type);
+    // formData.append("title", updatePropertyDetails.title);
+    // formData.append("desc", updatePropertyDetails.desc);
+    // formData.append("price", updatePropertyDetails.price);
+    // formData.append("location", updatePropertyDetails.location);
+    // formData.append("service", updatePropertyDetails.service);
+    // formData.append("subservice", updatePropertyDetails.subservice);
+    // formData.append("bedrooms", updatePropertyDetails.bedrooms);
+    // formData.append("washrooms", updatePropertyDetails.washrooms);
+    // formData.append("parking", updatePropertyDetails.parking);
+    // formData.append("type", type);
 
     const { data } = await axios.put(
       `/api/property/update/${updateId}`,
-      formData,
+      {
+        img: imgArr,
+        title: updatePropertyDetails.title,
+        desc: updatePropertyDetails.desc,
+        price: updatePropertyDetails.price,
+        location: updatePropertyDetails.location,
+        service: updatePropertyDetails.service,
+        subservice: updatePropertyDetails.subservice,
+        type: type,
+        bedrooms: updatePropertyDetails.bedrooms,
+        washrooms: updatePropertyDetails.washrooms,
+        parking: updatePropertyDetails.parking,
+      },
       {
         headers: {
           token: localStorage.getItem("admin_token"),
@@ -141,6 +160,7 @@ export const Project = () => {
     setOpen(true);
     setImages(p.img);
     setUpdateId(p._id);
+    setType(p.ourservices.type);
     setUpdatePropertyDetails({
       title: p.title,
       desc: p.desc,
@@ -185,6 +205,7 @@ export const Project = () => {
   React.useEffect(() => {
     getProjects();
   }, []);
+
   if (ok) {
     return <Project />;
   }
@@ -202,7 +223,7 @@ export const Project = () => {
                   <div>
                     <div className="items">
                       <figure>
-                        <img src={`/uploads/${p.img[0]}`} alt="" />
+                        <img src={`${p.img[0]}`} alt="" />
                       </figure>
                       <h4>{p.title}</h4>
                       <p>Rs {p.price}</p>
@@ -309,7 +330,7 @@ export const Project = () => {
                     })}
                   </select>
                   {updatePropertyDetails.subservice.toLowerCase() ===
-                    "residental" && (
+                    "residential" && (
                     <select
                       name=""
                       onChange={(e) => {

@@ -69,7 +69,6 @@ export const Ourproject = () => {
           return i;
         }
       });
-      console.log(filterData);
       setFilterProperty([...filterData]);
     }
   };
@@ -116,7 +115,7 @@ export const Ourproject = () => {
                   return (
                     <div className="project-items">
                       <figure>
-                        <img src={`/uploads/${p.img[0]}`} alt="" />
+                        <img src={` ${p.img[0]}`} alt="" />
                       </figure>
                       <div className="content">
                         <h3>{p.title}</h3>
@@ -177,7 +176,7 @@ export const Ourproject = () => {
                     filterProject(e);
                   }}
                 >
-                  <p className="item">Residental</p>
+                  <p className="item">Residential</p>
                   <p className="item">Commercial</p>
                   <p className="item">Building Nation</p>
                   <p className="item">Plot</p>
@@ -219,7 +218,7 @@ export const Ourproject = () => {
                   return (
                     <div className="project-items">
                       <figure>
-                        <img src={`/uploads/${p.img[0]}`} alt="" />
+                        <img src={`${p.img[0]}`} alt="" />
                       </figure>
                       <div className="content">
                         <h3>{p.title}</h3>
@@ -277,7 +276,7 @@ export const Ourproject = () => {
                     filterProject2(e);
                   }}
                 >
-                  <p className="item">Residental</p>
+                  <p className="item">Residential</p>
                   <p className="item">Commercial</p>
                   <p className="item">Land</p>
                   <p className="item">Dream Home Construction</p>
@@ -286,7 +285,7 @@ export const Ourproject = () => {
                 </div>
               )}
 
-              {check.toLowerCase() === "residental" && (
+              {check.toLowerCase() === "residential" && (
                 <div
                   className="residental-category"
                   onClick={(e) => {

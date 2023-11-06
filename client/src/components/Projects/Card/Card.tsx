@@ -11,7 +11,7 @@ export const Card = ({ property }: any) => {
       <div className="card-items">
         <Link to={`/projectdetails/${property._id}`}>
           <figure>
-            <img src={`/uploads/${property.img[0]}`} alt="" />
+            <img src={`${property.img[0]}`} alt="" />
           </figure>
         </Link>
         <h3>{property.title}</h3>

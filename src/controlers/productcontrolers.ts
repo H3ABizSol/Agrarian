@@ -10,15 +10,9 @@ const createProperty = catchAsynchError(
   async (req: Request, res: Response, next: NextFunction) => {
     console.log(req.body);
     const { washrooms, bedrooms, parking } = req.body;
-    const imgFile: any = req.files;
-    const imgArr: String[] = [];
-    for (const items of imgFile) {
-      imgArr.push(items.filename);
-    }
     if (parking && bedrooms && washrooms) {
       const property = await propertyModel.create({
         ...req.body,
-        img: imgArr,
         ourservices: {
           name: req.body.service,
           subservice: req.body.subservice,
@@ -32,9 +26,9 @@ const createProperty = catchAsynchError(
       });
       return res.send({ success: true, property });
     } else {
+      console.log(req.body);
       const property = await propertyModel.create({
         ...req.body,
-        img: imgArr,
         ourservices: {
           name: req.body.service,
           subservice: req.body.subservice.toLowerCase(),
@@ -63,16 +57,6 @@ const getPropertyDetails = catchAsynchError(
 const updateProperty = catchAsynchError(
   async (req: Request, res: Response, next: NextFunction) => {
     const { washrooms, bedrooms, parking } = req.body;
-    const imgFile: any = req.files;
-    const imgArr: String[] = [];
-    console.log(imgFile);
-    if (req.files) {
-      for (const items of imgFile) {
-        console.log(items);
-        imgArr.push(items.filename);
-      }
-    }
-    console.log(imgArr);
     if (
       parking !== "undefined" &&
       bedrooms !== "undefined" &&
@@ -104,7 +88,6 @@ const updateProperty = catchAsynchError(
         {
           $set: {
             ...req.body,
-            img: imgArr,
             ourservices: {
               name: req.body.service,
               subservice: req.body.subservice,

@@ -178,7 +178,7 @@ export const Servicedetial = () => {
               return (
                 <div className="service-items">
                   <figure>
-                    <img src={`/uploads/${p.img[0]}`} alt="" />
+                    <img src={`${p.img[0]}`} alt="" />
                   </figure>
                   <h3>{p.title}</h3>
                   <p className="desc">{p.desc}</p>
@@ -199,7 +199,11 @@ export const Servicedetial = () => {
                       </div>{" "}
                       <div className="details">
                         <LuBedDouble size={20} />
-                        <p>ParKing</p>
+                        <p>
+                          {p.properyDetails?.parking === "yes"
+                            ? "Parking Available"
+                            : "No Parking"}
+                        </p>
                       </div>
                     </div>
                   )}
@@ -366,7 +370,7 @@ export const Servicedetial = () => {
               return (
                 <div className="service-items">
                   <figure>
-                    <img src={`/uploads/${p.img[0]}`} alt="" />
+                    <img src={`${p.img[0]}`} alt="" />
                   </figure>
                   <h3>{p.title}</h3>
                   <p>{p.desc}</p>

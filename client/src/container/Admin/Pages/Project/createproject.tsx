@@ -72,7 +72,7 @@ export const Createproject = () => {
       ...propertyDetails,
       subservice: e.target.value,
     });
-    if (e.target.value.toLowerCase() === "residental") {
+    if (e.target.value.toLowerCase() === "residential") {
       setShowInput(true);
     } else {
       setShowInput(false);
@@ -83,25 +83,54 @@ export const Createproject = () => {
     setSpin(true);
     e.preventDefault();
     const formData = new FormData();
+    const imgArr = [];
     for (const img of image) {
-      formData.append("img", img);
+      formData.append("file", img);
+      formData.append("upload_preset", "agrarian");
+      const { data } = await axios.post(
+        "https://api.cloudinary.com/v1_1/drozcfuhv/image/upload",
+        formData
+      );
+      imgArr.push(data.secure_url);
     }
-    formData.append("title", propertyDetails.title);
-    formData.append("desc", propertyDetails.desc);
-    formData.append("price", propertyDetails.price);
-    formData.append("location", propertyDetails.location.toLowerCase());
-    formData.append("service", propertyDetails.service);
-    formData.append("subservice", propertyDetails.subservice);
-    formData.append("type", type);
-    formData.append("bedrooms", propertyDetails.bedrooms);
-    formData.append("washrooms", propertyDetails.washrooms);
-    formData.append("parking", propertyDetails.parking);
+    // console.log(imgArr);
+    // for (const imgs of imgArr) {
+    //   formData.append("img", imgs);
+    // }
+    // formData.append("img", imgArr);
+    // formData.append("title", propertyDetails.title);
+    // formData.append("desc", propertyDetails.desc);
+    // formData.append("price", propertyDetails.price);
+    // formData.append("location", propertyDetails.location.toLowerCase());
+    // formData.append("service", propertyDetails.service);
+    // formData.append("subservice", propertyDetails.subservice);
+    // formData.append("type", type);
+    // formData.append("bedrooms", propertyDetails.bedrooms);
+    // formData.append("washrooms", propertyDetails.washrooms);
+    // formData.append("parking", propertyDetails.parking);
 
-    const { data } = await axios.post("/api/property/create", formData, {
-      headers: {
-        token: localStorage.getItem("admin_token"),
+    const { data } = await axios.post(
+      "/api/property/create",
+      {
+        img: imgArr,
+        title: propertyDetails.title,
+        desc: propertyDetails.desc,
+        price: propertyDetails.price,
+        location: propertyDetails.location,
+        service: propertyDetails.service,
+        subservice: propertyDetails.subservice,
+        type: type,
+        bedrooms: propertyDetails.bedrooms,
+        washrooms: propertyDetails.washrooms,
+        parking: propertyDetails.parking,
       },
-    });
+      {
+        headers: {
+          token: localStorage.getItem("admin_token"),
+        },
+      }
+    );
+    console.log(data);
     if (data.success) {
       setSpin(false);
       setOk(true);
