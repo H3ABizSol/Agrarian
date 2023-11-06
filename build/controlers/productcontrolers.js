@@ -35,15 +35,9 @@ const path_1 = __importDefault(require("path"));
 const createProperty = (0, catchAsyncError_1.default)(async (req, res, next) => {
     console.log(req.body);
     const { washrooms, bedrooms, parking } = req.body;
-    const imgFile = req.files;
-    const imgArr = [];
-    for (const items of imgFile) {
-        imgArr.push(items.filename);
-    }
     if (parking && bedrooms && washrooms) {
         const property = await property_1.default.create({
             ...req.body,
-            img: imgArr,
             ourservices: {
                 name: req.body.service,
                 subservice: req.body.subservice,
@@ -58,9 +52,9 @@ const createProperty = (0, catchAsyncError_1.default)(async (req, res, next) => 
         return res.send({ success: true, property });
     }
     else {
+        console.log(req.body);
         const property = await property_1.default.create({
             ...req.body,
-            img: imgArr,
             ourservices: {
                 name: req.body.service,
                 subservice: req.body.subservice.toLowerCase(),
@@ -83,15 +77,6 @@ const getPropertyDetails = (0, catchAsyncError_1.default)(async (req, res, next)
 exports.getPropertyDetails = getPropertyDetails;
 const updateProperty = (0, catchAsyncError_1.default)(async (req, res, next) => {
     const { washrooms, bedrooms, parking } = req.body;
-    console.log(req.body);
-    const imgFile = req.files;
-    const imgArr = [];
-    if (req.files) {
-        for (const items of imgFile) {
-            console.log(items);
-            imgArr.push(items.filename);
-        }
-    }
     if (parking !== "undefined" &&
         bedrooms !== "undefined" &&
         washrooms !== "undefined") {
@@ -116,7 +101,6 @@ const updateProperty = (0, catchAsyncError_1.default)(async (req, res, next) => 
         const allProperty = await property_1.default.findByIdAndUpdate(req.params.id, {
             $set: {
                 ...req.body,
-                img: imgArr,
                 ourservices: {
                     name: req.body.service,
                     subservice: req.body.subservice,

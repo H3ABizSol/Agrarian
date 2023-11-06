@@ -33,6 +33,8 @@ const ourservices = [
 const num = [1, 2, 3, 4, 5];
 
 export const Project = () => {
+  const [imgArr, setImgArr] = useState([] as any);
+
   const [updatePropertyDetails, setUpdatePropertyDetails] = useState({
     title: "",
     desc: "",
@@ -47,7 +49,6 @@ export const Project = () => {
   const [type, setType] = useState("");
   const [allProperty, setAllProperty] = React.useState([] as any);
   const [open, setOpen] = useState(false);
-  const [image, setImages] = useState([]);
   const [subService, setSubService] = useState([] as any);
   const [showInput, setShowInput] = useState(false);
   const [ok, setOk] = useState(false);
@@ -85,20 +86,25 @@ export const Project = () => {
     }
   };
 
-  const handleSubmit = async (e: any) => {
-    setSpin(true);
-    e.preventDefault();
+  const uploadImages = async (e: any) => {
+    const images = e.target.files;
     const formData = new FormData();
-    const imgArr = [];
-    for (const img of image) {
+    const imgageArr: any = [];
+    for (const img of images) {
       formData.append("file", img);
       formData.append("upload_preset", "agrarian");
       const { data } = await axios.post(
         "https://api.cloudinary.com/v1_1/drozcfuhv/image/upload",
         formData
       );
-      imgArr.push(data.secure_url);
+      imgageArr.push(data.url);
     }
+    setImgArr(imgageArr);
+  };
+
+  const handleSubmit = async (e: any) => {
+    setSpin(true);
+    e.preventDefault();
     // formData.append("title", updatePropertyDetails.title);
     // formData.append("desc", updatePropertyDetails.desc);
     // formData.append("price", updatePropertyDetails.price);
@@ -158,9 +164,9 @@ export const Project = () => {
 
   const updateProject = (p: any) => {
     setOpen(true);
-    setImages(p.img);
     setUpdateId(p._id);
     setType(p.ourservices.type);
+    setImgArr(p.img);
     setUpdatePropertyDetails({
       title: p.title,
       desc: p.desc,
@@ -410,7 +416,7 @@ export const Project = () => {
                     name="title"
                     multiple
                     onChange={(e: any) => {
-                      setImages(e.target.files);
+                      uploadImages(e);
                     }}
                   />
                 </div>

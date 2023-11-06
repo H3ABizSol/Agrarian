@@ -31,6 +31,7 @@ const ourservices = [
 const num = [1, 2, 3, 4, 5];
 
 export const Createproject = () => {
+  const [imgArr, setImgArr] = useState([]);
   const [propertyDetails, setPropertyDetails] = useState({
     title: "",
     desc: "",
@@ -42,7 +43,7 @@ export const Createproject = () => {
     washrooms: "",
     parking: "",
   } as any);
-  const [image, setImages] = useState([]);
+
   const [subService, setSubService] = useState([] as any);
   const [showInput, setShowInput] = useState(false);
   const [type, setType] = useState("");
@@ -79,20 +80,26 @@ export const Createproject = () => {
     }
   };
 
-  const handleSubmit = async (e: any) => {
-    setSpin(true);
-    e.preventDefault();
+  const uploadImages = async (e: any) => {
+    const images = e.target.files;
     const formData = new FormData();
-    const imgArr = [];
-    for (const img of image) {
+    const imgageArr: any = [];
+    for (const img of images) {
       formData.append("file", img);
       formData.append("upload_preset", "agrarian");
       const { data } = await axios.post(
         "https://api.cloudinary.com/v1_1/drozcfuhv/image/upload",
         formData
       );
-      imgArr.push(data.secure_url);
+      imgageArr.push(data.secure_url);
     }
+    setImgArr(imgageArr);
+  };
+
+  const handleSubmit = async (e: any) => {
+    setSpin(true);
+    e.preventDefault();
+
     // console.log(imgArr);
     // for (const imgs of imgArr) {
     //   formData.append("img", imgs);
@@ -299,7 +306,7 @@ export const Createproject = () => {
                 multiple
                 id=""
                 onChange={(e: any) => {
-                  setImages(e.target.files);
+                  uploadImages(e);
                 }}
               />
             </div>
