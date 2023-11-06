@@ -108,14 +108,6 @@ const deleteProperty = catchAsynchError(
     if (!propertyExist) {
       return next(new Errorhandler("property does not exist", 401));
     }
-    for (const items of propertyExist.img) {
-      fs.unlink(path.join(__dirname, `../public/uploads/${items}`), (err) => {
-        if (err) {
-          return next(new Errorhandler(err, 401));
-        }
-      });
-    }
-
     await propertyExist.deleteOne();
     res.send({ success: true, message: "property delte Successfuly" });
   }
