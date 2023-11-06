@@ -27,7 +27,7 @@ export const Oursevice = () => {
               {/* <p>Cum sociis natoque penatibus et magnis dis​</p> */}
             </div>
           </Link>
-          <Link to="/service/agrarian home" className="link">
+          <Link to="/service/agrarian homes" className="link">
             <div>
               <AiOutlineProject className="icon" />
               <h3>Agrarian Homes</h3>

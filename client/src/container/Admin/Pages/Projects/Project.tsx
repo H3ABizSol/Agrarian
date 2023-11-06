@@ -182,6 +182,7 @@ export const Project = () => {
 
   const deleteProject = async (p: any) => {
     const confirm = window.confirm("Are you sure");
+
     if (confirm) {
       setSpin(true);
       const { data } = await axios.delete(`/api/property/delete/${p._id}`, {
@@ -189,6 +190,7 @@ export const Project = () => {
           token: localStorage.getItem("admin_token"),
         },
       });
+      console.log(data);
       if (data.success) {
         setSpin(false);
         toast("👌 delete successfully!", {
