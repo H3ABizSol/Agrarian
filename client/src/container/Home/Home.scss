@@ -6,6 +6,8 @@
         text-align: center;
         font-size: 5rem;
         text-transform: uppercase;
+        font-family: "Poppins";
+        letter-spacing: 0.5rem;
         @media screen and (max-width:768px) {
              font-size: 3rem;
              margin-bottom: 3rem;
@@ -22,6 +24,7 @@
         margin: 0 auto;
         padding: 4rem 0;
         // background-color: black;
+     
        @media screen and (max-width:868px) {
           display: flex;
           flex-wrap: wrap;
@@ -58,9 +61,10 @@
             gap: 2rem;
            p{
             font-size: 1.6rem;
-            line-height: 3rem;
-            color: rgb(108, 104, 104);
+            line-height: 4rem;
+            color: rgb(91, 87, 87);
             text-align: justify;
+            font-family: "Readex Pro";
            }
            .btn-container{
             padding: 1rem 0;

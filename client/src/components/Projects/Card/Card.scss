@@ -2,7 +2,7 @@
     // background: linear-gradient(#e4e4fb,#ece0e3 );
   font-family: "lato";
   box-shadow: 0 0 3px rgb(190, 188, 188);
-  width: 540px;
+  width: 640px;
   padding: 0.6rem;
   // height: 250px;
   figure{
@@ -28,22 +28,28 @@
     // text-align: center;
     font-size: 1.5rem;
     padding: 0.8rem;
+    font-family: "Fredoka";
+    letter-spacing: 0.2rem;
   }
   .location{
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem;
+ 
+    text-transform: capitalize;
 
     .icon{
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: gray;
       
    
     }
     span{
-      font-size: 1.6rem;
-      color: gray;
+      font-size: 1.8rem;
+      color: rgb(128, 128, 128);
+      font-family: "Kanit";
+      // font-weight: 900;
     }
   }
   .card-details{

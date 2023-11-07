@@ -26,7 +26,6 @@ const createProperty = catchAsynchError(
       });
       return res.send({ success: true, property });
     } else {
-      console.log(req.body);
       const property = await propertyModel.create({
         ...req.body,
         ourservices: {
@@ -57,11 +56,8 @@ const getPropertyDetails = catchAsynchError(
 const updateProperty = catchAsynchError(
   async (req: Request, res: Response, next: NextFunction) => {
     const { washrooms, bedrooms, parking } = req.body;
-    if (
-      parking !== "undefined" &&
-      bedrooms !== "undefined" &&
-      washrooms !== "undefined"
-    ) {
+    console.log(req.body);
+    if (parking && bedrooms && washrooms) {
       const allProperty = await propertyModel.findByIdAndUpdate(
         req.params.id,
         {

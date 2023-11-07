@@ -234,10 +234,11 @@ header{
                   display: none;
             } 
             li{
-                font-size: 1.12vw;
+                font-size: 1.2vw;
                 letter-spacing: 0.1rem;
                 position: relative; 
-                font-family: "Lato";
+                font-family: "Kanit";
+                // font-family: "Roboto";
                 text-transform: uppercase;
                 cursor: pointer;
                 // color: rgb(208, 141, 18);
@@ -282,7 +283,7 @@ header{
                     li{
                         text-transform: capitalize;
                         font-size: 1.7rem;
-                        padding: 1rem 0.5rem;
+                        padding: 1rem;
                         font-weight: 600;
 
                     }
@@ -290,7 +291,7 @@ header{
                         display: flex;
                         flex-direction: column;
                         gap: 1rem;
-                        width: 280px;
+                        width: 320px;
                         position: absolute;
                         top: -28%;
                         right: 100%;

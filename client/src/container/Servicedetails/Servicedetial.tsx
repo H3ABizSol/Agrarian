@@ -195,7 +195,7 @@ export const Servicedetial = () => {
                       </div>
                       <div className="details">
                         <LuBedDouble size={20} />
-                        <p>Bath Room {p.properyDetails.washrooms}</p>
+                        <p>Bath Room {p.properyDetails?.washrooms}</p>
                       </div>{" "}
                       <div className="details">
                         <LuBedDouble size={20} />

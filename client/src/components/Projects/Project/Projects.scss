@@ -66,9 +66,10 @@
         h2{
             text-align: center;
             padding: 0.6rem 0;
-            font-size: 3rem;
+            font-size: 3.5rem;
             text-transform: uppercase;
-            letter-spacing: 0.2rem;
+            letter-spacing: 0.5rem;
+            font-family: "Poppins";
             // background:linear-gradient(#283a9f,rgb(221, 49, 78));
             // color: #f09824;
             color: #011F5F;
@@ -80,13 +81,13 @@
         }
 
       .card-wrapper{
-        width: 85%;
+        width: 100%;
         margin: 5rem auto;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 2rem;
-        row-gap: 8rem;
+        gap: 5rem;
+        // row-gap: 8rem;
       }
     }
 }

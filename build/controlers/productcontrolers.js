@@ -52,7 +52,6 @@ const createProperty = (0, catchAsyncError_1.default)(async (req, res, next) => 
         return res.send({ success: true, property });
     }
     else {
-        console.log(req.body);
         const property = await property_1.default.create({
             ...req.body,
             ourservices: {
@@ -77,9 +76,8 @@ const getPropertyDetails = (0, catchAsyncError_1.default)(async (req, res, next)
 exports.getPropertyDetails = getPropertyDetails;
 const updateProperty = (0, catchAsyncError_1.default)(async (req, res, next) => {
     const { washrooms, bedrooms, parking } = req.body;
-    if (parking !== "undefined" &&
-        bedrooms !== "undefined" &&
-        washrooms !== "undefined") {
+    console.log(req.body);
+    if (parking && bedrooms && washrooms) {
         const allProperty = await property_1.default.findByIdAndUpdate(req.params.id, {
             $set: {
                 ...req.body,
