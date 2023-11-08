@@ -35,8 +35,8 @@ export const Footer = () => {
           <ul>
             <ul>
               <li>Disclaimer</li>
-              <li>Privacy Polcy</li>
-              <li>Become our partner</li>
+              <li>Privacy Policy</li>
+              <li>Become Our Partner</li>
             </ul>
           </ul>
         </div>
