@@ -16,6 +16,7 @@ export const Contact = () => {
   );
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     setSpin(true);
     const { data } = await axios.post("/api/auth/sendemail", {
       name,
@@ -23,7 +24,6 @@ export const Contact = () => {
       message,
       interest,
     });
-    console.log(data);
     if (data.success) {
       setMailMessage(data.message);
       setSpin(false);
@@ -38,7 +38,7 @@ export const Contact = () => {
         </div>
         <div className="right">
           <form action="" onSubmit={handleSubmit}>
-            <h2>Get in Touch</h2>
+            <h2>Get In Touch</h2>
             <p>
               Fill out this form and one of our agents will be in touch with you
               in latest 1 hour from your inquiry.

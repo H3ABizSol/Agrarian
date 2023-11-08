@@ -16,6 +16,9 @@ export const Ourproject = () => {
   const [location, setLocation] = useState([] as any);
   const [check, setCheck] = React.useState("");
   const [isCheck, setIsCheck] = React.useState(true);
+  const [dispay, setDisplay] = React.useState(false);
+  const [searchValue, setSearchValue] = React.useState("");
+  const [searchData, setSearchData] = React.useState([] as any);
 
   // const [spin, setSpin] = React.useState(false);
 
@@ -72,6 +75,7 @@ export const Ourproject = () => {
       setFilterProperty([...filterData]);
     }
   };
+
   const filterLocation = (e: any) => {
     if (e.target.innerHTML.toLowerCase() === "all") {
       setIsProperty(true);
@@ -86,6 +90,19 @@ export const Ourproject = () => {
     }
   };
 
+  const search = () => {
+    if (searchValue) {
+      setDisplay(true);
+      const filterData = allProperty.filter((d: any) => {
+        return d.title.toLowerCase().includes(searchValue.toLowerCase());
+      });
+      console.log(filterData);
+      setSearchData([...filterData]);
+    } else {
+      setDisplay(false);
+    }
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
     getProjects();
@@ -96,10 +113,35 @@ export const Ourproject = () => {
       <div className="project-detail-wrapper">
         <div className="search-wrapper-container">
           <div className={"search-wrapper"}>
-            <input type="search" name="" id="" placeholder="Search" />
+            <input
+              type="search"
+              name=""
+              id=""
+              placeholder="Search"
+              onChange={(e) => {
+                setSearchValue(e.target.value);
+              }}
+              onKeyUp={() => {
+                search();
+              }}
+            />
             <div className="icon">
               <AiOutlineSearch size={30} color="#ff55a4d3" />
             </div>
+            {dispay && (
+              <div className="display-search">
+                <ul>
+                  {searchData &&
+                    searchData.map((p: any) => {
+                      return (
+                        <Link to={`/projectdetails/${p._id}`} className="link">
+                          <li> {p.title}</li>
+                        </Link>
+                      );
+                    })}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
         <div className="paralex">

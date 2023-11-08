@@ -3,6 +3,8 @@ footer{
     margin: auto;
     // background-color:#ffffff;
     background-color: rgb(14, 15, 17);
+    background-color: rgb(21, 25, 31);
+
     // -webkit-clip-path: polygon(100% 9%, 100% 12%, 100% 100%, 100% 100%, 0 100%, 0 0);
     // clip-path: polygon(100% 9%, 100% 12%, 100% 100%, 100% 100%, 0 100%, 0 0);
 padding: 5rem 0;
@@ -26,10 +28,7 @@ padding: 5rem 0;
                     text-decoration: none;
                     // color: rgb(203, 52, 168);
                     color: rgb(199, 143, 23);
-        
                   
-                     
-                   
                 }
 
             }
@@ -51,11 +50,13 @@ padding: 5rem 0;
                 align-items: self-start;
          }
             li{
-                font-size: 1.3rem;
+                font-size: 1.5rem;
                 
                 color: rgb(143, 140, 140);
                 color: rgb(203, 52, 168);
                 color: rgb(199, 143, 23);
+                font-family: "Roboto";
+                letter-spacing: 0.2rem;
           
           
           
@@ -69,14 +70,12 @@ padding: 5rem 0;
         p{
             text-align: center;
             color: gray;
-           
             color: rgb(203, 52, 168);
             color: rgb(199, 143, 23);
-   
-           
-
             font-size: 1.6rem;
             padding: 2rem 0;
+            font-family: "Montserrat";
+                // letter-spacing: 0.1rem;
         }
     }
 }

@@ -47,10 +47,12 @@
         }
            h2{
             font-size: 6rem ;
-            color: #312f2f;
+            color: #252323;
             text-transform: uppercase;
-            line-height: 9rem;
+            line-height: 8.6rem;
             z-index: 2;
+            font-family: "Poppins";
+            letter-spacing: 0.2rem;
             
             @media screen and (max-width:1026px) {
                 font-size: 2.4rem;;
@@ -94,11 +96,17 @@
                 }
                 h2{
                     font-size: 3rem;
+                    text-align: center;
+                    font-family: "Kanit";
+                    letter-spacing: 0.2rem;
 
                 }
                 p{
-                    font-size: 1.3rem;
+                    font-size: 1.4rem;
                     color: gray;
+                    text-align: center;
+                    font-family: "Roboto";
+                    line-height: 2.4rem;
                 }
                 input,textarea,select{
                     border: none;
@@ -107,6 +115,8 @@
                     background-color: #d5edf1;
                     width: 85%;
                     font-size: 1.2rem;
+                    font-family: "Fredoka";
+                    letter-spacing: 0.1rem;
                 }
                 option{
                     font-size: 1.6rem;
@@ -118,10 +128,11 @@
                 margin: auto;
                 border: none;
                 outline: none;
-                color: white;
+                color: rgb(249, 240, 240);
                 font-size: 1.7rem;
                 cursor: pointer;
                 background-color: rgb(82, 182, 82);
+                font-family: "Montserrat";
               }
             }
         }
