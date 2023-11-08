@@ -89,6 +89,20 @@ export const Ourproject = () => {
       setFilterProperty([...filterData]);
     }
   };
+  const filterPrice = (e: any) => {
+    const priceRange = e.target.value.split("-");
+    setIsProperty(false);
+    setIsFilter(true);
+    const filterData = allProperty.filter((i: any) => {
+      if (
+        parseInt(i.price) >= parseInt(priceRange[0]) &&
+        parseInt(i.price) <= parseInt(priceRange[1])
+      ) {
+        return i;
+      }
+    });
+    setFilterProperty([...filterData]);
+  };
 
   const search = () => {
     if (searchValue) {
@@ -166,7 +180,26 @@ export const Ourproject = () => {
                           <SlLocationPin className="icon" />
                           <span>{p.location}</span>
                         </div>
-                        <p className="price"> ₹ {p.price}</p>
+                        <p>
+                          {p.price.length === 6
+                            ? `₹ ${p.price.slice(0, 1)} Lacs`
+                            : ""}
+                        </p>
+                        <p>
+                          {p.price.length === 7
+                            ? `₹ ${p.price.slice(0, 2)} Lacs`
+                            : ""}
+                        </p>
+                        <p>
+                          {p.price.length === 8
+                            ? `₹ ${p.price.slice(0, 1)} Cr`
+                            : ""}
+                        </p>
+                        <p>
+                          {p.price.length === 9
+                            ? `₹ ${p.price.slice(0, 2)} Cr`
+                            : ""}
+                        </p>
                         {p.properyDetails?.bedrooms && (
                           <div className="residental-wrapper">
                             <div className="details">
@@ -241,11 +274,19 @@ export const Ourproject = () => {
               </div>
               <h4>By Price</h4>
               <div className="price">
-                <select name="" id="">
-                  <option value="">Rs. 10 Lac - 20 Lac</option>
-                  <option value="">Rs. 10 Lac - 20 Lac</option>
-                  <option value="">Rs. 10 Lac - 20 Lac</option>
-                  <option value="">Rs. 10 Lac - 20 Lac</option>
+                <select
+                  name=""
+                  id=""
+                  onChange={(e) => {
+                    filterPrice(e);
+                  }}
+                >
+                  <option value="">select price</option>
+                  <option value="1000000-3000000">Rs. 10 Lac - 30 Lac</option>
+                  <option value="3000000-6000000">Rs. 30 Lac - 60 Lac</option>
+                  <option value="6000000-10000000">Rs. 60 Lac - 1 Cr</option>
+                  <option value="10000000-100000000">Rs. 1 Cr - 10 Cr</option>
+                  <option value="100000000 - 1000000000">Above Rs 10 Cr</option>
                 </select>
               </div>
             </div>
@@ -269,7 +310,26 @@ export const Ourproject = () => {
                           <SlLocationPin className="icon" />
                           <span>{p.location}</span>
                         </div>
-                        <p className="price"> ₹ {p.price}</p>
+                        <p>
+                          {p.price.length === 6
+                            ? `₹ ${p.price.slice(0, 1)} Lacs`
+                            : ""}
+                        </p>
+                        <p>
+                          {p.price.length === 7
+                            ? `₹ ${p.price.slice(0, 2)} Lacs`
+                            : ""}
+                        </p>
+                        <p>
+                          {p.price.length === 8
+                            ? `₹ ${p.price.slice(0, 1)} Cr`
+                            : ""}
+                        </p>
+                        <p>
+                          {p.price.length === 9
+                            ? `₹ ${p.price.slice(0, 2)} Cr`
+                            : ""}
+                        </p>
                         <div className="residental-wrapper">
                           <div className="details">
                             <LuBedDouble size={20} />
@@ -394,11 +454,21 @@ export const Ourproject = () => {
               </div>
               <h4>By Price</h4>
               <div className="price">
-                <select name="" id="">
-                  <option value="">Rs. 10 Lac - 20 Lac</option>
-                  <option value="">Rs. 10 Lac - 20 Lac</option>
-                  <option value="">Rs. 10 Lac - 20 Lac</option>
-                  <option value="">Rs. 10 Lac - 20 Lac</option>
+                <select
+                  name=""
+                  id=""
+                  onChange={(e) => {
+                    filterPrice(e);
+                  }}
+                >
+                  <option value="">select price</option>
+                  <option value="1000000 - 3000000">Rs. 10 Lac - 30 Lac</option>
+                  <option value="3000000 - 6000000">Rs. 30 Lac - 60 Lac</option>
+                  <option value="6000000 - 10000000">Rs. 60 Lac - 1 Cr</option>
+                  <option value="100000000 - 100000000">
+                    Rs. 1 Cr - 10 Cr
+                  </option>
+                  <option value="100000000 - 1000000000">Above Rs 10 Cr</option>
                 </select>
               </div>
             </div>

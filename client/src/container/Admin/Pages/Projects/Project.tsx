@@ -234,7 +234,27 @@ export const Project = () => {
                         <img src={`${p.img[0]}`} alt="" />
                       </figure>
                       <h4>{p.title}</h4>
-                      <p>Rs {p.price}</p>
+                      <p>
+                        {p.price.length === 6
+                          ? `Rs ${p.price.slice(0, 1)} Lacs`
+                          : ""}
+                      </p>
+                      <p>
+                        {p.price.length === 7
+                          ? `Rs ${p.price.slice(0, 2)} Lacs`
+                          : ""}
+                      </p>
+                      <p>
+                        {p.price.length === 8
+                          ? `Rs ${p.price.slice(0, 1)} Cr`
+                          : ""}
+                      </p>
+                      <p>
+                        {p.price.length === 9
+                          ? `Rs ${p.price.slice(0, 2)} Cr`
+                          : ""}
+                      </p>
+
                       <p>{p.location}</p>
                     </div>
                     <div className="btn-container">
