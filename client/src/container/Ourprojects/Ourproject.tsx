@@ -255,7 +255,7 @@ export const Ourproject = () => {
                   <p className="item">Commercial</p>
                   <p className="item">Building Nation</p>
                   <p className="item">Plot</p>
-                  <p className="item">Dream Home Construction</p>
+                  <p className="item">Dream Homes Construction</p>
                   <p className="item">All</p>
                 </div>
               )}
@@ -381,7 +381,7 @@ export const Ourproject = () => {
                   <p className="item">Residential</p>
                   <p className="item">Commercial</p>
                   <p className="item">Land</p>
-                  <p className="item">Dream Home Construction</p>
+                  <p className="item">Dream Homes Construction</p>
                   <p className="item">Plot</p>
                   <p className="item">All</p>
                 </div>
