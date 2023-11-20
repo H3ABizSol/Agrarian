@@ -133,7 +133,7 @@ export const Header = () => {
                         <a href="/assistant/locaiton" className="link">
                           <li>Residential Propoerty</li>
                         </a>
-                        <a href="/assistant/locaiton" className="link">
+                        <a href="/assistant/locaiton  " className="link">
                           <li>Commercial Property</li>
                         </a>
                       </ul>

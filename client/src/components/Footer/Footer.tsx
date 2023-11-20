@@ -14,7 +14,10 @@ export const Footer = () => {
           <ul>
             <ul>
               <li>
-                <a href="tel:+">
+                <a
+                  href="https://www.facebook.com/people/Agrarian-Infratech/61552549041958/"
+                  target="_blank"
+                >
                   <BiLogoFacebook />
                 </a>
               </li>
@@ -24,7 +27,10 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+">
+                <a
+                  href="https://www.linkedin.com/in/agrarian-infratech-7a97a329b/"
+                  target="_blank"
+                >
                   <BiLogoLinkedin />
                 </a>
               </li>

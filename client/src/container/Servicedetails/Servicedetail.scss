@@ -141,10 +141,10 @@
 .filter-type{
   display: flex;
   flex-wrap: wrap;
-   gap: 10rem;
+   gap: 5rem;
    justify-content: center;
    margin-top: 2rem;
-   @media screen and (max-width:764px) {
+   @media screen and (max-width:1151px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
@@ -192,13 +192,20 @@
         display: flex;
         // justify-content: center;
         width: 85%;
+        // background-color: red;
         margin: 4rem auto;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: .5fr .5fr;
         gap: 2rem;
         row-gap: 5rem;
+        @media screen and (max-width:1158px) {
+          display: flex;
+          flex-wrap: wrap;
+        
+        }
        .service-items{
         display: flex;
-        width: 600px;
+        // width: 600px;
         flex-direction: column;
         gap: 1.6rem;
         box-shadow: 0 0 4px rgb(217, 217, 217);
