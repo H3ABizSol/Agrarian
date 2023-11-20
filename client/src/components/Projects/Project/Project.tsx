@@ -6,7 +6,7 @@ import { Loader } from "../../Loader/Loader";
 
 export const Project = () => {
   const [allProperty, setAllProperty] = React.useState([] as any);
-  const [spin, setSpin] = React.useState(false);
+  const [spin, setSpin] = React.useState(true);
 
   // const handleClick = (e: any) => {
   //   const li = window.document.getElementsByClassName("myul");
@@ -17,7 +17,6 @@ export const Project = () => {
   // };
 
   const getProjects = async () => {
-    console.log("helo");
     setSpin(true);
     const { data } = await axios.get("/api/property/all");
     console.log(data);

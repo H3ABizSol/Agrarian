@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Card.scss";
 // import { BiRupee } from "react-icons/bi";
 import { SlLocationPin } from "react-icons/sl";
-import { BiRupee } from "react-icons/bi";
+// import { BiRupee } from "react-icons/bi";
 
 export const Card = ({ property }: any) => {
   console.log(property);
@@ -20,10 +20,10 @@ export const Card = ({ property }: any) => {
           <span>{property.location}</span>
         </div>
         <div className="card-details">
-          <div>
+          {/* <div>
             <BiRupee className="icon" />
             <p>{property.price}</p>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* <div className="explore-and-enquiry">

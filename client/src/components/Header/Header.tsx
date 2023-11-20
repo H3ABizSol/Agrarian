@@ -74,17 +74,12 @@ export const Header = () => {
                         </a> */}
                       </ul>
                     </li>
-                    <li className="sub-li">
-                      Agrarian Homes
-                      <ul className="sub-sub-menu-li">
-                        <a
-                          href="/service/dream homes construction"
-                          className="link"
-                        >
-                          <li>Dream Homes construction</li>
-                        </a>
-                      </ul>
-                    </li>
+                    <a
+                      href="/service/dream homes construction"
+                      className="link"
+                    >
+                      <li className="sub-li">Agrarian Homes</li>
+                    </a>
                     <li className="sub-li">
                       Agrarian Infrastructure
                       <ul className="sub-sub-menu-li">
@@ -104,13 +99,13 @@ export const Header = () => {
                     <li className="sub-li">
                       Help to search
                       <ul className="sub-sub-menu-li">
-                        <a href="#" className="link">
+                        <a href="/assistant/locaiton" className="link">
                           <li>location</li>
                         </a>
-                        <a href="#" className="link">
+                        <a href="/assistant/locaiton" className="link">
                           <li>projects</li>
                         </a>
-                        <a href="#" className="link">
+                        <a href="/assistant/locaiton" className="link">
                           <li>masterplan</li>
                         </a>
                       </ul>
@@ -135,16 +130,10 @@ export const Header = () => {
                         >
                           <li>plot</li>
                         </a>
-                        <a
-                          href="/service/dream home construction"
-                          className="link"
-                        >
+                        <a href="/assistant/locaiton" className="link">
                           <li>Residential Propoerty</li>
                         </a>
-                        <a
-                          href="/service/dream home construction"
-                          className="link"
-                        >
+                        <a href="/assistant/locaiton" className="link">
                           <li>Commercial Property</li>
                         </a>
                       </ul>
@@ -155,10 +144,10 @@ export const Header = () => {
                         <a href="/emicalculator" className="link">
                           <li>EMI Calculator</li>
                         </a>
-                        <a href="#" className="link">
+                        <a href="/assistant/locaiton" className="link">
                           <li>Loan Eligibility</li>
                         </a>
-                        <a href="#" className="link">
+                        <a href="/assistant/locaiton" className="link">
                           <li>Loan Documents</li>
                         </a>
                       </ul>
@@ -166,24 +155,24 @@ export const Header = () => {
                     <li className="sub-li">
                       property services
                       <ul className="sub-sub-menu-li">
-                        <a href="#" className="link">
+                        {/* <a href="#" className="link">
                           <li>Rent Agreement</li>
-                        </a>
-                        <a href="#" className="link">
+                        </a> */}
+                        <a href="/assistant/locaiton" className="link">
                           <li>Office Leasing Assistance</li>
                         </a>
                         <a href="/service/building nation" className="link">
                           <li>Home Interiors</li>
                         </a>
-                        <a href="/service/building nation" className="link">
+                        {/* <a href="/service/building nation" className="link">
                           <li>Vastu</li>
-                        </a>
+                        </a> */}
                       </ul>
                     </li>
                     <li className="sub-li">
                       booking to possession
                       <ul className="sub-sub-menu-li">
-                        <a href="/service/building nation" className="link">
+                        <a href="/assistant/locaiton" className="link">
                           <li>Complete Assistance</li>
                         </a>
                       </ul>

@@ -103,7 +103,8 @@ export const Servicedetial = () => {
         </div>
         <div className="paralex">
           <h2>{propertyDetail[0]?.ourservices.subservice}</h2>
-          <p>Find your dream house</p>
+          {propertyDetail[0]?.ourservices.subservice.toLowerCase() ===
+            "residential" && <p>Find your dream house</p>}
         </div>
         {propertyDetail[0]?.ourservices.subservice.toLowerCase() ===
           "residential" && (
@@ -115,7 +116,7 @@ export const Servicedetial = () => {
           >
             <button>Flats</button>
             <button>Villas</button>
-            <button>Appartments</button>
+            <button>Low-Rise Appartments</button>
             <button>Independent Floors</button>
           </div>
         )}
@@ -186,7 +187,7 @@ export const Servicedetial = () => {
                     <SlLocationPin className="icon" />
                     <span>{p.location}</span>
                   </div>
-                  <p className="price">Rs 20000</p>
+                  {/* <p className="price">Rs {p.price}</p> */}
                   {p.properyDetails && (
                     <div className="residental-wrapper">
                       <div className="details">

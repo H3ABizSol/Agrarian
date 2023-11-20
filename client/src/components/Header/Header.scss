@@ -247,19 +247,24 @@ header{
                 border-radius: 25px;
                 // color: rgb(198, 175, 43);
                 .sub-li{
+                    border: 1px solid #0a5477;
+                    text-align: center;
+                    
+                    padding: 0;
                     &:hover{
-                        background-color: #011F5F;
-                        padding: 1rem 0;
+                        background-color: #0b3388;
                         transition: all 0.2s;
                         color: white;
                       
                     }
                     li{
+                        border: 1px solid #0a5477;
+                    text-align: center;
                         &:hover{
-                            background-color: #011F5F;
-                            padding: 1rem 0;
-                            transition: all 0.2s;
-                            color: white;
+                            // background-color: #011F5F;
+                            // padding: 1rem 0;
+                            // transition: all 0.2s;
+                            // color: white;
 
                         }
                     }
@@ -275,7 +280,9 @@ header{
                     top: 100%;
                     left: 10%;
                     z-index: 50;
-                    background-color: rgb(238, 235, 235);
+                    background-color: rgb(240, 234, 234);
+                    background: linear-gradient(rgb(233, 229, 229),rgb(248, 233, 236));
+                    border-radius: 8px;
                     // background:linear-gradient(#283a9f,rgb(221, 49, 78));
                     color: rgb(209, 125, 15);
                     animation: animehover 0.6s forwards;
@@ -283,7 +290,7 @@ header{
                     li{
                         text-transform: capitalize;
                         font-size: 1.7rem;
-                        padding: 1rem;
+                        padding: 0.6rem;
                         font-weight: 600;
 
                     }
@@ -298,6 +305,10 @@ header{
                         z-index: 20;
                         padding: 1rem 0.5rem;
                         background-color: rgb(238, 235, 235);
+                    background: linear-gradient(rgb(233, 229, 229),rgb(248, 233, 236));
+                        
+
+                        border-radius: 8px;
                         animation: animehover 0.5s forwards;
                         @keyframes animehover {
                             0%{

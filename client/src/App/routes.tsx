@@ -14,6 +14,7 @@ import { Projectdetail } from "../container/Projectdetails/Projectdetail";
 import { Career } from "../container/Career/Career";
 import { Admincareer } from "../container/Admin/Pages/Career/Career";
 import Calculator from "../container/Emi/Calculator";
+import { Assistant } from "../container/Assistant/Assistant";
 
 ContactPage;
 const routes = () => {
@@ -28,6 +29,7 @@ const routes = () => {
       <Route path="/about" element={<About />} />
       <Route path="/careers" element={<Career />} />
       <Route path="/emicalculator" element={<Calculator />} />
+      <Route path="/assistant/:name" element={<Assistant />} />
 
       <Route path="/admin" element={<Privateroute />}>
         <Route path="" element={<Dashboard />} />

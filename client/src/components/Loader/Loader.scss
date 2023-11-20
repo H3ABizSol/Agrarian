@@ -7,8 +7,8 @@
       align-items: center;
       .loader-img{
         position: relative;
-        width: 280px;
-        height: 280px;
+        width: 380px;
+        height: 85px;
         animation: loader-anime 1.4s linear infinite alternate;
         @keyframes loader-anime {
                0%{
@@ -28,8 +28,8 @@
         h3{
             font-size: 2rem;
             position: absolute;
-            top: 60%;
-            left: 32%;
+            top: 80%;
+            left: 38%;
             text-transform: uppercase;
             letter-spacing: 0.4rem;
         }
