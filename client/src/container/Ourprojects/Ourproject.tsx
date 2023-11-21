@@ -160,7 +160,7 @@ export const Ourproject = () => {
         </div>
         <div className="paralex">
           <h2>Projects</h2>
-          <p>Find your dream house</p>
+          {/* <p>Find your dream house</p> */}
         </div>
 
         {isProperty && (

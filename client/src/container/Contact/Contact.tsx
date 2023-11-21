@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Layout from "../../Layout/Layout";
 import {
   AiOutlineInstagram,
+  AiOutlineLinkedin,
   AiOutlineMail,
-  AiOutlineTwitter,
 } from "react-icons/ai";
 import "./Contact.scss";
 import axios from "axios";
@@ -44,11 +44,24 @@ export const ContactPage = () => {
             <a href="tel:+919999589348" className="link">
               +919999589348
             </a>
+            <a
+              href="mailto:arun.gautam@agrarianinfratech.com"
+              className="link"
+              style={{ color: "blue", fontSize: "1.3rem", fontWeight: "400" }}
+            >
+              arun.gautam@agrarianinfratech.com
+            </a>
             <p className="follow">Follow on us</p>
             <div className="social-icons">
-              <AiOutlineInstagram className="icon insta" />
-              <AiOutlineTwitter className="icon twiter" />
-              <AiOutlineMail className="icon mail" />
+              <a href="">
+                <AiOutlineInstagram className="icon insta" />
+              </a>
+              <a href="https://www.linkedin.com/in/agrarian-infratech-7a97a329b/">
+                <AiOutlineLinkedin className="icon twiter" />
+              </a>
+              <a href="mailto:arun.gautam@agrarianinfratech.com">
+                <AiOutlineMail className="icon mail" />
+              </a>
               {/* <AiOutlineInstagram className="icon" /> */}
             </div>
           </div>
