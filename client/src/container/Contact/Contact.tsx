@@ -53,7 +53,7 @@ export const ContactPage = () => {
             </a>
             <p className="follow">Follow on us</p>
             <div className="social-icons">
-              <a href="">
+              <a href="https://www.instagram.com/agrarianinfratech/?igshid=YTQwZjQ0NmI0OA%3D%3D">
                 <AiOutlineInstagram className="icon insta" />
               </a>
               <a href="https://www.linkedin.com/in/agrarian-infratech-7a97a329b/">

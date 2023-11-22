@@ -1,68 +1,71 @@
-import React from "react";
+// import React from "react";
 import "./Career.scss";
 import Layout from "../../Layout/Layout";
-import axios from "axios";
-import { Loader } from "../../components/Loader/Loader";
-import { Modal } from "antd";
+// import axios from "axios";
+// import { Loader } from "../../components/Loader/Loader";
+// import { Modal } from "antd";
 
 export const Career = () => {
   // const [ok, setOk] = React.useState(false);
-  const [spin, setSpin] = React.useState(false);
-  const [careers, setCareers] = React.useState([] as any);
-  const [open, setOpen] = React.useState(false);
-  const [details, setDetails] = React.useState({} as any);
-  const [resume, setResume] = React.useState("");
-  const [mailMessage, setMailMessage] = React.useState("");
+  // const [spin, setSpin] = React.useState(false);
+  // const [careers, setCareers] = React.useState([] as any);
+  // const [open, setOpen] = React.useState(false);
+  // const [details, setDetails] = React.useState({} as any);
+  // const [resume, setResume] = React.useState("");
+  // const [mailMessage, setMailMessage] = React.useState("");
 
-  const [formDetails, setFormDetails] = React.useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    mobile: "",
-    housenumber: "",
-    pincode: "",
-    street: "",
-    state: "",
-    city: "",
-    country: "",
-  });
+  // const [formDetails, setFormDetails] = React.useState({
+  //   firstname: "",
+  //   lastname: "",
+  //   email: "",
+  //   mobile: "",
+  //   housenumber: "",
+  //   pincode: "",
+  //   street: "",
+  //   state: "",
+  //   city: "",
+  //   country: "",
+  // });
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append("firstname", formDetails.firstname);
-    formData.append("lastname", formDetails.lastname);
-    formData.append("email", formDetails.email);
-    formData.append("mobile", formDetails.mobile);
-    formData.append("housenumber", formDetails.housenumber);
-    formData.append("resume", resume);
-    await axios.post("/api/auth/applyjob", formData);
-    setMailMessage("Apply successfully");
-  };
+  // const handleSubmit = async (e: any) => {
+  //   e.preventDefault();
+  //   const formData = new FormData();
+  //   formData.append("firstname", formDetails.firstname);
+  //   formData.append("lastname", formDetails.lastname);
+  //   formData.append("email", formDetails.email);
+  //   formData.append("mobile", formDetails.mobile);
+  //   formData.append("housenumber", formDetails.housenumber);
+  //   formData.append("resume", resume);
+  //   await axios.post("/api/auth/applyjob", formData);
+  //   setMailMessage("Apply successfully");
+  // };
 
-  const handleChange = (e: any) => {
-    setFormDetails({
-      ...formDetails,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleChange = (e: any) => {
+  //   setFormDetails({
+  //     ...formDetails,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
-  const getCareers = async () => {
-    setSpin(true);
-    const { data } = await axios.get("/api/career");
-    if (data.success) {
-      setCareers([...data.career]);
-    }
-    setSpin(false);
-  };
+  // const getCareers = async () => {
+  //   setSpin(true);
+  //   const { data } = await axios.get("/api/career");
+  //   if (data.success) {
+  //     setCareers([...data.career]);
+  //   }
+  //   setSpin(false);
+  // };
 
-  React.useEffect(() => {
-    getCareers();
-  }, []);
-  console.log(resume);
+  // React.useEffect(() => {
+  //   getCareers();
+  // }, []);
+
   return (
     <Layout>
-      {spin ? (
+      <div className="assistant">
+        <h2>Comming Soon</h2>
+      </div>
+      {/* {spin ? (
         <Loader />
       ) : (
         <div className="career-wrapper">
@@ -247,7 +250,7 @@ export const Career = () => {
             </div>
           </Modal>
         </div>
-      )}
+      )} */}
     </Layout>
   );
 };

@@ -22,7 +22,10 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+">
+                <a
+                  href="https://www.instagram.com/agrarianinfratech/?igshid=YTQwZjQ0NmI0OA%3D%3D"
+                  target="_blank"
+                >
                   <BiLogoInstagram />
                 </a>
               </li>

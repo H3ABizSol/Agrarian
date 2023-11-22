@@ -127,11 +127,16 @@ const uploadVideo = async (req, res) => {
 };
 exports.uploadVideo = uploadVideo;
 const getVideo = async (req, res) => {
-    const videos = await property_1.videoModel.find({});
-    if (videos.length > 0) {
-        return res.json({ success: true, videos });
+    try {
+        const videos = await property_1.videoModel.find({});
+        if (videos.length > 0) {
+            return res.json({ success: true, videos });
+        }
+        return res.json({ success: false, message: "no videos " });
     }
-    return res.json({ success: false, message: "no videos " });
+    catch (error) {
+        console.log(error);
+    }
 };
 exports.getVideo = getVideo;
 const deleteVideo = (0, catchAsyncError_1.default)(async (req, res, next) => {
