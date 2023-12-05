@@ -236,22 +236,22 @@ export const Project = () => {
                       <h4>{p.title}</h4>
                       <p>
                         {p.price.length === 6
-                          ? `Rs ${p.price.slice(0, 1)} Lacs`
+                          ? `Rs ${p.price.slice(0, 2) / 10} Lacs`
                           : ""}
                       </p>
                       <p>
                         {p.price.length === 7
-                          ? `Rs ${p.price.slice(0, 2)} Lacs`
+                          ? `Rs ${Number(p.price.slice(0, 3)) / 10} Lacs`
                           : ""}
                       </p>
                       <p>
                         {p.price.length === 8
-                          ? `Rs ${p.price.slice(0, 1)} Cr`
+                          ? `Rs ${Number(p.price.slice(0, 2)) / 10} Cr`
                           : ""}
                       </p>
                       <p>
                         {p.price.length === 9
-                          ? `Rs ${p.price.slice(0, 2)} Cr`
+                          ? `Rs ${p.price.slice(0, 3) / 10} Cr`
                           : ""}
                       </p>
 
@@ -368,8 +368,12 @@ export const Project = () => {
                       <option value="">select type</option>
                       <option value="flats">Flats</option>
                       <option value="villas">villas</option>
-                      <option value="appartments">appartments</option>
-                      <option value="floors">floors</option>
+                      <option value="low-rise appartments">
+                        low-rise appartments
+                      </option>
+                      <option value="independent floors">
+                        independent floors
+                      </option>
                     </select>
                   )}
                   {updatePropertyDetails.subservice.toLowerCase() ===
@@ -384,7 +388,7 @@ export const Project = () => {
                       <option>select type</option>
                       <option value="shop">shop</option>
                       <option value="offices">offices</option>
-                      <option value="foodcourt">food-court</option>
+                      <option value="food court">food court</option>
                     </select>
                   )}
                   {updatePropertyDetails.subservice.toLowerCase() ===

@@ -227,7 +227,7 @@ export const Createproject = () => {
                   return <option value={s}>{s}</option>;
                 })}
               </select>
-              {propertyDetails.subservice.toLowerCase() === "residental" && (
+              {propertyDetails.subservice.toLowerCase() === "residential" && (
                 <select
                   name=""
                   onChange={(e) => {
@@ -237,8 +237,10 @@ export const Createproject = () => {
                   <option value="">select type</option>
                   <option value="flats">Flats</option>
                   <option value="villas">villas</option>
-                  <option value="appartments">appartments</option>
-                  <option value="floors">floors</option>
+                  <option value="low-rise appartments">
+                    low-rise appartments
+                  </option>
+                  <option value="independent floors">independent floors</option>
                 </select>
               )}
               {propertyDetails.subservice.toLowerCase() === "commercial" && (
@@ -252,7 +254,7 @@ export const Createproject = () => {
                   <option>select type</option>
                   <option value="shop">shop</option>
                   <option value="offices">offices</option>
-                  <option value="foodcourt">food-court</option>
+                  <option value="food court">food-court</option>
                 </select>
               )}
               {propertyDetails.subservice.toLowerCase() ===

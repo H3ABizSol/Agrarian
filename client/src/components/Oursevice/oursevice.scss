@@ -20,17 +20,23 @@
         //     color: #011F5F;
         // }
        .service-icon{
-        width: 80%;
+        width: 95%;
         margin: 0rem auto;
         display: flex;
+        // display: grid;
+        // grid-template-columns: repeat(4,1fr);
         justify-content: center;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         gap: 5rem;
         padding: 4rem 0;
+        @media screen and (max-width:768px){
+            display: flex;
+            flex-wrap: wrap;
+        }
      
         div{
             background-color: rgb(255, 255, 255);
-            padding: 6rem 1rem;
+            padding: 6rem 0.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -61,6 +67,7 @@
                 // color: #011F5F;
                 // color: rgb(0, 0, 0);
                 color: #c0762d;
+                text-align: center;
             }
             p{
                 font-size: 1rem;
