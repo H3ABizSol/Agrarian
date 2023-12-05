@@ -246,7 +246,7 @@ export const Ourproject = () => {
               <h4>Services</h4>
               {isCheck && (
                 <div
-                  className="residental-category"
+                  className="residental-category service"
                   onClick={(e) => {
                     filterProject(e);
                   }}
